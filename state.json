@@ -3,17 +3,83 @@
   "week_start_ts": 1749427200,
   "fair_value": {
     "STAR": 0,
-    "COMMIT": 0,
+    "COMMIT": 8,
     "FORK": 0
   },
   "books": {
-    "STAR":   {"bids": [], "asks": []},
-    "COMMIT": {"bids": [], "asks": []},
-    "FORK":   {"bids": [], "asks": []}
+    "STAR": {
+      "bids": [],
+      "asks": []
+    },
+    "COMMIT": {
+      "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 7.68,
+          "ts": 1780987600.9067776
+        }
+      ],
+      "asks": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.32,
+          "ts": 1780987600.9067776
+        },
+        {
+          "owner": "_noise",
+          "qty": 5,
+          "price": 7.78,
+          "ts": 1780987600.9067776
+        }
+      ]
+    },
+    "FORK": {
+      "bids": [],
+      "asks": []
+    }
   },
-  "accounts": {},
+  "accounts": {
+    "_mm": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_momentum": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_noise": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "example_meanrev": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    }
+  },
   "last_price": {},
   "price_history": {},
   "hall_of_fame": [],
-  "tick": 0
+  "tick": 1
 }

@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-<sub>Last tick: _initializing..._</sub>
+_Last updated: 2026-06-09 06:46 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -12,15 +12,15 @@
 ## Market
 
 <!-- STATS_START -->
-| Ticker | Underlying | Fair Value | Last Price | Signal |
-|--------|-----------|------------|------------|--------|
-| `$STAR` | stargazers at settlement | 0 | -- | -- |
-| `$COMMIT` | commits this week | 0 | -- | -- |
-| `$FORK` | forks at settlement | 0 | -- | -- |
+| Ticker | Fair Value | Last Price | Signal |
+|--------|-----------|------------|--------|
+| $STAR | 0 | ? | ⚪ |
+| $COMMIT | 8 | ? | ⚪ |
+| $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: calculating...**
+**Settlement in: 0d 0h 0m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -28,7 +28,21 @@
 ## Order Book
 
 <!-- BOOK_START -->
-_No open orders._
+
+**$STAR**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$COMMIT**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+| ASK | 8.32 | 8 | _mm |
+| ASK | 7.78 | 5 | _noise |
+| BID | 7.68 | 8 | _mm |
+
+**$FORK**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
 <!-- BOOK_END -->
 
 ---
@@ -63,7 +77,9 @@ CI picks it up within 15 min, closes the issue, updates the book. Every account 
 File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
-_No participants yet._
+| Rank | Name | P&L |
+|------|------|-----|
+| 🥇 | example_meanrev | +0 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -85,7 +101,11 @@ def decide(market: dict) -> list:
 Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
-_No bots yet._
+| Rank | Name | P&L |
+|------|------|-----|
+| 🥇 | _mm | +0 |
+| 🥈 | _momentum | +0 |
+| 🥉 | _noise | +0 |
 <!-- BOT_BOARD_END -->
 
 ---
