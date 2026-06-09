@@ -3,7 +3,7 @@
   "week_start_ts": 1780963200,
   "fair_value": {
     "STAR": 0,
-    "COMMIT": 10,
+    "COMMIT": 9,
     "FORK": 0
   },
   "books": {
@@ -15,6 +15,12 @@
       "bids": [
         {
           "owner": "_mm",
+          "qty": 3,
+          "price": 8.64,
+          "ts": 1780988547.9009733
+        },
+        {
+          "owner": "_mm",
           "qty": 8,
           "price": 7.68,
           "ts": 1780987600.9067776
@@ -24,14 +30,26 @@
           "qty": 3,
           "price": 7.68,
           "ts": 1780988356.6147044
+        },
+        {
+          "owner": "_noise",
+          "qty": 3,
+          "price": 8.81,
+          "ts": 1780988547.9009733
+        },
+        {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 7.68,
+          "ts": 1780988547.9009733
         }
       ],
       "asks": [
         {
           "owner": "_mm",
-          "qty": 5,
-          "price": 8.32,
-          "ts": 1780987600.9067776
+          "qty": 8,
+          "price": 9.36,
+          "ts": 1780988547.9009733
         },
         {
           "owner": "_noise",
@@ -96,9 +114,10 @@
   "price_history": {
     "COMMIT": [
       7.78,
+      8.32,
       8.32
     ]
   },
   "hall_of_fame": [],
-  "tick": 2
+  "tick": 3
 }
