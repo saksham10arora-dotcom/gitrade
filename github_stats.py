@@ -23,9 +23,17 @@ def fetch_real_stats(repo=None, fallback: dict | None = None) -> dict:
         g = Github(auth=Auth.Token(token))
         r = g.get_repo(repo_name)
 
-        # commits this week
+        # commits this week -- exclude the exchange's own automated commits
+        # (market/settle ticks push with [skip ci] as market-bot, which would
+        # otherwise inflate $COMMIT by ~672/week regardless of real dev work)
         since = datetime.now(timezone.utc) - timedelta(days=7)
-        commit_count = r.get_commits(since=since).totalCount
+        commit_count = 0
+        for c in r.get_commits(since=since):
+            msg = (c.commit.message or "")
+            author = (c.commit.author.name or "") if c.commit.author else ""
+            if "[skip ci]" in msg or author == "market-bot":
+                continue
+            commit_count += 1
 
         return {
             "STAR": r.stargazers_count,
