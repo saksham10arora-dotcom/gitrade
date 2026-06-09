@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-09 13:19 UTC_
+_Last updated: 2026-06-09 16:19 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-06-09 13:19 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 10h 40m**
+**Settlement in: 6d 7h 40m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -107,7 +107,7 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 | Rank | Name | P&L |
 |------|------|-----|
 | 🥇 | _mm | +7 |
-| 🥈 | _momentum | +0 |
+| 🥈 | _momentum | +1 |
 | 🥉 | _noise | -8 |
 <!-- BOT_BOARD_END -->
 

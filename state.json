@@ -17,7 +17,7 @@
           "owner": "_momentum",
           "qty": 3,
           "price": 9.18,
-          "ts": 1781011140.6247487
+          "ts": 1781021943.726756
         },
         {
           "owner": "_noise",
@@ -42,6 +42,12 @@
           "qty": 8,
           "price": 8.64,
           "ts": 1781011140.6247487
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.64,
+          "ts": 1781021943.726756
         },
         {
           "owner": "_mm",
@@ -82,6 +88,12 @@
           "ts": 1781011140.6247487
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.36,
+          "ts": 1781021943.726756
+        },
+        {
           "owner": "_noise",
           "qty": 3,
           "price": 9.79,
@@ -111,19 +123,19 @@
       "league": "human"
     },
     "_momentum": {
-      "cash": 9981.64,
+      "cash": 9935.739999999998,
       "positions": {
         "STAR": 0,
-        "COMMIT": 2,
+        "COMMIT": 7,
         "FORK": 0
       },
       "league": "human"
     },
     "_noise": {
-      "cash": 10057.26,
+      "cash": 10103.160000000002,
       "positions": {
         "STAR": 0,
-        "COMMIT": -7,
+        "COMMIT": -12,
         "FORK": 0
       },
       "league": "human"
@@ -147,9 +159,11 @@
       8.32,
       8.32,
       8.81,
+      9.18,
+      9.18,
       9.18
     ]
   },
   "hall_of_fame": [],
-  "tick": 5
+  "tick": 6
 }
