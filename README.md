@@ -5,7 +5,7 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-20232a?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Exchange CI](https://img.shields.io/github/actions/workflow/status/saksham10arora-dotcom/gitrade/market.yml?style=flat-square&label=exchange&color=238636)](https://github.com/saksham10arora-dotcom/gitrade/actions)
 [![Settlement](https://img.shields.io/badge/settlement-sunday_00%3A00_UTC-e6842a?style=flat-square)](settle.py)
-[![Bots](https://img.shields.io/badge/bot_league-submit_a_PR-58a6ff?style=flat-square)](CONTRIBUTING.md)
+[![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
 <sub>Last tick: _initializing..._</sub>
@@ -13,53 +13,14 @@
 
 ---
 
-## Quick Start
-
-**Trade in 30 seconds** -- open a GitHub Issue with this title:
-
-```
-BUY $STAR 10 @ 45
-```
-
-That's it. CI picks it up within 15 min, matches it against the book, closes the issue.
-
-**Submit a bot** -- add `bots/yourname.py` with a `decide(market)` function and open a PR. Your bot runs every 15 min, competes in the bot league, earns bragging rights on Sunday.
-
----
-
-## How It Works
-
-```
-  Monday                                          Sunday 00:00 UTC
-     |                                                    |
-     v                                                    v
-
-  GitHub Issue                                   settle.py runs
-  "BUY $STAR 10 @ 45"                           real stats pulled
-        |                                        all positions cash-settle
-        v                                        champions posted as Issue
-  market.py (every 15 min)                      accounts reset to $10,000
-        |                                                |
-        +-- parse issue                                  |
-        +-- run bots (decide())           <--------------+
-        +-- match orders (price-time FIFO)     new week begins
-        +-- update state.json
-        +-- rewrite README
-        +-- push [skip ci]
-```
-
-No server. No database. `state.json` is the order book. GitHub Actions is the exchange.
-
----
-
 ## Market
 
 <!-- STATS_START -->
-| Ticker | Underlying | Fair Value | Last Price |
-|--------|-----------|------------|------------|
-| `$STAR` | stargazers at settlement | 0 | -- |
-| `$COMMIT` | commits this week | 0 | -- |
-| `$FORK` | forks at settlement | 0 | -- |
+| Ticker | Underlying | Fair Value | Last Price | Signal |
+|--------|-----------|------------|------------|--------|
+| `$STAR` | stargazers at settlement | 0 | -- | -- |
+| `$COMMIT` | commits this week | 0 | -- | -- |
+| `$FORK` | forks at settlement | 0 | -- | -- |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -78,7 +39,7 @@ _No open orders._
 
 ## Trade
 
-Open a GitHub Issue. The title is the order.
+Open a GitHub Issue. The **title** is your order.
 
 <table>
 <tr>
@@ -95,13 +56,15 @@ Open a GitHub Issue. The title is the order.
 </tr>
 </table>
 
-Every account starts at **$10,000**. Shorts work: `SELL` without a position opens a short. If the real stat lands below your price on Sunday, you profit.
+CI picks it up within 15 min, closes the issue, updates the book. Every account starts at **$10,000**. Shorts work: sell without a position, profit if the price falls by Sunday.
 
 ---
 
 ## Leaderboards
 
 ### Human League
+
+File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
 _No participants yet._
@@ -115,16 +78,15 @@ Submit `bots/yourname.py` via PR. One function.
 NAME = "yourname"
 
 def decide(market: dict) -> list:
-    # called every tick with a live market snapshot:
-    # tickers[t]: fair_value, best_bid, best_ask, last_price, price_history[-50]
-    # my_cash, my_positions {STAR/COMMIT/FORK}, settles_in_sec
+    # market snapshot every 15 min:
+    # tickers[t]: fair_value, best_bid, best_ask, last_price, price_history
+    # my_cash, my_positions, settles_in_sec, week_number
     return [
         {"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0},
     ]
 ```
 
-**Rules:** 2s sandbox timeout, 6 orders/tick, no network calls.
-See [`bots/example_meanrev.py`](bots/example_meanrev.py) and [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
 _No bots yet._
@@ -134,15 +96,16 @@ _No bots yet._
 
 ## Settlement
 
+Every **Sunday at 00:00 UTC**:
+
 ```
-Every Sunday 00:00 UTC
-  1. pull real GitHub stats (stars / commits-this-week / forks)
-  2. cash-settle all positions:  pnl = (settlement_price - entry_price) * qty
-  3. post champion Issue
-  4. reset all accounts to $10,000
+1. pull real GitHub stats (stars / commits-this-week / forks)
+2. cash-settle all positions to those numbers
+3. post champion Issue
+4. reset all accounts to $10,000
 ```
 
-The market price is where people think the numbers land. Settlement is where they actually land.
+The market price is where people think those numbers land. Settlement is where they actually land.
 
 ---
 
@@ -161,39 +124,51 @@ _No champions yet. First settlement is Sunday._
 
 ```
 gitrade/
-├── engine.py           matching, P&L, settlement  (pure logic, zero I/O)
-├── market.py           15-min tick orchestrator
+├── engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
+├── market.py           15-min tick: parse issues -> run bots -> match -> render
 ├── settle.py           Sunday 00:00 UTC cron
-├── render.py           state -> README marker sections
-├── charts.py           neon SVG charts -> assets/
-├── github_stats.py     GitHub API wrapper (never raises)
+├── render.py           state dict -> README marker sections
+├── charts.py           neon SVG price + leaderboard charts
+├── github_stats.py     live GitHub API (never raises, returns fallback)
 │
 ├── bots/
-│   ├── loader.py           discover + sandbox (SIGALRM 2s)
-│   ├── _mm.py              market maker  (+/- 4% spread)
-│   ├── _noise.py           noise trader
-│   ├── _momentum.py        trend follower (LOOKBACK=4)
-│   └── example_meanrev.py  contributor baseline
+│   ├── loader.py           discover + sandbox all bots (SIGALRM 2s)
+│   ├── _mm.py              house market maker  (+/- 4% spread, SIZE=8)
+│   ├── _noise.py           noise trader        (random, fair-value biased)
+│   ├── _momentum.py        trend follower      (LOOKBACK=4)
+│   └── example_meanrev.py  contributor baseline -- copy this
 │
 ├── tools/
-│   └── simulate.py         local tester (no token needed)
-│                           python3 tools/simulate.py 50
+│   └── simulate.py         local tester: python3 tools/simulate.py 50
 │
 └── .github/workflows/
-    ├── market.yml          cron: */15 * * * *
-    └── settle.yml          cron: 0 0 * * 0
+    ├── market.yml          cron */15 * * * *
+    └── settle.yml          cron 0 0 * * 0
 ```
 
-**State shape:**
+**State shape** (`state.json`):
 ```json
 {
   "week_number": 1,
   "fair_value":  { "STAR": 0, "COMMIT": 0, "FORK": 0 },
-  "books":       { "STAR": { "bids": [], "asks": [] } },
-  "accounts":    { "user": { "cash": 10000, "positions": {} } },
-  "price_history": { "STAR": [44, 45, 46] },
+  "books":       { "STAR": { "bids": [], "asks": [] }, ... },
+  "accounts":    { "username": { "cash": 10000, "positions": {...} } },
+  "price_history": { "STAR": [44, 45, 46], ... },
   "hall_of_fame": []
 }
+```
+
+**Tick flow**:
+```
+fetch_real_stats()  ->  parse GitHub Issues  ->  run_all_bots()
+       |                        |                       |
+       v                        v                       v
+  update fair_value       place_order()           place_order()
+                                   \               /
+                                    -> match fills
+                                    -> save_state()
+                                    -> update_readme()
+                                    -> render charts
 ```
 
 </details>
