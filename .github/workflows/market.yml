@@ -1,0 +1,44 @@
+name: market
+
+on:
+  issues:
+    types: [opened]
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: market-engine
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: install deps
+        run: pip install PyGithub matplotlib numpy
+
+      - name: run tick
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python market.py
+
+      - name: commit changes
+        run: |
+          git config user.name "market-bot"
+          git config user.email "market-bot@users.noreply.github.com"
+          git add state.json state_meta.json README.md assets/
+          git diff --staged --quiet || git commit -m "market: tick [skip ci]"
+          git pull --rebase origin HEAD
+          git push

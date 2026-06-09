@@ -1,0 +1,19 @@
+{
+  "week_number": 1,
+  "week_start_ts": 1749427200,
+  "fair_value": {
+    "STAR": 0,
+    "COMMIT": 0,
+    "FORK": 0
+  },
+  "books": {
+    "STAR":   {"bids": [], "asks": []},
+    "COMMIT": {"bids": [], "asks": []},
+    "FORK":   {"bids": [], "asks": []}
+  },
+  "accounts": {},
+  "last_price": {},
+  "price_history": {},
+  "hall_of_fame": [],
+  "tick": 0
+}
