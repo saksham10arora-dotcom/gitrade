@@ -1,7 +1,3 @@
-![gitrade](assets/banner.svg)
-
-<br>
-
 [![Python 3.11](https://img.shields.io/badge/python-3.11-20232a?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Exchange CI](https://img.shields.io/github/actions/workflow/status/saksham10arora-dotcom/gitrade/market.yml?style=flat-square&label=exchange&color=238636)](https://github.com/saksham10arora-dotcom/gitrade/actions)
 [![Settlement](https://img.shields.io/badge/settlement-sunday_00%3A00_UTC-e6842a?style=flat-square)](settle.py)
