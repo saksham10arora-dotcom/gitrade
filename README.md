@@ -1,8 +1,18 @@
+<div align="left">
+
 # gitrade
 
-> Buy `$STAR` if you think this repo blows up. Short `$COMMIT` if you think it dies. Sunday, GitHub tells us who was right.
+**A futures market inside a GitHub repo.**
 
-A futures market that runs entirely inside this GitHub repo. No server. No database. GitHub Actions is the exchange. `state.json` is the order book.
+Three tickers. Real underlying. Weekly settlement to actual GitHub stats.
+
+[![Python](https://img.shields.io/badge/python-3.11-blue?style=flat-square)](https://python.org)
+[![CI](https://img.shields.io/github/actions/workflow/status/saksham10arora-dotcom/gitrade/market.yml?style=flat-square&label=exchange)](https://github.com/saksham10arora-dotcom/gitrade/actions)
+[![Settlement](https://img.shields.io/badge/settlement-sunday_00%3A00_UTC-zinc?style=flat-square)](https://github.com/saksham10arora-dotcom/gitrade/blob/main/settle.py)
+
+</div>
+
+---
 
 <!-- TIMESTAMP_START -->
 _Last updated: initializing..._
@@ -10,17 +20,25 @@ _Last updated: initializing..._
 
 ---
 
-## Live Market
+## The Market
+
+Three tickers, all derived from this repo's real GitHub stats:
+
+| Ticker | Underlying | Fair Value |
+|--------|-----------|------------|
+| `$STAR` | stargazer count at settlement | current stars |
+| `$COMMIT` | commits pushed this week | commits so far |
+| `$FORK` | fork count at settlement | current forks |
+
+Price floats freely all week. Sunday midnight UTC, real GitHub numbers are pulled. All positions cash-settle. Gap between price and fair value is the trade.
 
 <!-- STATS_START -->
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
-| $STAR | 0 | -- | ⚪ |
-| $COMMIT | 0 | -- | ⚪ |
-| $FORK | 0 | -- | ⚪ |
+| $STAR | 0 | -- | -- |
+| $COMMIT | 0 | -- | -- |
+| $FORK | 0 | -- | -- |
 <!-- STATS_END -->
-
-> 🟢 price below fair value (cheap)   🔴 price above fair value (expensive)
 
 <!-- COUNTDOWN_START -->
 **Settlement in: calculating...**
@@ -36,57 +54,56 @@ _No open orders._
 
 ---
 
-## How to Trade
+## Trading
 
-**Place a limit order** -- open an Issue with this title:
+Open a GitHub Issue. Title is the order.
 
+**Limit order**
 ```
 BUY $STAR 10 @ 45
 SELL $COMMIT 5 @ 12
 ```
 
-**Market order:**
+**Market order**
 ```
 MARKET BUY $FORK 3
 ```
 
-**Cancel your open orders on a ticker:**
+**Cancel resting orders**
 ```
 CANCEL $STAR
 ```
 
-CI processes your issue within 15 minutes, closes it, and updates the book.
-
-Every account starts with **$10,000**. Positions settle Sunday midnight UTC.
+CI processes each issue within 15 minutes, closes it, and updates the book. Every account starts with $10,000. Shorts work: sell something you do not own, profit if the price falls by Sunday.
 
 ---
 
 ## Two Leagues
 
-### Human League
+### Human
 
-Anyone can trade. File issues. Watch the board.
+File Issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
 _No participants yet._
 <!-- HUMAN_BOARD_END -->
 
-### Bot League
+### Bot
 
-Submit a `bots/yourname.py` via PR with one function:
+Submit a PR with `bots/yourname.py`. One function. No leading underscore in the filename.
 
 ```python
 NAME = "yourname"
 
 def decide(market: dict) -> list:
-    # market has: tickers (fair_value, best_bid, best_ask, last_price, price_history)
-    #             my_cash, my_positions, settles_in_sec
     return [
         {"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0},
     ]
 ```
 
-See `bots/example_meanrev.py` for a full template. See `CONTRIBUTING.md` for rules.
+`market` contains per-ticker `fair_value`, `best_bid`, `best_ask`, `last_price`, `price_history` (last 50 fills), plus `my_cash`, `my_positions`, `settles_in_sec`.
+
+Bots run every 15 minutes. 2-second timeout. 6 orders per tick max. See `bots/example_meanrev.py` for a full template and `CONTRIBUTING.md` for the full contract.
 
 <!-- BOT_BOARD_START -->
 _No bots yet._
@@ -98,12 +115,10 @@ _No bots yet._
 
 Every Sunday at 00:00 UTC:
 
-1. Real GitHub stats are pulled (stars, commits this week, forks)
+1. Real GitHub stats pulled via API
 2. All positions cash-settle to those numbers
-3. Champions are posted as an Issue
-4. All accounts reset to $10,000
-
-The market price is what people think those numbers will be. The settlement is what they actually are.
+3. Champions posted as a GitHub Issue
+4. All accounts reset to $10,000, new week begins
 
 ---
 
@@ -115,40 +130,30 @@ _No champions yet. First settlement is Sunday._
 
 ---
 
-## Architecture
+## Files
 
 ```
-engine.py          pure matching logic (no I/O)
-market.py          15-min tick orchestrator
-settle.py          Sunday settlement cron
-render.py          state -> README sections
-charts.py          neon SVG charts -> assets/
-github_stats.py    live GitHub API fetcher
+engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
+market.py           15-min tick: parse issues, run bots, match, render
+settle.py           Sunday 00:00 UTC settlement cron
+render.py           state dict -> README marker sections
+charts.py           neon SVG price + leaderboard charts
+github_stats.py     live GitHub API fetcher (never raises)
+
 bots/
-  loader.py        bot discovery + sandboxing (2s timeout)
-  _mm.py           house market maker
-  _noise.py        noise trader
-  _momentum.py     trend follower
-  example_meanrev.py  contributor baseline
-.github/workflows/
-  market.yml       runs market.py every 15 min
-  settle.yml       runs settle.py every Sunday 00:00 UTC
-```
+  _mm.py            house market maker (+/- 4% spread)
+  _noise.py         noise trader
+  _momentum.py      trend follower (LOOKBACK=4)
+  example_meanrev.py    contributor baseline -- copy this
 
-**Want to contribute a bot?** Read `CONTRIBUTING.md`.
+tools/
+  simulate.py       local tester: python3 tools/simulate.py 50
+
+.github/workflows/
+  market.yml        cron every 15 min
+  settle.yml        cron Sunday 00:00 UTC
+```
 
 ---
 
-## FAQ
-
-**Can I short?**
-Yes. `SELL $STAR 10 @ 45` with no existing position opens a short. If stars end below 45 on Sunday, you profit.
-
-**What if my order does not fill?**
-It rests in the book until someone takes the other side, or until you cancel it.
-
-**Who are the house bots?**
-`_mm` (market maker), `_noise` (random trader), `_momentum` (trend follower). They keep liquidity alive. They compete in the bot league only.
-
-**Is this real money?**
-No. All accounts start at $10,000 of play money. Settlement is bragging rights.
+_Built by [@saksham10arora-dotcom](https://github.com/saksham10arora-dotcom)_
