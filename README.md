@@ -1,43 +1,26 @@
-<div align="left">
+![gitrade](assets/banner.svg)
 
-# gitrade
+<br>
 
-**A futures market inside a GitHub repo.**
-
-Three tickers. Real underlying. Weekly settlement to actual GitHub stats.
-
-[![Python](https://img.shields.io/badge/python-3.11-blue?style=flat-square)](https://python.org)
-[![CI](https://img.shields.io/github/actions/workflow/status/saksham10arora-dotcom/gitrade/market.yml?style=flat-square&label=exchange)](https://github.com/saksham10arora-dotcom/gitrade/actions)
-[![Settlement](https://img.shields.io/badge/settlement-sunday_00%3A00_UTC-zinc?style=flat-square)](https://github.com/saksham10arora-dotcom/gitrade/blob/main/settle.py)
-
-</div>
-
----
+[![Python 3.11](https://img.shields.io/badge/python-3.11-20232a?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Exchange CI](https://img.shields.io/github/actions/workflow/status/saksham10arora-dotcom/gitrade/market.yml?style=flat-square&label=exchange&color=238636)](https://github.com/saksham10arora-dotcom/gitrade/actions)
+[![Settlement](https://img.shields.io/badge/settlement-sunday_00%3A00_UTC-e6842a?style=flat-square)](settle.py)
+[![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: initializing..._
+<sub>Last tick: _initializing..._</sub>
 <!-- TIMESTAMP_END -->
 
 ---
 
-## The Market
-
-Three tickers, all derived from this repo's real GitHub stats:
-
-| Ticker | Underlying | Fair Value |
-|--------|-----------|------------|
-| `$STAR` | stargazer count at settlement | current stars |
-| `$COMMIT` | commits pushed this week | commits so far |
-| `$FORK` | fork count at settlement | current forks |
-
-Price floats freely all week. Sunday midnight UTC, real GitHub numbers are pulled. All positions cash-settle. Gap between price and fair value is the trade.
+## Market
 
 <!-- STATS_START -->
-| Ticker | Fair Value | Last Price | Signal |
-|--------|-----------|------------|--------|
-| $STAR | 0 | -- | -- |
-| $COMMIT | 0 | -- | -- |
-| $FORK | 0 | -- | -- |
+| Ticker | Underlying | Fair Value | Last Price | Signal |
+|--------|-----------|------------|------------|--------|
+| `$STAR` | stargazers at settlement | 0 | -- | -- |
+| `$COMMIT` | commits this week | 0 | -- | -- |
+| `$FORK` | forks at settlement | 0 | -- | -- |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -54,56 +37,56 @@ _No open orders._
 
 ---
 
-## Trading
+## Trade
 
-Open a GitHub Issue. Title is the order.
+Open a GitHub Issue. The **title** is your order.
 
-**Limit order**
-```
-BUY $STAR 10 @ 45
-SELL $COMMIT 5 @ 12
-```
+<table>
+<tr>
+<td><strong>Limit</strong></td>
+<td><kbd>BUY $STAR 10 @ 45</kbd> &nbsp; <kbd>SELL $COMMIT 5 @ 12</kbd></td>
+</tr>
+<tr>
+<td><strong>Market</strong></td>
+<td><kbd>MARKET BUY $FORK 3</kbd></td>
+</tr>
+<tr>
+<td><strong>Cancel</strong></td>
+<td><kbd>CANCEL $STAR</kbd></td>
+</tr>
+</table>
 
-**Market order**
-```
-MARKET BUY $FORK 3
-```
-
-**Cancel resting orders**
-```
-CANCEL $STAR
-```
-
-CI processes each issue within 15 minutes, closes it, and updates the book. Every account starts with $10,000. Shorts work: sell something you do not own, profit if the price falls by Sunday.
+CI picks it up within 15 min, closes the issue, updates the book. Every account starts at **$10,000**. Shorts work: sell without a position, profit if the price falls by Sunday.
 
 ---
 
-## Two Leagues
+## Leaderboards
 
-### Human
+### Human League
 
-File Issues. Any GitHub account can trade.
+File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
 _No participants yet._
 <!-- HUMAN_BOARD_END -->
 
-### Bot
+### Bot League
 
-Submit a PR with `bots/yourname.py`. One function. No leading underscore in the filename.
+Submit `bots/yourname.py` via PR. One function.
 
 ```python
 NAME = "yourname"
 
 def decide(market: dict) -> list:
+    # market snapshot every 15 min:
+    # tickers[t]: fair_value, best_bid, best_ask, last_price, price_history
+    # my_cash, my_positions, settles_in_sec, week_number
     return [
         {"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0},
     ]
 ```
 
-`market` contains per-ticker `fair_value`, `best_bid`, `best_ask`, `last_price`, `price_history` (last 50 fills), plus `my_cash`, `my_positions`, `settles_in_sec`.
-
-Bots run every 15 minutes. 2-second timeout. 6 orders per tick max. See `bots/example_meanrev.py` for a full template and `CONTRIBUTING.md` for the full contract.
+Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
 _No bots yet._
@@ -113,12 +96,16 @@ _No bots yet._
 
 ## Settlement
 
-Every Sunday at 00:00 UTC:
+Every **Sunday at 00:00 UTC**:
 
-1. Real GitHub stats pulled via API
-2. All positions cash-settle to those numbers
-3. Champions posted as a GitHub Issue
-4. All accounts reset to $10,000, new week begins
+```
+1. pull real GitHub stats (stars / commits-this-week / forks)
+2. cash-settle all positions to those numbers
+3. post champion Issue
+4. reset all accounts to $10,000
+```
+
+The market price is where people think those numbers land. Settlement is where they actually land.
 
 ---
 
@@ -130,30 +117,62 @@ _No champions yet. First settlement is Sunday._
 
 ---
 
-## Files
+<details>
+<summary><strong>Architecture</strong></summary>
+
+<br>
 
 ```
-engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
-market.py           15-min tick: parse issues, run bots, match, render
-settle.py           Sunday 00:00 UTC settlement cron
-render.py           state dict -> README marker sections
-charts.py           neon SVG price + leaderboard charts
-github_stats.py     live GitHub API fetcher (never raises)
-
-bots/
-  _mm.py            house market maker (+/- 4% spread)
-  _noise.py         noise trader
-  _momentum.py      trend follower (LOOKBACK=4)
-  example_meanrev.py    contributor baseline -- copy this
-
-tools/
-  simulate.py       local tester: python3 tools/simulate.py 50
-
-.github/workflows/
-  market.yml        cron every 15 min
-  settle.yml        cron Sunday 00:00 UTC
+gitrade/
+├── engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
+├── market.py           15-min tick: parse issues -> run bots -> match -> render
+├── settle.py           Sunday 00:00 UTC cron
+├── render.py           state dict -> README marker sections
+├── charts.py           neon SVG price + leaderboard charts
+├── github_stats.py     live GitHub API (never raises, returns fallback)
+│
+├── bots/
+│   ├── loader.py           discover + sandbox all bots (SIGALRM 2s)
+│   ├── _mm.py              house market maker  (+/- 4% spread, SIZE=8)
+│   ├── _noise.py           noise trader        (random, fair-value biased)
+│   ├── _momentum.py        trend follower      (LOOKBACK=4)
+│   └── example_meanrev.py  contributor baseline -- copy this
+│
+├── tools/
+│   └── simulate.py         local tester: python3 tools/simulate.py 50
+│
+└── .github/workflows/
+    ├── market.yml          cron */15 * * * *
+    └── settle.yml          cron 0 0 * * 0
 ```
+
+**State shape** (`state.json`):
+```json
+{
+  "week_number": 1,
+  "fair_value":  { "STAR": 0, "COMMIT": 0, "FORK": 0 },
+  "books":       { "STAR": { "bids": [], "asks": [] }, ... },
+  "accounts":    { "username": { "cash": 10000, "positions": {...} } },
+  "price_history": { "STAR": [44, 45, 46], ... },
+  "hall_of_fame": []
+}
+```
+
+**Tick flow**:
+```
+fetch_real_stats()  ->  parse GitHub Issues  ->  run_all_bots()
+       |                        |                       |
+       v                        v                       v
+  update fair_value       place_order()           place_order()
+                                   \               /
+                                    -> match fills
+                                    -> save_state()
+                                    -> update_readme()
+                                    -> render charts
+```
+
+</details>
 
 ---
 
-_Built by [@saksham10arora-dotcom](https://github.com/saksham10arora-dotcom)_
+<sub>Built by <a href="https://github.com/saksham10arora-dotcom">@saksham10arora-dotcom</a></sub>
