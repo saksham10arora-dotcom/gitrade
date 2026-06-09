@@ -8,6 +8,11 @@ import importlib.util
 import os
 import signal
 import sys
+
+# ensure repo root is on path so bots can import engine
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 import time
 from pathlib import Path
 from typing import Optional
