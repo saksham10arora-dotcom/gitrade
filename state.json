@@ -15,7 +15,7 @@
       "bids": [
         {
           "owner": "_momentum",
-          "qty": 5,
+          "qty": 4,
           "price": 9.18,
           "ts": 1781029976.9844542
         },
@@ -54,6 +54,24 @@
           "qty": 5,
           "price": 9.18,
           "ts": 1781108831.108619
+        },
+        {
+          "owner": "_momentum",
+          "qty": 5,
+          "price": 9.18,
+          "ts": 1781118992.9389856
+        },
+        {
+          "owner": "_momentum",
+          "qty": 5,
+          "price": 9.18,
+          "ts": 1781127433.1375349
+        },
+        {
+          "owner": "_noise",
+          "qty": 2,
+          "price": 8.84,
+          "ts": 1781118992.9389856
         },
         {
           "owner": "_noise",
@@ -152,6 +170,12 @@
           "ts": 1781118992.9389856
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.64,
+          "ts": 1781127433.1375349
+        },
+        {
           "owner": "_noise",
           "qty": 4,
           "price": 8.55,
@@ -174,18 +198,6 @@
           "qty": 3,
           "price": 7.68,
           "ts": 1780988547.9009733
-        },
-        {
-          "owner": "_momentum",
-          "qty": 5,
-          "price": 9.18,
-          "ts": 1781118992.9389856
-        },
-        {
-          "owner": "_noise",
-          "qty": 2,
-          "price": 8.84,
-          "ts": 1781118992.9389856
         }
       ],
       "asks": [
@@ -268,6 +280,12 @@
           "ts": 1781118992.9389856
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.36,
+          "ts": 1781127433.1375349
+        },
+        {
           "owner": "_noise",
           "qty": 1,
           "price": 9.49,
@@ -303,19 +321,19 @@
       "league": "human"
     },
     "_momentum": {
-      "cash": 9908.199999999997,
+      "cash": 9899.019999999997,
       "positions": {
         "STAR": 0,
-        "COMMIT": 10,
+        "COMMIT": 11,
         "FORK": 0
       },
       "league": "human"
     },
     "_noise": {
-      "cash": 10102.620000000003,
+      "cash": 10111.800000000003,
       "positions": {
         "STAR": 0,
-        "COMMIT": -12,
+        "COMMIT": -13,
         "FORK": 0
       },
       "league": "human"
@@ -331,7 +349,7 @@
     }
   },
   "last_price": {
-    "COMMIT": 9.34
+    "COMMIT": 9.18
   },
   "price_history": {
     "COMMIT": [
@@ -344,9 +362,10 @@
       9.18,
       9.36,
       9.18,
-      9.34
+      9.34,
+      9.18
     ]
   },
   "hall_of_fame": [],
-  "tick": 15
+  "tick": 16
 }
