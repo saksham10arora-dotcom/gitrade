@@ -1,13 +1,13 @@
 {
   "week": 1,
-  "tick": 23,
+  "tick": 24,
   "fair_value": {
     "STAR": 0,
     "COMMIT": 9,
     "FORK": 0
   },
   "last_price": {
-    "COMMIT": 9.29
+    "COMMIT": 9.22
   },
   "top_human": "example_meanrev",
   "top_bot": "_mm"
