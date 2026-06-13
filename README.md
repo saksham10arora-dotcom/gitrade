@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-13 21:40 UTC_
+_Last updated: 2026-06-13 22:47 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-13 21:40 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 9 | 9.18 | 🔴 |
+| $COMMIT | 9 | 9.36 | 🔴 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 2d 2h 19m**
+**Settlement in: 2d 1h 12m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -37,8 +37,8 @@ _Last updated: 2026-06-13 21:40 UTC_
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 9.36 | 8 | _mm |
-| ASK | 9.36 | 5 | _mm |
-| ASK | 9.19 | 2 | _noise |
+| ASK | 9.36 | 8 | _mm |
+| ASK | 9.36 | 4 | _mm |
 | BID | 9.18 | 2 | _momentum |
 | BID | 9.18 | 5 | _momentum |
 | BID | 9.18 | 5 | _momentum |
@@ -107,8 +107,8 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 | Rank | Name | P&L |
 |------|------|-----|
 | 🥇 | _mm | +8 |
-| 🥈 | _momentum | +0 |
-| 🥉 | _noise | -8 |
+| 🥈 | _momentum | +3 |
+| 🥉 | _noise | -11 |
 <!-- BOT_BOARD_END -->
 
 ---
