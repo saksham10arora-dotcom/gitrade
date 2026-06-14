@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-14 21:42 UTC_
+_Last updated: 2026-06-14 22:54 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-14 21:42 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 9 | 9.18 | 🔴 |
+| $COMMIT | 9 | 9.23 | 🔴 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 5h 1m**
+**Settlement in: 6d 3h 49m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -37,10 +37,10 @@ _Last updated: 2026-06-14 21:42 UTC_
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 9.36 | 8 | _mm |
-| ASK | 9.23 | 3 | _noise |
-| ASK | 9.18 | 1 | _noise |
+| ASK | 9.36 | 8 | _mm |
+| ASK | 9.36 | 8 | _mm |
+| BID | 9.18 | 4 | _momentum |
 | BID | 8.64 | 5 | _mm |
-| BID | 8.64 | 8 | _mm |
 | BID | 8.64 | 8 | _mm |
 
 **$FORK**
@@ -106,9 +106,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +1 |
+| 🥇 | _mm | +2 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -1 |
+| 🥉 | _noise | -2 |
 <!-- BOT_BOARD_END -->
 
 ---
