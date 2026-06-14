@@ -6,8 +6,78 @@
     "COMMIT": 9,
     "FORK": 0
   },
-  "books": {},
-  "accounts": {},
+  "books": {
+    "STAR": {
+      "bids": [],
+      "asks": []
+    },
+    "COMMIT": {
+      "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.64,
+          "ts": 1781414266.9287858
+        }
+      ],
+      "asks": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.36,
+          "ts": 1781414266.9287858
+        },
+        {
+          "owner": "_noise",
+          "qty": 4,
+          "price": 8.83,
+          "ts": 1781414266.9287858
+        }
+      ]
+    },
+    "FORK": {
+      "bids": [],
+      "asks": []
+    }
+  },
+  "accounts": {
+    "_mm": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_momentum": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_noise": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "example_meanrev": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    }
+  },
   "last_price": {},
   "price_history": {},
   "hall_of_fame": [
@@ -24,5 +94,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 44
+  "tick": 45
 }
