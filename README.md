@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-14 05:17 UTC_
+_Last updated: 2026-06-14 08:54 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-14 05:17 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 9 | ? | ⚪ |
+| $COMMIT | 9 | 8.64 | 🟢 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 21h 26m**
+**Settlement in: 6d 17h 49m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -37,7 +37,9 @@ _Last updated: 2026-06-14 05:17 UTC_
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 9.36 | 8 | _mm |
+| ASK | 9.36 | 8 | _mm |
 | ASK | 8.83 | 4 | _noise |
+| BID | 8.64 | 7 | _mm |
 | BID | 8.64 | 8 | _mm |
 
 **$FORK**
@@ -105,7 +107,7 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 |------|------|-----|
 | 🥇 | _mm | +0 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | +0 |
+| 🥉 | _noise | -0 |
 <!-- BOT_BOARD_END -->
 
 ---
