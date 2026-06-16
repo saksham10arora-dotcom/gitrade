@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-15 22:35 UTC_
+_Last updated: 2026-06-16 00:18 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-06-15 22:35 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 5d 4h 8m**
+**Settlement in: 5d 2h 25m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -36,9 +36,9 @@ _Last updated: 2026-06-15 22:35 UTC_
 **$COMMIT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 9.36 | 7 | _mm |
 | ASK | 9.28 | 1 | _noise |
 | ASK | 9.26 | 1 | _noise |
+| ASK | 9.23 | 2 | _noise |
 | BID | 9.18 | 4 | _momentum |
 | BID | 9.18 | 5 | _momentum |
 | BID | 9.18 | 5 | _momentum |
