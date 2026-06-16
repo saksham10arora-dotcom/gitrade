@@ -3,7 +3,7 @@
   "week_start_ts": 1781405031.6078222,
   "fair_value": {
     "STAR": 0,
-    "COMMIT": 7,
+    "COMMIT": 0,
     "FORK": 0
   },
   "books": {
@@ -15,19 +15,7 @@
       "bids": [
         {
           "owner": "_momentum",
-          "qty": 1,
-          "price": 9.18,
-          "ts": 1781482792.545358
-        },
-        {
-          "owner": "_momentum",
-          "qty": 5,
-          "price": 9.18,
-          "ts": 1781502023.2701328
-        },
-        {
-          "owner": "_momentum",
-          "qty": 5,
+          "qty": 3,
           "price": 9.18,
           "ts": 1781523390.3640978
         },
@@ -66,6 +54,12 @@
           "qty": 4,
           "price": 8.82,
           "ts": 1781502023.2701328
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.81,
+          "ts": 1781609845.0389013
         },
         {
           "owner": "_mm",
@@ -214,6 +208,12 @@
           "ts": 1781569119.0345392
         },
         {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 9.23,
+          "ts": 1781590293.4979339
+        },
+        {
           "owner": "_noise",
           "qty": 1,
           "price": 9.26,
@@ -328,10 +328,16 @@
           "ts": 1781569119.0345392
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.55,
+          "ts": 1781609845.0389013
+        },
+        {
           "owner": "example_meanrev",
           "qty": 3,
           "price": 9.23,
-          "ts": 1781590293.4979339
+          "ts": 1781609845.0389013
         }
       ]
     },
@@ -351,19 +357,19 @@
       "league": "human"
     },
     "_momentum": {
-      "cash": 9917.380000000001,
+      "cash": 9889.84,
       "positions": {
         "STAR": 0,
-        "COMMIT": 9,
+        "COMMIT": 12,
         "FORK": 0
       },
       "league": "human"
     },
     "_noise": {
-      "cash": 10025.74,
+      "cash": 10053.28,
       "positions": {
         "STAR": 0,
-        "COMMIT": -3,
+        "COMMIT": -6,
         "FORK": 0
       },
       "league": "human"
@@ -392,6 +398,10 @@
       9.23,
       9.36,
       9.18,
+      9.18,
+      9.18,
+      9.18,
+      9.18,
       9.18
     ]
   },
@@ -409,5 +419,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 62
+  "tick": 63
 }
