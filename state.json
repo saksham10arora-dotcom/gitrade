@@ -38,6 +38,12 @@
           "ts": 1781569119.0345392
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.86,
+          "ts": 1781766740.8137808
+        },
+        {
           "owner": "_noise",
           "qty": 4,
           "price": 8.82,
@@ -265,18 +271,6 @@
           "owner": "example_meanrev",
           "qty": 2,
           "price": 9.23,
-          "ts": 1781609845.0389013
-        },
-        {
-          "owner": "example_meanrev",
-          "qty": 3,
-          "price": 9.23,
-          "ts": 1781626450.279574
-        },
-        {
-          "owner": "example_meanrev",
-          "qty": 3,
-          "price": 9.23,
           "ts": 1781639611.721182
         },
         {
@@ -332,6 +326,12 @@
           "qty": 3,
           "price": 9.23,
           "ts": 1781739906.0754235
+        },
+        {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 9.23,
+          "ts": 1781748375.9120672
         },
         {
           "owner": "_noise",
@@ -562,6 +562,12 @@
           "ts": 1781732808.3664813
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.6,
+          "ts": 1781766740.8137808
+        },
+        {
           "owner": "_noise",
           "qty": 1,
           "price": 9.73,
@@ -571,7 +577,7 @@
           "owner": "example_meanrev",
           "qty": 3,
           "price": 9.23,
-          "ts": 1781748375.9120672
+          "ts": 1781766740.8137808
         }
       ]
     },
@@ -591,28 +597,28 @@
       "league": "human"
     },
     "_momentum": {
-      "cash": 9843.69,
+      "cash": 9797.54,
       "positions": {
         "STAR": 0,
-        "COMMIT": 17,
+        "COMMIT": 22,
         "FORK": 0
       },
       "league": "human"
     },
     "_noise": {
-      "cash": 10062.51,
+      "cash": 10053.28,
       "positions": {
         "STAR": 0,
-        "COMMIT": -7,
+        "COMMIT": -6,
         "FORK": 0
       },
       "league": "human"
     },
     "example_meanrev": {
-      "cash": 10036.92,
+      "cash": 10092.3,
       "positions": {
         "STAR": 0,
-        "COMMIT": -4,
+        "COMMIT": -10,
         "FORK": 0
       },
       "league": "human"
@@ -646,6 +652,9 @@
       9.18,
       9.18,
       9.18,
+      9.23,
+      9.23,
+      9.23,
       9.23
     ]
   },
@@ -663,5 +672,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 75
+  "tick": 76
 }
