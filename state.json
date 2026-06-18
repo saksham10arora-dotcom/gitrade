@@ -117,6 +117,12 @@
         },
         {
           "owner": "_mm",
+          "qty": 8,
+          "price": 8.81,
+          "ts": 1781748375.9120672
+        },
+        {
+          "owner": "_mm",
           "qty": 5,
           "price": 8.64,
           "ts": 1781414266.9287858
@@ -257,7 +263,7 @@
       "asks": [
         {
           "owner": "example_meanrev",
-          "qty": 3,
+          "qty": 2,
           "price": 9.23,
           "ts": 1781609845.0389013
         },
@@ -322,6 +328,12 @@
           "ts": 1781732808.3664813
         },
         {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 9.23,
+          "ts": 1781739906.0754235
+        },
+        {
           "owner": "_noise",
           "qty": 5,
           "price": 9.25,
@@ -332,6 +344,12 @@
           "qty": 1,
           "price": 9.26,
           "ts": 1781541236.536007
+        },
+        {
+          "owner": "_noise",
+          "qty": 4,
+          "price": 9.26,
+          "ts": 1781739906.0754235
         },
         {
           "owner": "_noise",
@@ -528,6 +546,18 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 9.55,
+          "ts": 1781739906.0754235
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.55,
+          "ts": 1781748375.9120672
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 9.56,
           "ts": 1781732808.3664813
         },
@@ -538,22 +568,10 @@
           "ts": 1781705032.4533927
         },
         {
-          "owner": "_mm",
-          "qty": 8,
-          "price": 9.55,
-          "ts": 1781739906.0754235
-        },
-        {
-          "owner": "_noise",
-          "qty": 4,
-          "price": 9.26,
-          "ts": 1781739906.0754235
-        },
-        {
           "owner": "example_meanrev",
           "qty": 3,
           "price": 9.23,
-          "ts": 1781739906.0754235
+          "ts": 1781748375.9120672
         }
       ]
     },
@@ -582,26 +600,26 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 10071.74,
+      "cash": 10062.51,
       "positions": {
         "STAR": 0,
-        "COMMIT": -8,
+        "COMMIT": -7,
         "FORK": 0
       },
       "league": "human"
     },
     "example_meanrev": {
-      "cash": 10027.69,
+      "cash": 10036.92,
       "positions": {
         "STAR": 0,
-        "COMMIT": -3,
+        "COMMIT": -4,
         "FORK": 0
       },
       "league": "human"
     }
   },
   "last_price": {
-    "COMMIT": 9.18
+    "COMMIT": 9.23
   },
   "price_history": {
     "COMMIT": [
@@ -627,7 +645,8 @@
       9.18,
       9.18,
       9.18,
-      9.18
+      9.18,
+      9.23
     ]
   },
   "hall_of_fame": [
@@ -644,5 +663,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 74
+  "tick": 75
 }
