@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-19 18:25 UTC_
+_Last updated: 2026-06-19 20:17 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-19 18:25 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 0 | 9.23 | 🔴 |
+| $COMMIT | 0 | 8.86 | 🔴 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 8h 18m**
+**Settlement in: 1d 6h 26m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -39,7 +39,7 @@ _Last updated: 2026-06-19 18:25 UTC_
 | ASK | 9.23 | 3 | example_meanrev |
 | ASK | 9.23 | 3 | example_meanrev |
 | ASK | 9.23 | 3 | example_meanrev |
-| BID | 9.18 | 2 | _momentum |
+| BID | 8.86 | 7 | _mm |
 | BID | 8.86 | 8 | _mm |
 | BID | 8.86 | 8 | _mm |
 
@@ -82,7 +82,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | +1 |
+| 🥇 | example_meanrev | +6 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -106,9 +106,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +2 |
-| 🥈 | _momentum | +0 |
-| 🥉 | _noise | -3 |
+| 🥇 | _mm | +3 |
+| 🥈 | _noise | -3 |
+| 🥉 | _momentum | -5 |
 <!-- BOT_BOARD_END -->
 
 ---
