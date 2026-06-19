@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-19 05:36 UTC_
+_Last updated: 2026-06-19 10:05 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-19 05:36 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 0 | 9.18 | 🔴 |
+| $COMMIT | 0 | 9.23 | 🔴 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 21h 7m**
+**Settlement in: 1d 16h 37m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -82,7 +82,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | +0 |
+| 🥇 | example_meanrev | +1 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
