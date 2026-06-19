@@ -62,6 +62,12 @@
           "ts": 1781886951.192079
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.86,
+          "ts": 1781893528.3638492
+        },
+        {
           "owner": "_noise",
           "qty": 4,
           "price": 8.82,
@@ -323,12 +329,6 @@
       "asks": [
         {
           "owner": "example_meanrev",
-          "qty": 1,
-          "price": 9.23,
-          "ts": 1781725123.3149092
-        },
-        {
-          "owner": "example_meanrev",
           "qty": 3,
           "price": 9.23,
           "ts": 1781732808.3664813
@@ -404,6 +404,12 @@
           "qty": 3,
           "price": 9.23,
           "ts": 1781877098.7811968
+        },
+        {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 9.23,
+          "ts": 1781886951.192079
         },
         {
           "owner": "_noise",
@@ -700,6 +706,12 @@
           "ts": 1781886951.192079
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.6,
+          "ts": 1781893528.3638492
+        },
+        {
           "owner": "_noise",
           "qty": 2,
           "price": 9.61,
@@ -715,7 +727,7 @@
           "owner": "example_meanrev",
           "qty": 3,
           "price": 9.23,
-          "ts": 1781886951.192079
+          "ts": 1781893528.3638492
         }
       ]
     },
@@ -744,19 +756,19 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 9951.450000000006,
+      "cash": 9942.220000000007,
       "positions": {
         "STAR": 0,
-        "COMMIT": 5,
+        "COMMIT": 6,
         "FORK": 0
       },
       "league": "human"
     },
     "example_meanrev": {
-      "cash": 10295.359999999995,
+      "cash": 10304.589999999995,
       "positions": {
         "STAR": 0,
-        "COMMIT": -32,
+        "COMMIT": -33,
         "FORK": 0
       },
       "league": "human"
@@ -811,6 +823,7 @@
       9.23,
       9.23,
       9.23,
+      9.23,
       9.23
     ]
   },
@@ -828,5 +841,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 86
+  "tick": 87
 }
