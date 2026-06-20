@@ -320,6 +320,12 @@
           "ts": 1781919082.939209
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 8.51,
+          "ts": 1781935483.179129
+        },
+        {
           "owner": "_noise",
           "qty": 5,
           "price": 8.49,
@@ -347,7 +353,7 @@
       "asks": [
         {
           "owner": "_mm",
-          "qty": 8,
+          "qty": 7,
           "price": 9.21,
           "ts": 1781905605.1764827
         },
@@ -368,6 +374,18 @@
           "qty": 8,
           "price": 9.21,
           "ts": 1781919082.939209
+        },
+        {
+          "owner": "example_meanrev",
+          "qty": 3,
+          "price": 9.21,
+          "ts": 1781919082.939209
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 9.21,
+          "ts": 1781935483.179129
         },
         {
           "owner": "example_meanrev",
@@ -793,7 +811,7 @@
           "owner": "example_meanrev",
           "qty": 3,
           "price": 9.21,
-          "ts": 1781919082.939209
+          "ts": 1781935483.179129
         }
       ]
     },
@@ -804,10 +822,10 @@
   },
   "accounts": {
     "_mm": {
-      "cash": 9941.699999999997,
+      "cash": 9950.909999999996,
       "positions": {
         "STAR": 0,
-        "COMMIT": 7,
+        "COMMIT": 6,
         "FORK": 0
       },
       "league": "human"
@@ -822,10 +840,10 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 9987.160000000009,
+      "cash": 9977.95000000001,
       "positions": {
         "STAR": 0,
-        "COMMIT": 1,
+        "COMMIT": 2,
         "FORK": 0
       },
       "league": "human"
@@ -841,11 +859,10 @@
     }
   },
   "last_price": {
-    "COMMIT": 8.86
+    "COMMIT": 9.21
   },
   "price_history": {
     "COMMIT": [
-      8.64,
       9.18,
       9.18,
       9.23,
@@ -894,7 +911,8 @@
       8.86,
       8.86,
       8.86,
-      8.86
+      8.86,
+      9.21
     ]
   },
   "hall_of_fame": [
@@ -911,5 +929,5 @@
       "pnl": 7.54
     }
   ],
-  "tick": 91
+  "tick": 92
 }
