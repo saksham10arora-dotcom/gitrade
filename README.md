@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-20 21:24 UTC_
+_Last updated: 2026-06-20 22:45 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -15,12 +15,12 @@ _Last updated: 2026-06-20 21:24 UTC_
 | Ticker | Fair Value | Last Price | Signal |
 |--------|-----------|------------|--------|
 | $STAR | 0 | ? | ⚪ |
-| $COMMIT | 0 | 8.86 | 🔴 |
+| $COMMIT | 0 | 9.0 | 🔴 |
 | $FORK | 0 | ? | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 5h 19m**
+**Settlement in: 0d 3h 58m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -38,8 +38,8 @@ _Last updated: 2026-06-20 21:24 UTC_
 |------|-------|-----|-------|
 | ASK | 9.0 | 3 | example_meanrev |
 | ASK | 9.0 | 3 | example_meanrev |
-| ASK | 9.0 | 5 | _momentum |
-| BID | 8.86 | 3 | _mm |
+| ASK | 9.0 | 3 | example_meanrev |
+| BID | 8.86 | 6 | _mm |
 | BID | 8.86 | 8 | _mm |
 | BID | 8.86 | 8 | _mm |
 
