@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-20 06:04 UTC_
+_Last updated: 2026-06-20 09:44 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-06-20 06:04 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 20h 39m**
+**Settlement in: 0d 16h 59m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -38,7 +38,7 @@ _Last updated: 2026-06-20 06:04 UTC_
 |------|-------|-----|-------|
 | ASK | 9.21 | 3 | example_meanrev |
 | ASK | 9.21 | 8 | _mm |
-| ASK | 9.21 | 7 | _mm |
+| ASK | 9.21 | 2 | _mm |
 | BID | 9.18 | 2 | _noise |
 | BID | 8.86 | 3 | _mm |
 | BID | 8.86 | 8 | _mm |
