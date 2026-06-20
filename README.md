@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-20 22:45 UTC_
+_Last updated: 2026-06-20 23:54 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-06-20 22:45 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 3h 58m**
+**Settlement in: 0d 2h 49m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -37,8 +37,8 @@ _Last updated: 2026-06-20 22:45 UTC_
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 9.0 | 3 | example_meanrev |
-| ASK | 9.0 | 3 | example_meanrev |
-| ASK | 9.0 | 3 | example_meanrev |
+| ASK | 9.0 | 1 | example_meanrev |
+| ASK | 8.98 | 4 | _noise |
 | BID | 8.86 | 6 | _mm |
 | BID | 8.86 | 8 | _mm |
 | BID | 8.86 | 8 | _mm |
@@ -82,7 +82,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | +10 |
+| 🥇 | example_meanrev | +11 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -107,7 +107,7 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 | Rank | Name | P&L |
 |------|------|-----|
 | 🥇 | _mm | +8 |
-| 🥈 | _noise | -4 |
+| 🥈 | _noise | -5 |
 | 🥉 | _momentum | -14 |
 <!-- BOT_BOARD_END -->
 
