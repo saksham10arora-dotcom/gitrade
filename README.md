@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-06-20 19:48 UTC_
+_Last updated: 2026-06-20 21:24 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-06-20 19:48 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 6h 55m**
+**Settlement in: 0d 5h 19m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -36,10 +36,10 @@ _Last updated: 2026-06-20 19:48 UTC_
 **$COMMIT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 9.2 | 1 | _noise |
+| ASK | 9.0 | 3 | example_meanrev |
 | ASK | 9.0 | 3 | example_meanrev |
 | ASK | 9.0 | 5 | _momentum |
-| BID | 8.86 | 8 | _mm |
+| BID | 8.86 | 3 | _mm |
 | BID | 8.86 | 8 | _mm |
 | BID | 8.86 | 8 | _mm |
 
@@ -106,9 +106,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +7 |
+| 🥇 | _mm | +8 |
 | 🥈 | _noise | -4 |
-| 🥉 | _momentum | -13 |
+| 🥉 | _momentum | -14 |
 <!-- BOT_BOARD_END -->
 
 ---
