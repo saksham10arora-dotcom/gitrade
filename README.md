@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-07-12 00:13 UTC_
+_Last updated: 2026-07-12 04:02 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -20,7 +20,7 @@ _Last updated: 2026-07-12 00:13 UTC_
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 1h 54m**
+**Settlement in: 6d 21h 47m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -127,6 +127,8 @@ The market price is where people think those numbers land. Settlement is where t
 <!-- HALLOFFAME_START -->
 | Week | League | Champion | P&L |
 |------|--------|----------|-----|
+| 5 | bot | _mm | +0 |
+| 5 | human | example_meanrev | +0 |
 | 4 | bot | _mm | +0 |
 | 4 | human | example_meanrev | +0 |
 | 3 | bot | _mm | +0 |
