@@ -6,8 +6,58 @@
     "COMMIT": 0,
     "FORK": 0
   },
-  "books": {},
-  "accounts": {},
+  "books": {
+    "STAR": {
+      "bids": [],
+      "asks": []
+    },
+    "COMMIT": {
+      "bids": [],
+      "asks": []
+    },
+    "FORK": {
+      "bids": [],
+      "asks": []
+    }
+  },
+  "accounts": {
+    "_mm": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_momentum": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "_noise": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    },
+    "example_meanrev": {
+      "cash": 10000,
+      "positions": {
+        "STAR": 0,
+        "COMMIT": 0,
+        "FORK": 0
+      },
+      "league": "human"
+    }
+  },
   "last_price": {},
   "price_history": {},
   "hall_of_fame": [
@@ -84,5 +134,5 @@
       "pnl": 0
     }
   ],
-  "tick": 420
+  "tick": 421
 }
