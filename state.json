@@ -1,63 +1,13 @@
 {
-  "week_number": 9,
-  "week_start_ts": 1785635518.8675854,
+  "week_number": 10,
+  "week_start_ts": 1786237118.275011,
   "fair_value": {
     "STAR": 0,
     "COMMIT": 0,
     "FORK": 0
   },
-  "books": {
-    "STAR": {
-      "bids": [],
-      "asks": []
-    },
-    "COMMIT": {
-      "bids": [],
-      "asks": []
-    },
-    "FORK": {
-      "bids": [],
-      "asks": []
-    }
-  },
-  "accounts": {
-    "_mm": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "_momentum": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "_noise": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "example_meanrev": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    }
-  },
+  "books": {},
+  "accounts": {},
   "last_price": {},
   "price_history": {},
   "hall_of_fame": [
@@ -153,6 +103,18 @@
     },
     {
       "week": 8,
+      "league": "bot",
+      "name": "_mm",
+      "pnl": 0
+    },
+    {
+      "week": 9,
+      "league": "human",
+      "name": "example_meanrev",
+      "pnl": 0
+    },
+    {
+      "week": 9,
       "league": "bot",
       "name": "_mm",
       "pnl": 0
