@@ -155,14 +155,19 @@ _No participants yet._
 
 ## Settlement
 
-Every **Sunday at 00:00 UTC**:
+Every **Sunday at 00:01 UTC**:
 
 ```
-1. pull real GitHub stats (stars / commits-this-week / forks)
-2. cash-settle all positions to those numbers
-3. post champion Issue
-4. reset all accounts to $10,000
+1. compute each ticker's settlement = TWAP (average of 24 hourly readings
+   over the final 24h of the week), not a single closing snapshot
+2. cash-settle all positions to those numbers (signed: spreads settle +/-)
+3. update persistent ELO for accounts that traded this week
+4. post champion Issue
 ```
+
+Balances PERSIST across weeks. There is no weekly reset. Your cash carries forward,
+your ELO carries forward, and the weekly leaderboard ranks P&L since Monday.
+House bots get topped up to a liquidity floor; humans carry their wins and losses.
 
 The market price is where people think those numbers land. Settlement is where they actually land.
 
@@ -197,7 +202,7 @@ _No ELO data yet. First settlement unlocks the ladder._
 gitrade/
 ├── engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
 ├── market.py           15-min tick: parse issues -> run bots -> match -> render
-├── settle.py           Sunday 00:00 UTC cron
+├── settle.py           Sunday 00:01 UTC cron
 ├── render.py           state dict -> README marker sections
 ├── charts.py           neon SVG price + leaderboard charts
 ├── github_stats.py     live GitHub API (never raises, returns fallback)

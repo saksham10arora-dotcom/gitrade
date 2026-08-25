@@ -146,3 +146,85 @@ def test_settle_clears_positions_after_settlement():
     real_stats = {"DSTAR": 4, "DFORK": 0, "VSCODE": 100, "REACT": 90, "SPREAD": 10}
     settle_week(state, real_stats)
     assert state["accounts"]["alice"]["positions"]["DSTAR"] == 0
+
+
+# ---------------------------------------------------------------------------
+# Guard coverage (from final review — Important 5)
+# ---------------------------------------------------------------------------
+from engine import MAX_POSITION, compute_weekly_pnl
+
+
+def test_bankrupt_account_cannot_order():
+    state = {}
+    acct = get_account(state, "broke")
+    acct["cash"] = 0.0
+    get_account(state, "mm")
+    place_order(state, {"ticker": "DSTAR", "side": "SELL", "qty": 5, "price": 10.0, "owner": "mm", "ts": 0.0})
+    fills = place_order(state, {"ticker": "DSTAR", "side": "BUY", "qty": 5, "price": 10.0, "owner": "broke", "ts": 1.0})
+    assert fills == []   # rejected outright, no fills
+
+
+def test_self_trade_prevented():
+    state = {}
+    get_account(state, "alice")
+    place_order(state, {"ticker": "DSTAR", "side": "SELL", "qty": 5, "price": 10.0, "owner": "alice", "ts": 0.0})
+    fills = place_order(state, {"ticker": "DSTAR", "side": "BUY", "qty": 5, "price": 10.0, "owner": "alice", "ts": 1.0})
+    assert fills == []   # cannot match own resting order
+    assert state["accounts"]["alice"]["positions"]["DSTAR"] == 0
+
+
+def test_max_position_caps_aggressor():
+    state = {}
+    get_account(state, "whale")
+    get_account(state, "seller")
+    # seller offers 100 DSTAR; whale tries to buy all 100 but is capped at MAX_POSITION
+    place_order(state, {"ticker": "DSTAR", "side": "SELL", "qty": 100, "price": 1.0, "owner": "seller", "ts": 0.0})
+    fills = place_order(state, {"ticker": "DSTAR", "side": "BUY", "qty": 100, "price": 1.0, "owner": "whale", "ts": 1.0})
+    assert sum(f["qty"] for f in fills) == MAX_POSITION
+    assert state["accounts"]["whale"]["positions"]["DSTAR"] == MAX_POSITION
+
+
+def test_max_position_caps_passive():
+    state = {}
+    get_account(state, "resting")
+    get_account(state, "hitter")
+    # resting party posts a 100-lot bid; passive limit caps its accumulation at MAX_POSITION
+    place_order(state, {"ticker": "DSTAR", "side": "BUY", "qty": 100, "price": 1.0, "owner": "resting", "ts": 0.0})
+    place_order(state, {"ticker": "DSTAR", "side": "SELL", "qty": 100, "price": 1.0, "owner": "hitter", "ts": 1.0})
+    assert abs(state["accounts"]["resting"]["positions"]["DSTAR"]) == MAX_POSITION
+
+
+def test_buyer_margin_truncates_positive_price():
+    state = {}
+    buyer = get_account(state, "buyer")
+    get_account(state, "seller")
+    buyer["cash"] = 30.0   # can afford only 3 @ 10
+    place_order(state, {"ticker": "DSTAR", "side": "SELL", "qty": 10, "price": 10.0, "owner": "seller", "ts": 0.0})
+    fills = place_order(state, {"ticker": "DSTAR", "side": "BUY", "qty": 10, "price": 10.0, "owner": "buyer", "ts": 1.0})
+    assert sum(f["qty"] for f in fills) == 3
+    assert state["accounts"]["buyer"]["cash"] >= 0
+
+
+def test_settle_negative_spread_price():
+    # A short position on a spread ticker settling NEGATIVE pays the short holder.
+    state = {
+        "accounts": {
+            "shorty": {"cash": 10000.0, "cash_at_week_start": 10000.0,
+                       "positions": {t: 0 for t in TICKERS}, "league": "human"},
+        },
+        "books": {}, "elo": {}, "twap_samples": [], "hall_of_fame": [],
+        "week_number": 2, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+    }
+    state["accounts"]["shorty"]["positions"]["NEXTREMIX"] = -10   # short 10
+    real_stats = {t: 0 for t in TICKERS}
+    real_stats["NEXTREMIX"] = -20   # settles negative
+    settle_week(state, real_stats)
+    # short 10 * settlement -20 => cash += (-10)*(-20) = +200
+    assert state["accounts"]["shorty"]["cash"] == 10200.0
+    assert state["accounts"]["shorty"]["positions"]["NEXTREMIX"] == 0
+
+
+def test_compute_weekly_pnl_uses_week_start():
+    state = {"accounts": {"g": {"cash": 10500.0, "cash_at_week_start": 10000.0,
+                                "positions": {t: 0 for t in TICKERS}, "league": "human"}}}
+    assert compute_weekly_pnl(state, "g") == 500.0

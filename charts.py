@@ -91,14 +91,14 @@ def leaderboard_chart(state: dict):
     except ImportError:
         return
 
-    from engine import compute_pnl
+    from engine import compute_weekly_pnl
 
     accounts = state.get("accounts", {})
     if not accounts:
         return
 
     names = list(accounts.keys())
-    pnls = [compute_pnl(state, n) for n in names]
+    pnls = [compute_weekly_pnl(state, n) for n in names]
     colors = [_NEON["pos"] if p >= 0 else _NEON["neg"] for p in pnls]
 
     fig, ax = plt.subplots(figsize=(8, max(3, len(names) * 0.5)),

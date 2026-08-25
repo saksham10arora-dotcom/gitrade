@@ -87,17 +87,20 @@ def fetch_raw_snapshot(repo_name: str = None, token: str = None,
         cache = star_cache or {}
         known: dict = cache.get("star_cache", {})
 
-        clean_stars = sum(1 for v in known.values() if v)
+        # Classify only NEW stargazers (API-cheap), but count from the CURRENT
+        # stargazer set so an unstar decrements the total. A cache-sum would be
+        # monotonic and inflate DSTAR forever as people unstar.
+        current_logins = []
         for sg in r_gitrade.get_stargazers_with_dates():
             login = sg.user.login
+            current_logins.append(login)
             if login in known:
                 continue  # already classified — no extra API call
             u = sg.user
             age_days = (now - u.created_at).days
-            is_clean = not _is_likely_bot_account(age_days, u.public_repos, u.followers)
-            known[login] = is_clean
-            if is_clean:
-                clean_stars += 1
+            known[login] = not _is_likely_bot_account(age_days, u.public_repos, u.followers)
+
+        clean_stars = sum(1 for login in current_logins if known.get(login))
 
         if star_cache is not None:
             star_cache["star_cache"] = known   # persist for next tick

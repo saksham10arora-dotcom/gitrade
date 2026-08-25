@@ -1,5 +1,5 @@
 """
-settle.py -- Sunday 00:00 UTC settlement job.
+settle.py -- Sunday 00:01 UTC settlement job.
 
 Reads TWAP samples from state.json, computes averaged settlement prices,
 cash-settles all positions, updates ELO, posts champion issue.
@@ -12,7 +12,6 @@ from pathlib import Path
 from github import Github, Auth
 
 from engine import settle_week
-from github_stats import fetch_real_stats
 from twap import compute_twap_settlement
 
 STATE_FILE = Path("state.json")

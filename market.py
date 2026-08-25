@@ -76,15 +76,15 @@ def save_state(state: dict):
 
 def write_meta(state: dict):
     """Write state_meta.json for badge/dashboard use."""
-    from engine import compute_pnl, split_leagues, mark_price
+    from engine import compute_weekly_pnl, split_leagues, mark_price
     humans, bots = split_leagues(state)
     meta = {
         "week": state.get("week_number", 1),
         "tick": state.get("tick", 0),
         "fair_value": state.get("fair_value", {}),
         "last_price": state.get("last_price", {}),
-        "top_human": max(humans, key=lambda n: compute_pnl(state, n), default=None),
-        "top_bot": max(bots, key=lambda n: compute_pnl(state, n), default=None),
+        "top_human": max(humans, key=lambda n: compute_weekly_pnl(state, n), default=None),
+        "top_bot": max(bots, key=lambda n: compute_weekly_pnl(state, n), default=None),
         "twap_samples": len(state.get("twap_samples", [])),
     }
     Path("state_meta.json").write_text(json.dumps(meta, indent=2))
@@ -102,11 +102,12 @@ def _trader_eligible(state: dict, user) -> bool:
     Strict enough to kill freshly-spun alts, loose enough that any real
     student with one repo OR one follower gets in."""
     cache = state.setdefault("trader_cache", {})
-    if user.login in cache:
-        return cache[user.login]
+    if cache.get(user.login):
+        return True   # only TRUE is cached — eligibility grows over time, never expires falsely
     age_days = (datetime.now(timezone.utc) - user.created_at).days
     eligible = age_days >= TRADER_MIN_AGE_DAYS and (user.public_repos >= 1 or user.followers >= 1)
-    cache[user.login] = eligible
+    if eligible:
+        cache[user.login] = True   # don't freeze a NO — a day-20 account clears at day 30
     return eligible
 
 

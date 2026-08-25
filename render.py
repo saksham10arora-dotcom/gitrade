@@ -9,7 +9,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from engine import compute_pnl, TICKERS, STARTING_CASH, split_leagues, mark_price
+from engine import compute_weekly_pnl, TICKERS, STARTING_CASH, split_leagues, mark_price
 
 README = Path(__file__).parent / "README.md"
 
@@ -74,11 +74,11 @@ def _leaderboard(state: dict, league: str) -> str:
     if not names:
         return "_No participants yet._"
 
-    ranked = sorted(names, key=lambda n: compute_pnl(state, n), reverse=True)
+    ranked = sorted(names, key=lambda n: compute_weekly_pnl(state, n), reverse=True)
     lines = ["| Rank | Name | P&L |", "|------|------|-----|"]
     medals = ["🥇", "🥈", "🥉"]
     for i, name in enumerate(ranked[:10]):
-        pnl = compute_pnl(state, name)
+        pnl = compute_weekly_pnl(state, name)
         sign = "+" if pnl >= 0 else ""
         medal = medals[i] if i < 3 else str(i + 1)
         lines.append(f"| {medal} | {name} | {sign}{pnl:.0f} |")

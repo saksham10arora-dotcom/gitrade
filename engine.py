@@ -89,6 +89,19 @@ def compute_pnl(state: dict, name: str) -> float:
     return compute_equity(state, name) - STARTING_CASH
 
 
+def compute_weekly_pnl(state: dict, name: str) -> float:
+    """P&L since the start of the current week.
+
+    With persistent balances (no weekly cash reset), lifetime P&L crowns a
+    past winner forever. Live leaderboards and settlement rank on THIS week's
+    performance: current equity vs cash marked at week start."""
+    acct = state.get("accounts", {}).get(name)
+    if acct is None:
+        return 0.0
+    baseline = acct.get("cash_at_week_start", STARTING_CASH)
+    return compute_equity(state, name) - baseline
+
+
 # ---------------------------------------------------------------------------
 # Matching engine
 # ---------------------------------------------------------------------------
