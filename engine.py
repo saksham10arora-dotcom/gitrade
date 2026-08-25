@@ -225,6 +225,14 @@ def place_order(state: dict, order: dict) -> list[dict]:
     # Record last price
     if fills:
         state.setdefault("last_price", {})[ticker] = fills[-1]["price"]
+        vol = state.setdefault("weekly_volume", {})
+        vol[ticker] = vol.get(ticker, 0) + sum(f["qty"] for f in fills)
+        # Track who traded this week — settle_week only ELO-ranks active accounts
+        active = state.setdefault("active_this_week", [])
+        for f in fills:
+            for who in (f["buyer"], f["seller"]):
+                if who not in active:
+                    active.append(who)
         history = state.setdefault("price_history", {}).setdefault(ticker, [])
         history.extend(f["price"] for f in fills)
         if len(history) > 50:

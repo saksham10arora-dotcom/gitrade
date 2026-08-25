@@ -9,6 +9,28 @@ _Last updated: 2026-07-03 18:40 UTC_
 
 ---
 
+## Tickers
+
+| Ticker | You're betting on | Trade |
+|--------|-------------------|-------|
+| $DSTAR | gitrade repo: clean new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20DSTAR%201%20%40%205) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20DSTAR%201%20%40%205) |
+| $DFORK | gitrade repo: new forks this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20DFORK%201%20%40%202) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20DFORK%201%20%40%202) |
+| $VSCODE | microsoft/vscode: new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20VSCODE%201%20%40%20200) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20VSCODE%201%20%40%20200) |
+| $REACT | facebook/react: new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20REACT%201%20%40%20150) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20REACT%201%20%40%20150) |
+| $VSCREACT | vscode stars MINUS react stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20VSCREACT%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20VSCREACT%201%20%40%2050) |
+| $OAVSAN | OpenAI SDK stars MINUS Anthropic SDK stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20OAVSAN%201%20%40%2010) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20OAVSAN%201%20%40%2010) |
+| $RUSTGO | Rust stars MINUS Go stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20RUSTGO%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20RUSTGO%201%20%40%2050) |
+| $BUNVNODE | Bun stars MINUS Node stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20BUNVNODE%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20BUNVNODE%201%20%40%2050) |
+| $NEXTREMIX | Next.js stars MINUS React Router stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20NEXTREMIX%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20NEXTREMIX%201%20%40%2050) |
+
+Click a link, edit the qty/price in the issue title, hit submit. Your order fills on the next tick (15 min).
+Spread tickers can go NEGATIVE: quoting `@ -20` is valid.
+
+**How settlement works:** every ticker settles to the average of 24 hourly readings
+taken over the final 24h of the week (TWAP). Each reading is the week-to-date delta
+at that hour, so a last-minute star bomb moves settlement by at most 1/24th per hour.
+The number on Sunday morning is the trailing average, NOT the final delta. That is the contract.
+
 ## Market
 
 <!-- STATS_START -->

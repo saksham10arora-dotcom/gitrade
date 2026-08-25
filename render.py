@@ -33,16 +33,18 @@ def _countdown(state: dict) -> str:
 def _stats_table(state: dict) -> str:
     fv = state.get("fair_value", {})
     lp = state.get("last_price", {})
-    lines = ["| Ticker | Fair Value | Last Price | Signal |",
-             "|--------|-----------|------------|--------|"]
+    vol = state.get("weekly_volume", {})
+    lines = ["| Ticker | Fair Value | Last Price | Vol | Signal |",
+             "|--------|-----------|------------|-----|--------|"]
     for t in TICKERS:
         f = fv.get(t, "?")
         l = lp.get(t, "?")
+        v = vol.get(t, 0)
         if isinstance(f, (int, float)) and isinstance(l, (int, float)):
             dot = "🟢" if l < f else "🔴"
         else:
             dot = "⚪"
-        lines.append(f"| ${t} | {f} | {l} | {dot} |")
+        lines.append(f"| ${t} | {f} | {l} | {v} | {dot} |")
     return "\n".join(lines)
 
 
@@ -118,7 +120,7 @@ def _twap_progress(state: dict) -> str:
     target = TWAP_WINDOW_HOURS
     pct = min(100, int(n / target * 100))
     bar = "█" * (pct // 5) + "░" * (20 - pct // 5)
-    return f"**TWAP samples:** `{bar}` {n}/{target}h — settlement price will average these readings"
+    return f"**TWAP samples:** `{bar}` {n}/{target}h. Settlement price will average these readings"
 
 
 def update_readme(state: dict):
