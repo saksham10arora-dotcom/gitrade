@@ -29,15 +29,12 @@ STATE_FILE = Path("state.json")
 REPO_NAME  = os.environ.get("GITHUB_REPOSITORY", "saksham10arora-dotcom/gitrade")
 TOKEN      = os.environ.get("GITHUB_TOKEN", "")
 
-LIMIT_RE  = re.compile(
-    r"^(BUY|SELL)\s+\$?(STAR|COMMIT|FORK)\s+(\d+)\s+@\s+(\d+(?:\.\d+)?)$",
-    re.IGNORECASE,
-)
-MARKET_RE = re.compile(
-    r"^MARKET\s+(BUY|SELL)\s+\$?(STAR|COMMIT|FORK)\s+(\d+)$",
-    re.IGNORECASE,
-)
-CANCEL_RE = re.compile(r"^CANCEL\s+\$?(STAR|COMMIT|FORK)$", re.IGNORECASE)
+# Build ticker alternation from the canonical TICKERS list (derived, not hardcoded).
+# Price group allows a minus sign: spread tickers settle negative routinely.
+_T = "|".join(TICKERS)
+LIMIT_RE  = re.compile(rf"^(BUY|SELL)\s+\$?({_T})\s+(\d+)\s+@\s+(-?\d+(?:\.\d+)?)$", re.IGNORECASE)
+MARKET_RE = re.compile(rf"^MARKET\s+(BUY|SELL)\s+\$?({_T})\s+(\d+)$", re.IGNORECASE)
+CANCEL_RE = re.compile(rf"^CANCEL\s+\$?({_T})$", re.IGNORECASE)
 
 
 # ---------------------------------------------------------------------------
@@ -50,12 +47,24 @@ def load_state() -> dict:
     return {
         "week_number": 1,
         "week_start_ts": time.time(),
-        "fair_value": {"STAR": 0, "COMMIT": 0, "FORK": 0},
+        "fair_value": {t: 0 for t in TICKERS},
         "books": {},
         "accounts": {},
         "last_price": {},
         "price_history": {},
         "hall_of_fame": [],
+        "elo": {},
+        "trader_cache": {},
+        "twap_samples": [],
+        "prior_week_snapshot": {
+            "gitrade_stars": 0, "gitrade_forks": 0,
+            "vscode_stars": 0, "react_stars": 0,
+            "openai_sdk_stars": 0, "anthropic_sdk_stars": 0,
+            "rust_stars": 0, "go_stars": 0,
+            "bun_stars": 0, "node_stars": 0,
+            "nextjs_stars": 0, "remix_stars": 0,
+        },
+        "current_raw_snapshot": {},
         "tick": 0,
     }
 

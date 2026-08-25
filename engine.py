@@ -10,8 +10,14 @@ from __future__ import annotations
 import time
 from typing import Optional
 
-TICKERS = ["STAR", "COMMIT", "FORK"]
+TICKERS = [
+    "DSTAR", "DFORK",                          # Tier 1: personal repo deltas
+    "VSCODE", "REACT",                          # Tier 2: solo external deltas
+    "VSCREACT", "OAVSAN", "RUSTGO",            # Tier 2: spread markets
+    "BUNVNODE", "NEXTREMIX",
+]
 STARTING_CASH = 10_000
+MAX_POSITION = 50   # per account per ticker
 BOT_PREFIX = "_"   # house bots; excluded from human leaderboard
 
 
@@ -60,6 +66,7 @@ def mark_price(state: dict, ticker: str) -> Optional[float]:
 def get_account(state: dict, name: str) -> dict:
     return state.setdefault("accounts", {}).setdefault(name, {
         "cash": STARTING_CASH,
+        "cash_at_week_start": STARTING_CASH,   # baseline for weekly P&L / ELO ranking
         "positions": {t: 0 for t in TICKERS},
         "league": "human",
     })
@@ -98,6 +105,10 @@ def place_order(state: dict, order: dict) -> list[dict]:
       owner: str
       ts: float (unix)
     """
+    # Bankrupt accounts can't open new orders. One-time restart grant: v4.1.
+    if get_account(state, order["owner"])["cash"] <= 0:
+        return []
+
     ticker = order["ticker"]
     book = _book(state, ticker)
     fills = []
@@ -120,6 +131,9 @@ def place_order(state: dict, order: dict) -> list[dict]:
     new_passive = []
 
     for passive in passive_book:
+        if passive["owner"] == order["owner"]:   # no self-match — prevents wash trading
+            new_passive.append(passive)
+            continue
         if remaining == 0:
             new_passive.append(passive)
             continue
@@ -129,6 +143,45 @@ def place_order(state: dict, order: dict) -> list[dict]:
 
         fill_qty = min(remaining, passive["qty"])
         fill_price = passive["price"]
+
+        # Position limit on the AGGRESSOR — caps max loss on spread tickers.
+        aggressor = get_account(state, order["owner"])
+        pos_after = aggressor["positions"].get(ticker, 0) + aggressor_sign * fill_qty
+        if abs(pos_after) > MAX_POSITION:
+            fill_qty = max(0, MAX_POSITION - abs(aggressor["positions"].get(ticker, 0)))
+
+        # Enforce on the PASSIVE party too — without this, resting orders
+        # let an account accumulate unlimited position (limit bypass).
+        passive_acct = get_account(state, passive["owner"])
+        passive_after = passive_acct["positions"].get(ticker, 0) - aggressor_sign * fill_qty
+        if abs(passive_after) > MAX_POSITION:
+            allowed = MAX_POSITION - abs(passive_acct["positions"].get(ticker, 0))
+            fill_qty = max(0, min(fill_qty, allowed))
+
+        if fill_qty == 0:
+            new_passive.append(passive)
+            continue
+
+        # Positive-price margin check — buyer pays cash, truncate to what they can afford.
+        buyer_name = order["owner"] if order["side"] == "BUY" else passive["owner"]
+        buyer_acct = get_account(state, buyer_name)
+        if fill_price > 0 and buyer_acct["cash"] < fill_qty * fill_price:
+            fill_qty = max(0, int(buyer_acct["cash"] // fill_price))
+        if fill_qty == 0:
+            new_passive.append(passive)
+            continue
+
+        # Negative-price margin check — spread tickers settle negative, so the
+        # SELLER pays cash. Symmetric to the buyer check above.
+        if fill_price < 0:
+            seller_name = passive["owner"] if order["side"] == "BUY" else order["owner"]
+            seller_acct = get_account(state, seller_name)
+            cost = fill_qty * abs(fill_price)
+            if seller_acct["cash"] < cost:
+                fill_qty = max(0, int(seller_acct["cash"] // abs(fill_price)))
+            if fill_qty == 0:
+                new_passive.append(passive)
+                continue
 
         # Update aggressor account
         aggressor = get_account(state, order["owner"])
