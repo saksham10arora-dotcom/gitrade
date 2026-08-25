@@ -141,7 +141,7 @@ def decide(market: dict) -> list:
     # tickers[t]: fair_value, best_bid, best_ask, last_price, price_history
     # my_cash, my_positions, settles_in_sec, week_number
     return [
-        {"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0},
+        {"ticker": "DSTAR", "side": "BUY", "qty": 5, "price": 5.0},
     ]
 ```
 
@@ -226,10 +226,12 @@ gitrade/
 ```json
 {
   "week_number": 1,
-  "fair_value":  { "STAR": 0, "COMMIT": 0, "FORK": 0 },
-  "books":       { "STAR": { "bids": [], "asks": [] }, ... },
+  "fair_value":  { "DSTAR": 0, "DFORK": 0, "VSCODE": 0, ... },
+  "books":       { "DSTAR": { "bids": [], "asks": [] }, ... },
   "accounts":    { "username": { "cash": 10000, "positions": {...} } },
-  "price_history": { "STAR": [44, 45, 46], ... },
+  "elo":          { "username": 1000, ... },
+  "twap_samples": [],
+  "price_history": { "DSTAR": [4, 5, 6], ... },
   "hall_of_fame": []
 }
 ```
