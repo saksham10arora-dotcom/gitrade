@@ -21,6 +21,7 @@ from github import Github, Auth
 
 from engine import place_order, cancel_orders, TICKERS, get_account
 from github_stats import fetch_real_stats
+from datetime import datetime, timezone
 from bots.loader import run_all_bots
 from render import update_readme
 from charts import price_chart, leaderboard_chart
@@ -84,6 +85,7 @@ def write_meta(state: dict):
         "last_price": state.get("last_price", {}),
         "top_human": max(humans, key=lambda n: compute_pnl(state, n), default=None),
         "top_bot": max(bots, key=lambda n: compute_pnl(state, n), default=None),
+        "twap_samples": len(state.get("twap_samples", [])),
     }
     Path("state_meta.json").write_text(json.dumps(meta, indent=2))
 
@@ -91,6 +93,22 @@ def write_meta(state: dict):
 # ---------------------------------------------------------------------------
 # Issue parsing
 # ---------------------------------------------------------------------------
+
+TRADER_MIN_AGE_DAYS = 30
+
+
+def _trader_eligible(state: dict, user) -> bool:
+    """Anti-sybil gate. Aged account + minimal footprint required to trade.
+    Strict enough to kill freshly-spun alts, loose enough that any real
+    student with one repo OR one follower gets in."""
+    cache = state.setdefault("trader_cache", {})
+    if user.login in cache:
+        return cache[user.login]
+    age_days = (datetime.now(timezone.utc) - user.created_at).days
+    eligible = age_days >= TRADER_MIN_AGE_DAYS and (user.public_repos >= 1 or user.followers >= 1)
+    cache[user.login] = eligible
+    return eligible
+
 
 def parse_order(title: str, owner: str, ts: float) -> dict | None:
     title = title.strip()
@@ -139,17 +157,35 @@ def run_tick():
     state["tick"] = tick
 
     # 1. Update fair value from live GitHub stats
-    fv = fetch_real_stats(REPO_NAME, fallback=state.get("fair_value", {}))
+    prior = state.get("prior_week_snapshot")
+    fv, new_snapshot = fetch_real_stats(
+        prior_snapshot=prior,
+        repo_name=REPO_NAME,
+        fallback=state.get("fair_value", {}),
+        star_cache=state,   # incremental fraud filter — persists star_cache across ticks
+    )
     state["fair_value"] = fv
+    if new_snapshot is not None:
+        state["current_raw_snapshot"] = new_snapshot
 
     # 2. Parse GitHub Issues (human orders)
     if TOKEN:
         g = Github(auth=Auth.Token(TOKEN))
         repo = g.get_repo(REPO_NAME)
-        for issue in repo.get_issues(state="open", labels=[]):
+        open_issues = sorted(repo.get_issues(state="open", labels=[]),
+                             key=lambda i: i.created_at)
+        for issue in open_issues:
             owner = issue.user.login
             title = issue.title.strip()
             ts    = issue.created_at.timestamp()
+
+            if not _trader_eligible(state, issue.user):
+                issue.create_comment(
+                    "Order rejected: anti-sybil rules require a GitHub account "
+                    "30+ days old with at least 1 public repo or 1 follower."
+                )
+                issue.edit(state="closed")
+                continue
 
             cancel_ticker = parse_cancel(title)
             if cancel_ticker:
