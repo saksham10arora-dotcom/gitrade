@@ -102,8 +102,8 @@ def _clean_orders(raw: list, owner: str, ts: float) -> list:
                 continue
             if side not in VALID_SIDES:
                 continue
-            if qty <= 0 or price <= 0:
-                continue
+            if qty <= 0:
+                continue   # negative PRICES are valid (spread tickers settle negative)
             clean.append({
                 "ticker": ticker,
                 "side": side,
@@ -119,6 +119,12 @@ def _clean_orders(raw: list, owner: str, ts: float) -> list:
 
 def run_all_bots(state: dict, tick: int, settles_in_sec: float) -> list[dict]:
     """Discover all bots, run each, return flat list of validated orders."""
+    # Strip tokens before ANY community code runs — discover() executes
+    # module top-level code, not just decide(). Safe to pop permanently:
+    # everything after bots is local (state save, render, charts); the
+    # git push happens in the workflow shell, a separate process.
+    for key in ("GITHUB_TOKEN", "GH_TOKEN"):
+        os.environ.pop(key, None)
     all_orders = []
     ts = time.time()
     for mod in discover():
