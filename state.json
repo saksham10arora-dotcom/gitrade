@@ -1,102 +1,28 @@
 {
-  "week_number": 4,
-  "week_start_ts": 1782614165.1670334,
+  "week_number": 1,
+  "week_start_ts": 1787672906.412937,
   "fair_value": {
-    "STAR": 0,
-    "COMMIT": 0,
-    "FORK": 0
+    "DSTAR": 0,
+    "DFORK": 0,
+    "VSCODE": 0,
+    "REACT": 0,
+    "VSCREACT": 0,
+    "OAVSAN": 0,
+    "RUSTGO": 0,
+    "BUNVNODE": 0,
+    "NEXTREMIX": 0
   },
-  "books": {
-    "STAR": {
-      "bids": [],
-      "asks": []
-    },
-    "COMMIT": {
-      "bids": [],
-      "asks": []
-    },
-    "FORK": {
-      "bids": [],
-      "asks": []
-    }
-  },
-  "accounts": {
-    "_mm": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "_momentum": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "_noise": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    },
-    "example_meanrev": {
-      "cash": 10000,
-      "positions": {
-        "STAR": 0,
-        "COMMIT": 0,
-        "FORK": 0
-      },
-      "league": "human"
-    }
-  },
+  "books": {},
+  "accounts": {},
   "last_price": {},
   "price_history": {},
-  "hall_of_fame": [
-    {
-      "week": 1,
-      "league": "human",
-      "name": "example_meanrev",
-      "pnl": 0
-    },
-    {
-      "week": 1,
-      "league": "bot",
-      "name": "_mm",
-      "pnl": 7.54
-    },
-    {
-      "week": 2,
-      "league": "human",
-      "name": "example_meanrev",
-      "pnl": 349.59
-    },
-    {
-      "week": 2,
-      "league": "bot",
-      "name": "_mm",
-      "pnl": -72.17
-    },
-    {
-      "week": 3,
-      "league": "human",
-      "name": "example_meanrev",
-      "pnl": 0
-    },
-    {
-      "week": 3,
-      "league": "bot",
-      "name": "_mm",
-      "pnl": 0
-    }
-  ],
-  "tick": 224
+  "hall_of_fame": [],
+  "elo": {},
+  "trader_cache": {},
+  "twap_samples": [],
+  "prior_week_snapshot": {},
+  "current_raw_snapshot": {},
+  "weekly_volume": {},
+  "active_this_week": [],
+  "tick": 0
 }

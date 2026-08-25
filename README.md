@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-07-03 18:40 UTC_
+_Last updated: 2026-08-25 15:48 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -34,15 +34,21 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 ## Market
 
 <!-- STATS_START -->
-| Ticker | Fair Value | Last Price | Signal |
-|--------|-----------|------------|--------|
-| $STAR | 0 | ? | ⚪ |
-| $COMMIT | 0 | ? | ⚪ |
-| $FORK | 0 | ? | ⚪ |
+| Ticker | Fair Value | Last Price | Vol | Signal |
+|--------|-----------|------------|-----|--------|
+| $DSTAR | 0 | ? | 0 | ⚪ |
+| $DFORK | 0 | ? | 0 | ⚪ |
+| $VSCODE | 0 | ? | 0 | ⚪ |
+| $REACT | 0 | ? | 0 | ⚪ |
+| $VSCREACT | 0 | ? | 0 | ⚪ |
+| $OAVSAN | 0 | ? | 0 | ⚪ |
+| $RUSTGO | 0 | ? | 0 | ⚪ |
+| $BUNVNODE | 0 | ? | 0 | ⚪ |
+| $NEXTREMIX | 0 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 7h 55m**
+**Settlement in: 6d 23h 59m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -51,15 +57,39 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 
 <!-- BOOK_START -->
 
-**$STAR**
+**$DSTAR**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 
-**$COMMIT**
+**$DFORK**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 
-**$FORK**
+**$VSCODE**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$REACT**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$VSCREACT**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$OAVSAN**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$RUSTGO**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$BUNVNODE**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$NEXTREMIX**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 <!-- BOOK_END -->
@@ -73,15 +103,15 @@ Open a GitHub Issue. The **title** is your order.
 <table>
 <tr>
 <td><strong>Limit</strong></td>
-<td><kbd>BUY $STAR 10 @ 45</kbd> &nbsp; <kbd>SELL $COMMIT 5 @ 12</kbd></td>
+<td><kbd>BUY $DSTAR 10 @ 5</kbd> &nbsp; <kbd>SELL $VSCREACT 5 @ -20</kbd></td>
 </tr>
 <tr>
 <td><strong>Market</strong></td>
-<td><kbd>MARKET BUY $FORK 3</kbd></td>
+<td><kbd>MARKET BUY $VSCODE 3</kbd></td>
 </tr>
 <tr>
 <td><strong>Cancel</strong></td>
-<td><kbd>CANCEL $STAR</kbd></td>
+<td><kbd>CANCEL $DSTAR</kbd></td>
 </tr>
 </table>
 
@@ -96,9 +126,7 @@ CI picks it up within 15 min, closes the issue, updates the book. Every account 
 File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
-| Rank | Name | P&L |
-|------|------|-----|
-| 🥇 | example_meanrev | +0 |
+_No participants yet._
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -120,11 +148,7 @@ def decide(market: dict) -> list:
 Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
-| Rank | Name | P&L |
-|------|------|-----|
-| 🥇 | _mm | +0 |
-| 🥈 | _momentum | +0 |
-| 🥉 | _noise | +0 |
+_No participants yet._
 <!-- BOT_BOARD_END -->
 
 ---
@@ -147,26 +171,19 @@ The market price is where people think those numbers land. Settlement is where t
 ## Hall of Fame
 
 <!-- HALLOFFAME_START -->
-| Week | League | Champion | P&L |
-|------|--------|----------|-----|
-| 3 | bot | _mm | +0 |
-| 3 | human | example_meanrev | +0 |
-| 2 | bot | _mm | +-72 |
-| 2 | human | example_meanrev | +350 |
-| 1 | bot | _mm | +8 |
-| 1 | human | example_meanrev | +0 |
+_No champions yet. First settlement is Sunday._
 <!-- HALLOFFAME_END -->
 
 ## ELO Ladder
 
 <!-- ELO_START -->
-_ELO ladder loading..._
+_No ELO data yet. First settlement unlocks the ladder._
 <!-- ELO_END -->
 
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-_TWAP progress loading..._
+**TWAP samples:** `░░░░░░░░░░░░░░░░░░░░` 0/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
