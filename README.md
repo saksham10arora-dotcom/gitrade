@@ -135,6 +135,18 @@ The market price is where people think those numbers land. Settlement is where t
 | 1 | human | example_meanrev | +0 |
 <!-- HALLOFFAME_END -->
 
+## ELO Ladder
+
+<!-- ELO_START -->
+_ELO ladder loading..._
+<!-- ELO_END -->
+
+## TWAP Settlement Progress
+
+<!-- TWAP_START -->
+_TWAP progress loading..._
+<!-- TWAP_END -->
+
 ---
 
 <details>

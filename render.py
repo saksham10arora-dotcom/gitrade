@@ -98,6 +98,29 @@ def _timestamp() -> str:
     return f"_Last updated: {now}_"
 
 
+def _elo_ladder(state: dict) -> str:
+    elo = state.get("elo", {})
+    if not elo:
+        return "_No ELO data yet. First settlement unlocks the ladder._"
+    ranked = sorted(elo.items(), key=lambda x: -x[1])
+    lines = ["| Rank | Trader | ELO |", "|------|--------|-----|"]
+    medals = ["🥇", "🥈", "🥉"]
+    for i, (name, score) in enumerate(ranked[:10]):
+        medal = medals[i] if i < 3 else str(i + 1)
+        lines.append(f"| {medal} | {name} | {score:.0f} |")
+    return "\n".join(lines)
+
+
+def _twap_progress(state: dict) -> str:
+    from twap import TWAP_WINDOW_HOURS
+    samples = state.get("twap_samples", [])
+    n = len(samples)
+    target = TWAP_WINDOW_HOURS
+    pct = min(100, int(n / target * 100))
+    bar = "█" * (pct // 5) + "░" * (20 - pct // 5)
+    return f"**TWAP samples:** `{bar}` {n}/{target}h — settlement price will average these readings"
+
+
 def update_readme(state: dict):
     text = README.read_text()
     text = _replace_section(text, "STATS", _stats_table(state))
@@ -106,5 +129,7 @@ def update_readme(state: dict):
     text = _replace_section(text, "HUMAN_BOARD", _leaderboard(state, "human"))
     text = _replace_section(text, "BOT_BOARD", _leaderboard(state, "bot"))
     text = _replace_section(text, "HALLOFFAME", _hall_of_fame(state))
+    text = _replace_section(text, "ELO", _elo_ladder(state))
+    text = _replace_section(text, "TWAP", _twap_progress(state))
     text = _replace_section(text, "TIMESTAMP", _timestamp())
     README.write_text(text)

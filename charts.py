@@ -11,9 +11,17 @@ ASSETS = Path(__file__).parent / "assets"
 ASSETS.mkdir(exist_ok=True)
 
 _NEON = {
-    "STAR":   "#00e5ff",
-    "COMMIT": "#76ff03",
-    "FORK":   "#ff4081",
+    "DSTAR":     "#00e5ff",
+    "DFORK":     "#ff4081",
+    "VSCODE":    "#2196f3",
+    "REACT":     "#61dafb",
+    "VSCREACT":  "#7c4dff",
+    "OAVSAN":    "#d97757",
+    "RUSTGO":    "#ff7043",
+    "BUNVNODE":  "#f9f1e1",
+    "NEXTREMIX": "#76ff03",
+    "pos":       "#76ff03",   # leaderboard gain bars (was COMMIT)
+    "neg":       "#ff4081",   # leaderboard loss bars (was FORK)
     "fair":   "#ffffff",
     "bg":     "#0d1117",
     "grid":   "#21262d",
@@ -91,7 +99,7 @@ def leaderboard_chart(state: dict):
 
     names = list(accounts.keys())
     pnls = [compute_pnl(state, n) for n in names]
-    colors = [_NEON["COMMIT"] if p >= 0 else _NEON["FORK"] for p in pnls]
+    colors = [_NEON["pos"] if p >= 0 else _NEON["neg"] for p in pnls]
 
     fig, ax = plt.subplots(figsize=(8, max(3, len(names) * 0.5)),
                            facecolor=_NEON["bg"])
