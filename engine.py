@@ -254,55 +254,113 @@ def split_leagues(state: dict) -> tuple[list[str], list[str]]:
     return humans, bots
 
 
+ELO_K = 32
+
+
+def compute_elo_update(elo_before: dict, rankings: list[str], pnls: dict | None = None) -> dict:
+    """
+    Update ELO for all traders based on their weekly rank.
+    rankings: list of trader names sorted best-to-worst by P&L.
+    pnls: optional name->pnl map; exact P&L ties score 0.5 (draw).
+    Without tie handling, idle accounts at identical pnl=0 would win/lose
+    on arbitrary sort order and their ELO would drift randomly every week.
+    """
+    elo = {name: elo_before.get(name, 1000) for name in rankings}
+    n = len(rankings)
+    if n < 2:
+        return elo
+
+    updates = {name: 0.0 for name in rankings}
+    for i, name in enumerate(rankings):
+        for j, opponent in enumerate(rankings):
+            if i == j:
+                continue
+            expected = 1 / (1 + 10 ** ((elo[opponent] - elo[name]) / 400))
+            if pnls is not None and pnls.get(name) == pnls.get(opponent):
+                actual = 0.5                     # exact tie = draw
+            else:
+                actual = 1.0 if i < j else 0.0   # lower index = better rank = win
+            updates[name] += ELO_K * (actual - expected) / (n - 1)
+
+    return {name: round(elo[name] + updates[name], 1) for name in rankings}
+
+
 # ---------------------------------------------------------------------------
 # Settlement
 # ---------------------------------------------------------------------------
 
 def settle_week(state: dict, real_stats: dict) -> dict:
     """
-    Cash-settle all positions to real GitHub numbers.
-    Returns a summary dict with P&L for every account.
-    real_stats: {"STAR": int, "COMMIT": int, "FORK": int}
+    Cash-settle all positions to real stats (TWAP prices).
+    Update ELO. Clear positions. Do NOT reset cash balances.
+    Returns summary dict with P&L for every account.
     """
     summary = {}
-    for name, acct in state.get("accounts", {}).items():
-        equity_before = compute_equity(state, name)
-        cash = acct["cash"]
 
-        for ticker, qty in acct["positions"].items():
+    for name, acct in state.get("accounts", {}).items():
+        cash = acct["cash"]
+        for ticker, qty in list(acct["positions"].items()):
             real = real_stats.get(ticker)
             if real is None or qty == 0:
                 continue
-            settlement_value = qty * real
-            cash += settlement_value
+            cash += qty * real           # cash-settle: pnl = qty * settlement_price
+            acct["positions"][ticker] = 0  # zero out position
 
-        pnl = cash - STARTING_CASH
+        acct["cash"] = round(cash, 2)
+
+        # Weekly P&L = vs cash at week start, NOT lifetime vs STARTING_CASH.
+        week_open = acct.get("cash_at_week_start", STARTING_CASH)
+        pnl = acct["cash"] - week_open
         summary[name] = {
-            "final_cash": round(cash, 2),
+            "final_cash": acct["cash"],
             "pnl": round(pnl, 2),
-            "equity_before_settle": round(equity_before, 2),
         }
 
-    # Crown champions
+    # ELO update — only accounts that actually traded this week are ranked.
+    active = set(state.get("active_this_week", []))
     humans, bots = split_leagues(state)
-    human_summary = {n: summary[n] for n in humans if n in summary}
-    bot_summary = {n: summary[n] for n in bots if n in summary}
+    pnls = {n: data["pnl"] for n, data in summary.items()}
+    human_ranked = sorted([n for n in humans if n in active], key=lambda n: pnls.get(n, 0), reverse=True)
+    bot_ranked   = sorted([n for n in bots   if n in active], key=lambda n: pnls.get(n, 0), reverse=True)
 
-    best_human = max(human_summary, key=lambda n: human_summary[n]["pnl"], default=None)
-    best_bot = max(bot_summary, key=lambda n: bot_summary[n]["pnl"], default=None)
+    elo_snapshot = dict(state.get("elo", {}))   # snapshot before mutation
+    state.setdefault("elo", {})
+    state["elo"].update(compute_elo_update(elo_snapshot, human_ranked, pnls))
+    state["elo"].update(compute_elo_update(elo_snapshot, bot_ranked, pnls))
 
+    # Hall of fame
     hall = state.setdefault("hall_of_fame", [])
     week = state.get("week_number", 1)
+    best_human = human_ranked[0] if human_ranked else None
+    best_bot   = bot_ranked[0]   if bot_ranked   else None
     if best_human:
-        hall.append({"week": week, "league": "human", "name": best_human, "pnl": human_summary[best_human]["pnl"]})
+        hall.append({"week": week, "league": "human", "name": best_human,
+                     "pnl": summary[best_human]["pnl"],
+                     "elo": state["elo"].get(best_human, 1000)})
     if best_bot:
-        hall.append({"week": week, "league": "bot", "name": best_bot, "pnl": bot_summary[best_bot]["pnl"]})
+        hall.append({"week": week, "league": "bot", "name": best_bot,
+                     "pnl": summary[best_bot]["pnl"],
+                     "elo": state["elo"].get(best_bot, 1000)})
 
-    # Reset state for new week
-    state["accounts"] = {}
+    # Snapshot rollover: current raw snapshot becomes next week's prior
+    current_raw = state.get("current_raw_snapshot")
+    if current_raw:
+        state["prior_week_snapshot"] = current_raw
+        state["current_raw_snapshot"] = {}
+
+    # Roll week-start cash marks + refill bot liquidity floor.
+    for name, acct in state.get("accounts", {}).items():
+        if name.startswith(BOT_PREFIX) and acct["cash"] < 1_000:
+            acct["cash"] = 1_000.0
+        acct["cash_at_week_start"] = acct["cash"]
+
+    # Reset only market microstructure (books, samples) — not cash
     state["books"] = {}
     state["last_price"] = {}
     state["price_history"] = {}
+    state["twap_samples"] = []
+    state["active_this_week"] = []
+    state["weekly_volume"] = {}
     state["fair_value"] = real_stats.copy()
     state["week_number"] = week + 1
     state["week_start_ts"] = time.time()

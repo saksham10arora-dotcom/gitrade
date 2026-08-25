@@ -44,3 +44,105 @@ def test_negative_price_seller_margin_check():
     filled = sum(f["qty"] for f in fills)
     assert filled == 5
     assert state["accounts"]["seller"]["cash"] >= 0
+
+
+# ---------------------------------------------------------------------------
+# Task 4: persistent ELO + no cash reset
+# ---------------------------------------------------------------------------
+from engine import settle_week, compute_elo_update, STARTING_CASH
+
+
+def test_elo_update_winner_gains():
+    rankings = ["alice", "bob", "carol"]
+    elo_before = {"alice": 1000, "bob": 1000, "carol": 1000}
+    elo_after = compute_elo_update(elo_before, rankings)
+    assert elo_after["alice"] > 1000
+    assert elo_after["carol"] < 1000
+    assert elo_after["bob"] > elo_after["carol"]
+
+
+def test_elo_tie_scores_half():
+    rankings = ["a", "b"]
+    pnls = {"a": 100.0, "b": 100.0}
+    elo_after = compute_elo_update({"a": 1000, "b": 1000}, rankings, pnls)
+    assert elo_after["a"] == 1000
+    assert elo_after["b"] == 1000
+
+
+def test_settle_does_not_reset_cash():
+    state = {
+        "accounts": {
+            "alice": {"cash": 10500.0, "positions": {"DSTAR": 10, "DFORK": 0, "VSCODE": 0, "REACT": 0, "SPREAD": 0}, "league": "human"},
+            "bob":   {"cash":  9500.0, "positions": {"DSTAR": 0, "DFORK": 0, "VSCODE": 0, "REACT": 0, "SPREAD": 0}, "league": "human"},
+        },
+        "books": {}, "elo": {"alice": 1020, "bob": 980}, "twap_samples": [],
+        "hall_of_fame": [], "week_number": 2, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+    }
+    real_stats = {"DSTAR": 5, "DFORK": 1, "VSCODE": 200, "REACT": 180, "SPREAD": 20}
+    settle_week(state, real_stats)
+    alice_cash = state["accounts"]["alice"]["cash"]
+    assert alice_cash != STARTING_CASH
+    assert alice_cash == 10500.0 + 10 * 5
+
+
+def test_settle_updates_elo():
+    state = {
+        "accounts": {
+            "winner": {"cash": 11000.0, "positions": {t: 0 for t in ["DSTAR","DFORK","VSCODE","REACT","SPREAD"]}, "league": "human"},
+            "loser":  {"cash":  9000.0, "positions": {t: 0 for t in ["DSTAR","DFORK","VSCODE","REACT","SPREAD"]}, "league": "human"},
+        },
+        "books": {}, "elo": {}, "twap_samples": [], "hall_of_fame": [],
+        "week_number": 1, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+        "active_this_week": ["winner", "loser"],
+    }
+    real_stats = {"DSTAR": 3, "DFORK": 1, "VSCODE": 100, "REACT": 80, "SPREAD": 20}
+    settle_week(state, real_stats)
+    assert state["elo"]["winner"] > 1000
+    assert state["elo"]["loser"]  < 1000
+
+
+def test_settle_ranks_by_weekly_pnl_not_lifetime():
+    state = {
+        "accounts": {
+            "rich_idle": {"cash": 15000.0, "cash_at_week_start": 15000.0,
+                          "positions": {t: 0 for t in ["DSTAR","DFORK","VSCODE","REACT","SPREAD"]}, "league": "human"},
+            "grinder":   {"cash": 10500.0, "cash_at_week_start": 10000.0,
+                          "positions": {t: 0 for t in ["DSTAR","DFORK","VSCODE","REACT","SPREAD"]}, "league": "human"},
+        },
+        "books": {}, "elo": {}, "twap_samples": [], "hall_of_fame": [],
+        "week_number": 5, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+        "active_this_week": ["grinder"],
+    }
+    real_stats = {"DSTAR": 3, "DFORK": 1, "VSCODE": 100, "REACT": 80, "SPREAD": 20}
+    summary = settle_week(state, real_stats)
+    assert summary["rich_idle"]["pnl"] == 0
+    assert summary["grinder"]["pnl"] == 500
+    assert "rich_idle" not in state["elo"]
+
+
+def test_bot_refill_floor():
+    state = {
+        "accounts": {
+            "_mm": {"cash": 200.0, "cash_at_week_start": 200.0,
+                    "positions": {t: 0 for t in ["DSTAR","DFORK","VSCODE","REACT","SPREAD"]}, "league": "human"},
+        },
+        "books": {}, "elo": {}, "twap_samples": [], "hall_of_fame": [],
+        "week_number": 3, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+    }
+    real_stats = {"DSTAR": 0, "DFORK": 0, "VSCODE": 0, "REACT": 0, "SPREAD": 0}
+    settle_week(state, real_stats)
+    assert state["accounts"]["_mm"]["cash"] == 1000.0
+    assert state["accounts"]["_mm"]["cash_at_week_start"] == 1000.0
+
+
+def test_settle_clears_positions_after_settlement():
+    state = {
+        "accounts": {
+            "alice": {"cash": 10000.0, "positions": {"DSTAR": 5, "DFORK": 0, "VSCODE": 0, "REACT": 0, "SPREAD": 0}, "league": "human"},
+        },
+        "books": {}, "elo": {}, "twap_samples": [], "hall_of_fame": [],
+        "week_number": 1, "prior_week_snapshot": {}, "current_raw_snapshot": {},
+    }
+    real_stats = {"DSTAR": 4, "DFORK": 0, "VSCODE": 100, "REACT": 90, "SPREAD": 10}
+    settle_week(state, real_stats)
+    assert state["accounts"]["alice"]["positions"]["DSTAR"] == 0
