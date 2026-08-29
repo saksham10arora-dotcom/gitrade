@@ -9,7 +9,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from engine import compute_pnl, TICKERS, STARTING_CASH, split_leagues, mark_price
+from engine import compute_weekly_pnl, TICKERS, STARTING_CASH, split_leagues, mark_price
 
 README = Path(__file__).parent / "README.md"
 
@@ -33,16 +33,18 @@ def _countdown(state: dict) -> str:
 def _stats_table(state: dict) -> str:
     fv = state.get("fair_value", {})
     lp = state.get("last_price", {})
-    lines = ["| Ticker | Fair Value | Last Price | Signal |",
-             "|--------|-----------|------------|--------|"]
+    vol = state.get("weekly_volume", {})
+    lines = ["| Ticker | Fair Value | Last Price | Vol | Signal |",
+             "|--------|-----------|------------|-----|--------|"]
     for t in TICKERS:
         f = fv.get(t, "?")
         l = lp.get(t, "?")
+        v = vol.get(t, 0)
         if isinstance(f, (int, float)) and isinstance(l, (int, float)):
             dot = "🟢" if l < f else "🔴"
         else:
             dot = "⚪"
-        lines.append(f"| ${t} | {f} | {l} | {dot} |")
+        lines.append(f"| ${t} | {f} | {l} | {v} | {dot} |")
     return "\n".join(lines)
 
 
@@ -72,11 +74,11 @@ def _leaderboard(state: dict, league: str) -> str:
     if not names:
         return "_No participants yet._"
 
-    ranked = sorted(names, key=lambda n: compute_pnl(state, n), reverse=True)
+    ranked = sorted(names, key=lambda n: compute_weekly_pnl(state, n), reverse=True)
     lines = ["| Rank | Name | P&L |", "|------|------|-----|"]
     medals = ["🥇", "🥈", "🥉"]
     for i, name in enumerate(ranked[:10]):
-        pnl = compute_pnl(state, name)
+        pnl = compute_weekly_pnl(state, name)
         sign = "+" if pnl >= 0 else ""
         medal = medals[i] if i < 3 else str(i + 1)
         lines.append(f"| {medal} | {name} | {sign}{pnl:.0f} |")
@@ -98,6 +100,29 @@ def _timestamp() -> str:
     return f"_Last updated: {now}_"
 
 
+def _elo_ladder(state: dict) -> str:
+    elo = state.get("elo", {})
+    if not elo:
+        return "_No ELO data yet. First settlement unlocks the ladder._"
+    ranked = sorted(elo.items(), key=lambda x: -x[1])
+    lines = ["| Rank | Trader | ELO |", "|------|--------|-----|"]
+    medals = ["🥇", "🥈", "🥉"]
+    for i, (name, score) in enumerate(ranked[:10]):
+        medal = medals[i] if i < 3 else str(i + 1)
+        lines.append(f"| {medal} | {name} | {score:.0f} |")
+    return "\n".join(lines)
+
+
+def _twap_progress(state: dict) -> str:
+    from twap import TWAP_WINDOW_HOURS
+    samples = state.get("twap_samples", [])
+    n = len(samples)
+    target = TWAP_WINDOW_HOURS
+    pct = min(100, int(n / target * 100))
+    bar = "█" * (pct // 5) + "░" * (20 - pct // 5)
+    return f"**TWAP samples:** `{bar}` {n}/{target}h. Settlement price will average these readings"
+
+
 def update_readme(state: dict):
     text = README.read_text()
     text = _replace_section(text, "STATS", _stats_table(state))
@@ -106,5 +131,7 @@ def update_readme(state: dict):
     text = _replace_section(text, "HUMAN_BOARD", _leaderboard(state, "human"))
     text = _replace_section(text, "BOT_BOARD", _leaderboard(state, "bot"))
     text = _replace_section(text, "HALLOFFAME", _hall_of_fame(state))
+    text = _replace_section(text, "ELO", _elo_ladder(state))
+    text = _replace_section(text, "TWAP", _twap_progress(state))
     text = _replace_section(text, "TIMESTAMP", _timestamp())
     README.write_text(text)

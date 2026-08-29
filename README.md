@@ -4,23 +4,51 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-08-25 16:02 UTC_
+_Last updated: 2026-08-25 15:48 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
 
+## Tickers
+
+| Ticker | You're betting on | Trade |
+|--------|-------------------|-------|
+| $DSTAR | gitrade repo: clean new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20DSTAR%201%20%40%205) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20DSTAR%201%20%40%205) |
+| $DFORK | gitrade repo: new forks this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20DFORK%201%20%40%202) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20DFORK%201%20%40%202) |
+| $VSCODE | microsoft/vscode: new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20VSCODE%201%20%40%20200) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20VSCODE%201%20%40%20200) |
+| $REACT | facebook/react: new stars this week | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20REACT%201%20%40%20150) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20REACT%201%20%40%20150) |
+| $VSCREACT | vscode stars MINUS react stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20VSCREACT%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20VSCREACT%201%20%40%2050) |
+| $OAVSAN | OpenAI SDK stars MINUS Anthropic SDK stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20OAVSAN%201%20%40%2010) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20OAVSAN%201%20%40%2010) |
+| $RUSTGO | Rust stars MINUS Go stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20RUSTGO%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20RUSTGO%201%20%40%2050) |
+| $BUNVNODE | Bun stars MINUS Node stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20BUNVNODE%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20BUNVNODE%201%20%40%2050) |
+| $NEXTREMIX | Next.js stars MINUS React Router stars | [BUY](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=BUY%20NEXTREMIX%201%20%40%2050) · [SELL](https://github.com/saksham10arora-dotcom/gitrade/issues/new?title=SELL%20NEXTREMIX%201%20%40%2050) |
+
+Click a link, edit the qty/price in the issue title, hit submit. Your order fills on the next tick (15 min).
+Spread tickers can go NEGATIVE: quoting `@ -20` is valid.
+
+**How settlement works:** every ticker settles to the average of 24 hourly readings
+taken over the final 24h of the week (TWAP). Each reading is the week-to-date delta
+at that hour, so a last-minute star bomb moves settlement by at most 1/24th per hour.
+The number on Sunday morning is the trailing average, NOT the final delta. That is the contract.
+
 ## Market
 
 <!-- STATS_START -->
-| Ticker | Fair Value | Last Price | Signal |
-|--------|-----------|------------|--------|
-| $STAR | 0 | ? | ⚪ |
-| $COMMIT | 0 | ? | ⚪ |
-| $FORK | 0 | ? | ⚪ |
+| Ticker | Fair Value | Last Price | Vol | Signal |
+|--------|-----------|------------|-----|--------|
+| $DSTAR | 0 | ? | 0 | ⚪ |
+| $DFORK | 0 | ? | 0 | ⚪ |
+| $VSCODE | 0 | ? | 0 | ⚪ |
+| $REACT | 0 | ? | 0 | ⚪ |
+| $VSCREACT | 0 | ? | 0 | ⚪ |
+| $OAVSAN | 0 | ? | 0 | ⚪ |
+| $RUSTGO | 0 | ? | 0 | ⚪ |
+| $BUNVNODE | 0 | ? | 0 | ⚪ |
+| $NEXTREMIX | 0 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 8h 41m**
+**Settlement in: 6d 23h 59m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -29,15 +57,39 @@ _Last updated: 2026-08-25 16:02 UTC_
 
 <!-- BOOK_START -->
 
-**$STAR**
+**$DSTAR**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 
-**$COMMIT**
+**$DFORK**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 
-**$FORK**
+**$VSCODE**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$REACT**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$VSCREACT**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$OAVSAN**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$RUSTGO**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$BUNVNODE**
+| Side | Price | Qty | Owner |
+|------|-------|-----|-------|
+
+**$NEXTREMIX**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 <!-- BOOK_END -->
@@ -51,15 +103,15 @@ Open a GitHub Issue. The **title** is your order.
 <table>
 <tr>
 <td><strong>Limit</strong></td>
-<td><kbd>BUY $STAR 10 @ 45</kbd> &nbsp; <kbd>SELL $COMMIT 5 @ 12</kbd></td>
+<td><kbd>BUY $DSTAR 10 @ 5</kbd> &nbsp; <kbd>SELL $VSCREACT 5 @ -20</kbd></td>
 </tr>
 <tr>
 <td><strong>Market</strong></td>
-<td><kbd>MARKET BUY $FORK 3</kbd></td>
+<td><kbd>MARKET BUY $VSCODE 3</kbd></td>
 </tr>
 <tr>
 <td><strong>Cancel</strong></td>
-<td><kbd>CANCEL $STAR</kbd></td>
+<td><kbd>CANCEL $DSTAR</kbd></td>
 </tr>
 </table>
 
@@ -74,9 +126,7 @@ CI picks it up within 15 min, closes the issue, updates the book. Every account 
 File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
-| Rank | Name | P&L |
-|------|------|-----|
-| 🥇 | example_meanrev | +0 |
+_No participants yet._
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -91,32 +141,33 @@ def decide(market: dict) -> list:
     # tickers[t]: fair_value, best_bid, best_ask, last_price, price_history
     # my_cash, my_positions, settles_in_sec, week_number
     return [
-        {"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0},
+        {"ticker": "DSTAR", "side": "BUY", "qty": 5, "price": 5.0},
     ]
 ```
 
 Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
-| Rank | Name | P&L |
-|------|------|-----|
-| 🥇 | _mm | +0 |
-| 🥈 | _momentum | +0 |
-| 🥉 | _noise | +0 |
+_No participants yet._
 <!-- BOT_BOARD_END -->
 
 ---
 
 ## Settlement
 
-Every **Sunday at 00:00 UTC**:
+Every **Sunday at 00:01 UTC**:
 
 ```
-1. pull real GitHub stats (stars / commits-this-week / forks)
-2. cash-settle all positions to those numbers
-3. post champion Issue
-4. reset all accounts to $10,000
+1. compute each ticker's settlement = TWAP (average of 24 hourly readings
+   over the final 24h of the week), not a single closing snapshot
+2. cash-settle all positions to those numbers (signed: spreads settle +/-)
+3. update persistent ELO for accounts that traded this week
+4. post champion Issue
 ```
+
+Balances PERSIST across weeks. There is no weekly reset. Your cash carries forward,
+your ELO carries forward, and the weekly leaderboard ranks P&L since Monday.
+House bots get topped up to a liquidity floor; humans carry their wins and losses.
 
 The market price is where people think those numbers land. Settlement is where they actually land.
 
@@ -125,19 +176,20 @@ The market price is where people think those numbers land. Settlement is where t
 ## Hall of Fame
 
 <!-- HALLOFFAME_START -->
-| Week | League | Champion | P&L |
-|------|--------|----------|-----|
-| 11 | bot | _mm | +0 |
-| 11 | human | example_meanrev | +0 |
-| 10 | bot | _mm | +0 |
-| 10 | human | example_meanrev | +0 |
-| 9 | bot | _mm | +0 |
-| 9 | human | example_meanrev | +0 |
-| 8 | bot | _mm | +0 |
-| 8 | human | example_meanrev | +0 |
-| 7 | bot | _mm | +0 |
-| 7 | human | example_meanrev | +0 |
+_No champions yet. First settlement is Sunday._
 <!-- HALLOFFAME_END -->
+
+## ELO Ladder
+
+<!-- ELO_START -->
+_No ELO data yet. First settlement unlocks the ladder._
+<!-- ELO_END -->
+
+## TWAP Settlement Progress
+
+<!-- TWAP_START -->
+**TWAP samples:** `░░░░░░░░░░░░░░░░░░░░` 0/24h. Settlement price will average these readings
+<!-- TWAP_END -->
 
 ---
 
@@ -150,7 +202,7 @@ The market price is where people think those numbers land. Settlement is where t
 gitrade/
 ├── engine.py           matching engine, P&L, settlement  (pure logic, no I/O)
 ├── market.py           15-min tick: parse issues -> run bots -> match -> render
-├── settle.py           Sunday 00:00 UTC cron
+├── settle.py           Sunday 00:01 UTC cron
 ├── render.py           state dict -> README marker sections
 ├── charts.py           neon SVG price + leaderboard charts
 ├── github_stats.py     live GitHub API (never raises, returns fallback)
@@ -174,10 +226,12 @@ gitrade/
 ```json
 {
   "week_number": 1,
-  "fair_value":  { "STAR": 0, "COMMIT": 0, "FORK": 0 },
-  "books":       { "STAR": { "bids": [], "asks": [] }, ... },
+  "fair_value":  { "DSTAR": 0, "DFORK": 0, "VSCODE": 0, ... },
+  "books":       { "DSTAR": { "bids": [], "asks": [] }, ... },
   "accounts":    { "username": { "cash": 10000, "positions": {...} } },
-  "price_history": { "STAR": [44, 45, 46], ... },
+  "elo":          { "username": 1000, ... },
+  "twap_samples": [],
+  "price_history": { "DSTAR": [4, 5, 6], ... },
   "hall_of_fame": []
 }
 ```

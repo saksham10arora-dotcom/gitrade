@@ -21,6 +21,7 @@ from github import Github, Auth
 
 from engine import place_order, cancel_orders, TICKERS, get_account
 from github_stats import fetch_real_stats
+from datetime import datetime, timezone
 from bots.loader import run_all_bots
 from render import update_readme
 from charts import price_chart, leaderboard_chart
@@ -29,15 +30,12 @@ STATE_FILE = Path("state.json")
 REPO_NAME  = os.environ.get("GITHUB_REPOSITORY", "saksham10arora-dotcom/gitrade")
 TOKEN      = os.environ.get("GITHUB_TOKEN", "")
 
-LIMIT_RE  = re.compile(
-    r"^(BUY|SELL)\s+\$?(STAR|COMMIT|FORK)\s+(\d+)\s+@\s+(\d+(?:\.\d+)?)$",
-    re.IGNORECASE,
-)
-MARKET_RE = re.compile(
-    r"^MARKET\s+(BUY|SELL)\s+\$?(STAR|COMMIT|FORK)\s+(\d+)$",
-    re.IGNORECASE,
-)
-CANCEL_RE = re.compile(r"^CANCEL\s+\$?(STAR|COMMIT|FORK)$", re.IGNORECASE)
+# Build ticker alternation from the canonical TICKERS list (derived, not hardcoded).
+# Price group allows a minus sign: spread tickers settle negative routinely.
+_T = "|".join(TICKERS)
+LIMIT_RE  = re.compile(rf"^(BUY|SELL)\s+\$?({_T})\s+(\d+)\s+@\s+(-?\d+(?:\.\d+)?)$", re.IGNORECASE)
+MARKET_RE = re.compile(rf"^MARKET\s+(BUY|SELL)\s+\$?({_T})\s+(\d+)$", re.IGNORECASE)
+CANCEL_RE = re.compile(rf"^CANCEL\s+\$?({_T})$", re.IGNORECASE)
 
 
 # ---------------------------------------------------------------------------
@@ -50,12 +48,24 @@ def load_state() -> dict:
     return {
         "week_number": 1,
         "week_start_ts": time.time(),
-        "fair_value": {"STAR": 0, "COMMIT": 0, "FORK": 0},
+        "fair_value": {t: 0 for t in TICKERS},
         "books": {},
         "accounts": {},
         "last_price": {},
         "price_history": {},
         "hall_of_fame": [],
+        "elo": {},
+        "trader_cache": {},
+        "twap_samples": [],
+        "prior_week_snapshot": {
+            "gitrade_stars": 0, "gitrade_forks": 0,
+            "vscode_stars": 0, "react_stars": 0,
+            "openai_sdk_stars": 0, "anthropic_sdk_stars": 0,
+            "rust_stars": 0, "go_stars": 0,
+            "bun_stars": 0, "node_stars": 0,
+            "nextjs_stars": 0, "remix_stars": 0,
+        },
+        "current_raw_snapshot": {},
         "tick": 0,
     }
 
@@ -66,15 +76,16 @@ def save_state(state: dict):
 
 def write_meta(state: dict):
     """Write state_meta.json for badge/dashboard use."""
-    from engine import compute_pnl, split_leagues, mark_price
+    from engine import compute_weekly_pnl, split_leagues, mark_price
     humans, bots = split_leagues(state)
     meta = {
         "week": state.get("week_number", 1),
         "tick": state.get("tick", 0),
         "fair_value": state.get("fair_value", {}),
         "last_price": state.get("last_price", {}),
-        "top_human": max(humans, key=lambda n: compute_pnl(state, n), default=None),
-        "top_bot": max(bots, key=lambda n: compute_pnl(state, n), default=None),
+        "top_human": max(humans, key=lambda n: compute_weekly_pnl(state, n), default=None),
+        "top_bot": max(bots, key=lambda n: compute_weekly_pnl(state, n), default=None),
+        "twap_samples": len(state.get("twap_samples", [])),
     }
     Path("state_meta.json").write_text(json.dumps(meta, indent=2))
 
@@ -82,6 +93,23 @@ def write_meta(state: dict):
 # ---------------------------------------------------------------------------
 # Issue parsing
 # ---------------------------------------------------------------------------
+
+TRADER_MIN_AGE_DAYS = 30
+
+
+def _trader_eligible(state: dict, user) -> bool:
+    """Anti-sybil gate. Aged account + minimal footprint required to trade.
+    Strict enough to kill freshly-spun alts, loose enough that any real
+    student with one repo OR one follower gets in."""
+    cache = state.setdefault("trader_cache", {})
+    if cache.get(user.login):
+        return True   # only TRUE is cached — eligibility grows over time, never expires falsely
+    age_days = (datetime.now(timezone.utc) - user.created_at).days
+    eligible = age_days >= TRADER_MIN_AGE_DAYS and (user.public_repos >= 1 or user.followers >= 1)
+    if eligible:
+        cache[user.login] = True   # don't freeze a NO — a day-20 account clears at day 30
+    return eligible
+
 
 def parse_order(title: str, owner: str, ts: float) -> dict | None:
     title = title.strip()
@@ -130,17 +158,35 @@ def run_tick():
     state["tick"] = tick
 
     # 1. Update fair value from live GitHub stats
-    fv = fetch_real_stats(REPO_NAME, fallback=state.get("fair_value", {}))
+    prior = state.get("prior_week_snapshot")
+    fv, new_snapshot = fetch_real_stats(
+        prior_snapshot=prior,
+        repo_name=REPO_NAME,
+        fallback=state.get("fair_value", {}),
+        star_cache=state,   # incremental fraud filter — persists star_cache across ticks
+    )
     state["fair_value"] = fv
+    if new_snapshot is not None:
+        state["current_raw_snapshot"] = new_snapshot
 
     # 2. Parse GitHub Issues (human orders)
     if TOKEN:
         g = Github(auth=Auth.Token(TOKEN))
         repo = g.get_repo(REPO_NAME)
-        for issue in repo.get_issues(state="open", labels=[]):
+        open_issues = sorted(repo.get_issues(state="open", labels=[]),
+                             key=lambda i: i.created_at)
+        for issue in open_issues:
             owner = issue.user.login
             title = issue.title.strip()
             ts    = issue.created_at.timestamp()
+
+            if not _trader_eligible(state, issue.user):
+                issue.create_comment(
+                    "Order rejected: anti-sybil rules require a GitHub account "
+                    "30+ days old with at least 1 public repo or 1 follower."
+                )
+                issue.edit(state="closed")
+                continue
 
             cancel_ticker = parse_cancel(title)
             if cancel_ticker:

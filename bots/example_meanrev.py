@@ -13,7 +13,7 @@ def decide(market: dict) -> list:
     market snapshot:
     {
       "tickers": {
-        "STAR": {
+        "DSTAR": {
           "fair_value": float | None,
           "best_bid": float | None,
           "best_ask": float | None,
@@ -23,13 +23,13 @@ def decide(market: dict) -> list:
         ...
       },
       "my_cash": float,
-      "my_positions": {"STAR": int, "COMMIT": int, "FORK": int},
+      "my_positions": {"DSTAR": int, "DFORK": int, ...},  # all 9 v4 tickers
       "settles_in_sec": float,
       "week_number": int
     }
 
     Return a list of up to 6 orders:
-    [{"ticker": "STAR", "side": "BUY", "qty": 5, "price": 45.0}, ...]
+    [{"ticker": "DSTAR", "side": "BUY", "qty": 5, "price": 5.0}, ...]
     """
     orders = []
     for ticker, info in market["tickers"].items():

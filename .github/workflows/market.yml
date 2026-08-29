@@ -4,7 +4,8 @@ on:
   issues:
     types: [opened]
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/15 * * * *"   # market tick
+    - cron: "0 * * * *"      # TWAP sample every hour
   workflow_dispatch:
 
 permissions:
@@ -12,11 +13,13 @@ permissions:
   issues: write
 
 concurrency:
-  group: market-engine
+  group: market-state        # shared by tick, TWAP, and settle — one lock on state.json
   cancel-in-progress: false
 
 jobs:
   run:
+    # market tick — issue events, the */15 cron, and manual dispatch
+    if: github.event_name != 'schedule' || github.event.schedule == '*/15 * * * *'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,5 +43,34 @@ jobs:
           git config user.email "market-bot@users.noreply.github.com"
           git add state.json state_meta.json README.md assets/
           git diff --staged --quiet || git commit -m "market: tick [skip ci]"
+          git pull --rebase origin HEAD
+          git push
+
+  twap-sample:
+    # hourly TWAP sampler — only the top-of-hour cron
+    if: github.event_name == 'schedule' && github.event.schedule == '0 * * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: install deps
+        run: pip install PyGithub
+
+      - name: record TWAP sample
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python twap.py
+
+      - name: commit TWAP state
+        run: |
+          git config user.name "market-bot"
+          git config user.email "market-bot@users.noreply.github.com"
+          git add state.json
+          git diff --staged --quiet || git commit -m "twap: sample [skip ci]"
           git pull --rebase origin HEAD
           git push
