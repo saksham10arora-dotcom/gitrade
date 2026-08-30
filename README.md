@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-08-25 15:48 UTC_
+_Last updated: 2026-08-30 07:32 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 0 | ? | 0 | ⚪ |
-| $REACT | 0 | ? | 0 | ⚪ |
-| $VSCREACT | 0 | ? | 0 | ⚪ |
-| $OAVSAN | 0 | ? | 0 | ⚪ |
-| $RUSTGO | 0 | ? | 0 | ⚪ |
-| $BUNVNODE | 0 | ? | 0 | ⚪ |
-| $NEXTREMIX | 0 | ? | 0 | ⚪ |
+| $VSCODE | 280 | ? | 0 | ⚪ |
+| $REACT | 296 | 427.26 | 2 | 🔴 |
+| $VSCREACT | -16 | ? | 0 | ⚪ |
+| $OAVSAN | 2 | ? | 0 | ⚪ |
+| $RUSTGO | 36 | ? | 0 | ⚪ |
+| $BUNVNODE | -271 | ? | 0 | ⚪ |
+| $NEXTREMIX | 27 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 23h 59m**
+**Settlement in: 2d 8h 16m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,10 +68,14 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 437.85 | 8 | _mm |
+| BID | 404.17 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 462.87 | 8 | _mm |
+| BID | 427.26 | 6 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -126,7 +130,9 @@ CI picks it up within 15 min, closes the issue, updates the book. Every account 
 File issues. Any GitHub account can trade.
 
 <!-- HUMAN_BOARD_START -->
-_No participants yet._
+| Rank | Name | P&L |
+|------|------|-----|
+| 🥇 | example_meanrev | +0 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -148,7 +154,11 @@ def decide(market: dict) -> list:
 Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_meanrev.py`](bots/example_meanrev.py) for a full template and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contract.
 
 <!-- BOT_BOARD_START -->
-_No participants yet._
+| Rank | Name | P&L |
+|------|------|-----|
+| 🥇 | _mm | +36 |
+| 🥈 | _momentum | +0 |
+| 🥉 | _noise | -36 |
 <!-- BOT_BOARD_END -->
 
 ---
