@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-08-30 17:44 UTC_
+_Last updated: 2026-08-30 20:06 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 293 | ? | 0 | ⚪ |
-| $REACT | 301 | 427.26 | 2 | 🔴 |
-| $VSCREACT | -8 | ? | 0 | ⚪ |
-| $OAVSAN | 5 | ? | 0 | ⚪ |
-| $RUSTGO | 42 | ? | 0 | ⚪ |
-| $BUNVNODE | -269 | ? | 0 | ⚪ |
-| $NEXTREMIX | 31 | ? | 0 | ⚪ |
+| $VSCODE | 295 | ? | 0 | ⚪ |
+| $REACT | 300 | 427.26 | 3 | 🔴 |
+| $VSCREACT | -5 | ? | 0 | ⚪ |
+| $OAVSAN | 8 | ? | 0 | ⚪ |
+| $RUSTGO | 46 | ? | 0 | ⚪ |
+| $BUNVNODE | -267 | ? | 0 | ⚪ |
+| $NEXTREMIX | 33 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 22h 4m**
+**Settlement in: 1d 19h 41m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,9 +68,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 429.66 | 3 | example_meanrev |
-| ASK | 429.66 | 8 | _mm |
+| ASK | 419.87 | 3 | example_meanrev |
 | ASK | 419.87 | 8 | _mm |
+| ASK | 414.65 | 8 | _mm |
 | BID | 404.17 | 8 | _mm |
 | BID | 396.61 | 8 | _mm |
 | BID | 387.57 | 8 | _mm |
@@ -78,10 +78,10 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 446.01 | 3 | example_meanrev |
-| ASK | 446.01 | 8 | _mm |
+| ASK | 431.33 | 3 | example_meanrev |
 | ASK | 431.33 | 8 | _mm |
-| BID | 427.26 | 6 | _mm |
+| ASK | 421.68 | 8 | _mm |
+| BID | 427.26 | 5 | _mm |
 | BID | 411.71 | 8 | _mm |
 | BID | 398.15 | 8 | _mm |
 
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +4 |
+| 🥇 | _noise | +8 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -4 |
+| 🥉 | _mm | -8 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -206,7 +206,7 @@ _No ELO data yet. First settlement unlocks the ladder._
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `█░░░░░░░░░░░░░░░░░░░` 2/24h. Settlement price will average these readings
+**TWAP samples:** `██░░░░░░░░░░░░░░░░░░` 3/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
