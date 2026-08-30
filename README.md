@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-08-30 07:32 UTC_
+_Last updated: 2026-08-30 13:19 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 280 | ? | 0 | ⚪ |
-| $REACT | 296 | 427.26 | 2 | 🔴 |
-| $VSCREACT | -16 | ? | 0 | ⚪ |
-| $OAVSAN | 2 | ? | 0 | ⚪ |
-| $RUSTGO | 36 | ? | 0 | ⚪ |
-| $BUNVNODE | -271 | ? | 0 | ⚪ |
-| $NEXTREMIX | 27 | ? | 0 | ⚪ |
+| $VSCODE | 289 | ? | 0 | ⚪ |
+| $REACT | 300 | 427.26 | 2 | 🔴 |
+| $VSCREACT | -11 | ? | 0 | ⚪ |
+| $OAVSAN | 5 | ? | 0 | ⚪ |
+| $RUSTGO | 46 | ? | 0 | ⚪ |
+| $BUNVNODE | -270 | ? | 0 | ⚪ |
+| $NEXTREMIX | 29 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 2d 8h 16m**
+**Settlement in: 2d 2h 28m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,14 +68,21 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 437.85 | 3 | example_meanrev |
 | ASK | 437.85 | 8 | _mm |
+| ASK | 429.66 | 8 | _mm |
 | BID | 404.17 | 8 | _mm |
+| BID | 396.61 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 462.87 | 3 | example_meanrev |
 | ASK | 462.87 | 8 | _mm |
+| ASK | 446.01 | 8 | _mm |
 | BID | 427.26 | 6 | _mm |
+| BID | 411.71 | 8 | _mm |
+| BID | 305.55 | 2 | _noise |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -156,9 +163,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +36 |
+| 🥇 | _mm | +19 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -36 |
+| 🥉 | _noise | -19 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -198,7 +205,7 @@ _No ELO data yet. First settlement unlocks the ladder._
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `░░░░░░░░░░░░░░░░░░░░` 0/24h. Settlement price will average these readings
+**TWAP samples:** `░░░░░░░░░░░░░░░░░░░░` 1/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
