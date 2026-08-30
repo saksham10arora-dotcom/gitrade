@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-08-30 20:06 UTC_
+_Last updated: 2026-08-30 22:47 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 295 | ? | 0 | ⚪ |
-| $REACT | 300 | 427.26 | 3 | 🔴 |
-| $VSCREACT | -5 | ? | 0 | ⚪ |
-| $OAVSAN | 8 | ? | 0 | ⚪ |
-| $RUSTGO | 46 | ? | 0 | ⚪ |
-| $BUNVNODE | -267 | ? | 0 | ⚪ |
-| $NEXTREMIX | 33 | ? | 0 | ⚪ |
+| $VSCODE | 301 | ? | 0 | ⚪ |
+| $REACT | 302 | 427.26 | 6 | 🔴 |
+| $VSCREACT | -1 | ? | 0 | ⚪ |
+| $OAVSAN | 9 | ? | 0 | ⚪ |
+| $RUSTGO | 48 | ? | 0 | ⚪ |
+| $BUNVNODE | -265 | ? | 0 | ⚪ |
+| $NEXTREMIX | 35 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 19h 41m**
+**Settlement in: 1d 17h 0m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,9 +68,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 419.87 | 3 | example_meanrev |
-| ASK | 419.87 | 8 | _mm |
+| ASK | 414.65 | 3 | example_meanrev |
 | ASK | 414.65 | 8 | _mm |
+| ASK | 414.14 | 8 | _mm |
 | BID | 404.17 | 8 | _mm |
 | BID | 396.61 | 8 | _mm |
 | BID | 387.57 | 8 | _mm |
@@ -78,10 +78,10 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 431.33 | 3 | example_meanrev |
 | ASK | 431.33 | 8 | _mm |
 | ASK | 421.68 | 8 | _mm |
-| BID | 427.26 | 5 | _mm |
+| ASK | 415.52 | 8 | _mm |
+| BID | 427.26 | 2 | _mm |
 | BID | 411.71 | 8 | _mm |
 | BID | 398.15 | 8 | _mm |
 
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | +0 |
+| 🥇 | example_meanrev | +18 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +8 |
+| 🥇 | _noise | +18 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -8 |
+| 🥉 | _mm | -35 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -206,7 +206,7 @@ _No ELO data yet. First settlement unlocks the ladder._
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `██░░░░░░░░░░░░░░░░░░` 3/24h. Settlement price will average these readings
+**TWAP samples:** `███░░░░░░░░░░░░░░░░░` 4/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
