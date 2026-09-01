@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-01 05:43 UTC_
+_Last updated: 2026-09-01 10:31 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 494 | 384.07 | 3 | 🟢 |
-| $REACT | 473 | 345.46 | 27 | 🟢 |
-| $VSCREACT | 21 | ? | 0 | ⚪ |
-| $OAVSAN | 23 | ? | 0 | ⚪ |
-| $RUSTGO | 54 | ? | 0 | ⚪ |
-| $BUNVNODE | -441 | ? | 0 | ⚪ |
-| $NEXTREMIX | 50 | ? | 0 | ⚪ |
+| $VSCODE | 596 | 384.07 | 9 | 🟢 |
+| $REACT | 599 | 373.79 | 34 | 🟢 |
+| $VSCREACT | -3 | ? | 0 | ⚪ |
+| $OAVSAN | 24 | ? | 0 | ⚪ |
+| $RUSTGO | 77 | ? | 0 | ⚪ |
+| $BUNVNODE | -531 | ? | 0 | ⚪ |
+| $NEXTREMIX | 64 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 10h 4m**
+**Settlement in: 0d 5h 16m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,22 +68,22 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 399.21 | 3 | example_meanrev |
+| ASK | 404.9 | 8 | _mm |
 | ASK | 399.21 | 8 | _mm |
-| ASK | 384.07 | 5 | _mm |
+| ASK | 384.07 | 2 | _mm |
+| BID | 590.73 | 5 | _mm |
 | BID | 504.52 | 8 | _mm |
 | BID | 404.17 | 8 | _mm |
-| BID | 396.61 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 381.65 | 3 | example_meanrev |
 | ASK | 381.65 | 8 | _mm |
-| ASK | 373.79 | 8 | _mm |
-| ASK | 345.46 | 2 | _noise |
+| ASK | 373.79 | 3 | _mm |
+| BID | 593.7 | 8 | _mm |
 | BID | 483.07 | 8 | _mm |
 | BID | 389.24 | 8 | _mm |
-| BID | 383.55 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | +349 |
+| 🥇 | example_meanrev | +285 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _momentum | +0 |
-| 🥈 | _mm | -135 |
-| 🥉 | _noise | -214 |
+| 🥇 | _mm | +808 |
+| 🥈 | _momentum | +0 |
+| 🥉 | _noise | -1093 |
 <!-- BOT_BOARD_END -->
 
 ---
