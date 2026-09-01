@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-01 15:13 UTC_
+_Last updated: 2026-09-01 18:37 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 599 | 407.39 | 16 | 🟢 |
-| $REACT | 605 | 373.79 | 36 | 🟢 |
-| $VSCREACT | -6 | ? | 0 | ⚪ |
-| $OAVSAN | 28 | ? | 0 | ⚪ |
-| $RUSTGO | 77 | ? | 0 | ⚪ |
-| $BUNVNODE | -529 | ? | 0 | ⚪ |
-| $NEXTREMIX | 65 | ? | 0 | ⚪ |
+| $VSCODE | 607 | 407.39 | 18 | 🟢 |
+| $REACT | 609 | 373.79 | 36 | 🟢 |
+| $VSCREACT | -2 | ? | 0 | ⚪ |
+| $OAVSAN | 29 | ? | 0 | ⚪ |
+| $RUSTGO | 80 | ? | 0 | ⚪ |
+| $BUNVNODE | -534 | ? | 0 | ⚪ |
+| $NEXTREMIX | 72 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 0h 35m**
+**Settlement in: 0d 0h 0m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -72,8 +72,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 399.21 | 8 | _mm |
 | ASK | 384.07 | 2 | _mm |
 | BID | 590.73 | 5 | _mm |
+| BID | 582.72 | 6 | _mm |
 | BID | 577.05 | 1 | _mm |
-| BID | 504.52 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
@@ -82,8 +82,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 381.65 | 8 | _mm |
 | ASK | 373.79 | 1 | _mm |
 | BID | 593.7 | 8 | _mm |
+| BID | 584.64 | 8 | _mm |
 | BID | 582.83 | 8 | _mm |
-| BID | 483.07 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | -288 |
+| 🥇 | example_meanrev | -448 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,7 +164,7 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +1161 |
+| 🥇 | _mm | +1321 |
 | 🥈 | _momentum | +0 |
 | 🥉 | _noise | -873 |
 <!-- BOT_BOARD_END -->
