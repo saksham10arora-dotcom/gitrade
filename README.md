@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-02 18:55 UTC_
+_Last updated: 2026-09-02 21:42 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,13 +38,13 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 652 | 414.14 | 21 | 🟢 |
-| $REACT | 634 | 381.65 | 42 | 🟢 |
-| $VSCREACT | 18 | ? | 0 | ⚪ |
+| $VSCODE | 659 | 414.65 | 23 | 🟢 |
+| $REACT | 637 | 381.65 | 47 | 🟢 |
+| $VSCREACT | 22 | ? | 0 | ⚪ |
 | $OAVSAN | 30 | ? | 0 | ⚪ |
-| $RUSTGO | 80 | ? | 0 | ⚪ |
-| $BUNVNODE | -531 | ? | 0 | ⚪ |
-| $NEXTREMIX | 90 | ? | 0 | ⚪ |
+| $RUSTGO | 79 | ? | 0 | ⚪ |
+| $BUNVNODE | -529 | ? | 0 | ⚪ |
+| $NEXTREMIX | 92 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -71,19 +71,19 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 404.9 | 8 | _mm |
 | ASK | 399.21 | 8 | _mm |
 | ASK | 384.07 | 2 | _mm |
+| BID | 632.64 | 6 | _mm |
 | BID | 625.92 | 8 | _mm |
 | BID | 620.16 | 8 | _mm |
-| BID | 612.48 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 393.96 | 8 | _mm |
 | ASK | 387.88 | 8 | _mm |
-| ASK | 381.65 | 3 | example_meanrev |
-| ASK | 381.65 | 3 | _mm |
+| ASK | 381.65 | 1 | example_meanrev |
+| BID | 611.52 | 7 | _mm |
 | BID | 608.64 | 8 | _mm |
 | BID | 604.8 | 8 | _mm |
-| BID | 600.96 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | -895 |
+| 🥇 | example_meanrev | -1351 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +1204 |
-| 🥈 | _momentum | +0 |
-| 🥉 | _noise | -309 |
+| 🥇 | _mm | +1208 |
+| 🥈 | _noise | +143 |
+| 🥉 | _momentum | +0 |
 <!-- BOT_BOARD_END -->
 
 ---
