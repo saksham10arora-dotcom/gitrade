@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-02 01:26 UTC_
+_Last updated: 2026-09-02 06:22 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,13 +38,13 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 621 | 414.14 | 21 | 🟢 |
-| $REACT | 618 | 381.65 | 39 | 🟢 |
-| $VSCREACT | 3 | ? | 0 | ⚪ |
-| $OAVSAN | 28 | ? | 0 | ⚪ |
-| $RUSTGO | 76 | ? | 0 | ⚪ |
-| $BUNVNODE | -538 | ? | 0 | ⚪ |
-| $NEXTREMIX | 81 | ? | 0 | ⚪ |
+| $VSCODE | 626 | 414.14 | 21 | 🟢 |
+| $REACT | 620 | 381.65 | 39 | 🟢 |
+| $VSCREACT | 6 | ? | 0 | ⚪ |
+| $OAVSAN | 27 | ? | 0 | ⚪ |
+| $RUSTGO | 79 | ? | 0 | ⚪ |
+| $BUNVNODE | -532 | ? | 0 | ⚪ |
+| $NEXTREMIX | 80 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -71,9 +71,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 404.9 | 8 | _mm |
 | ASK | 399.21 | 8 | _mm |
 | ASK | 384.07 | 2 | _mm |
+| BID | 600.96 | 8 | _mm |
 | BID | 596.16 | 8 | _mm |
 | BID | 593.28 | 8 | _mm |
-| BID | 592.32 | 5 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
@@ -81,9 +81,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 387.88 | 8 | _mm |
 | ASK | 381.65 | 3 | example_meanrev |
 | ASK | 381.65 | 6 | _mm |
+| BID | 595.2 | 8 | _mm |
 | BID | 593.7 | 8 | _mm |
 | BID | 593.28 | 8 | _mm |
-| BID | 591.36 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | -716 |
+| 🥇 | example_meanrev | -742 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +1306 |
+| 🥇 | _mm | +1338 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -590 |
+| 🥉 | _noise | -596 |
 <!-- BOT_BOARD_END -->
 
 ---
