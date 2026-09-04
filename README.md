@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-04 15:08 UTC_
+_Last updated: 2026-09-04 18:27 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,13 +38,13 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 1077 | 399.21 | 39 | 🟢 |
-| $REACT | 1047 | 602.78 | 98 | 🟢 |
-| $VSCREACT | 30 | ? | 0 | ⚪ |
-| $OAVSAN | 35 | ? | 0 | ⚪ |
-| $RUSTGO | 153 | ? | 0 | ⚪ |
-| $BUNVNODE | -860 | ? | 0 | ⚪ |
-| $NEXTREMIX | 101 | ? | 0 | ⚪ |
+| $VSCODE | 1089 | 399.21 | 39 | 🟢 |
+| $REACT | 1046 | 415.52 | 100 | 🟢 |
+| $VSCREACT | 43 | ? | 0 | ⚪ |
+| $OAVSAN | 38 | ? | 0 | ⚪ |
+| $RUSTGO | 157 | ? | 0 | ⚪ |
+| $BUNVNODE | -861 | ? | 0 | ⚪ |
+| $NEXTREMIX | 106 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -71,19 +71,19 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 405.55 | 8 | _mm |
 | ASK | 404.9 | 8 | _mm |
 | ASK | 399.21 | 4 | _mm |
+| BID | 1045.44 | 8 | _mm |
 | BID | 1033.92 | 8 | _mm |
 | BID | 1027.2 | 8 | _mm |
-| BID | 1016.64 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 431.33 | 8 | _mm |
 | ASK | 421.68 | 8 | _mm |
-| ASK | 415.52 | 3 | _mm |
+| ASK | 415.52 | 1 | _mm |
 | BID | 1005.12 | 8 | _mm |
+| BID | 1004.16 | 8 | _mm |
 | BID | 1002.24 | 6 | _mm |
-| BID | 994.56 | 4 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | -7981 |
+| 🥇 | example_meanrev | -8067 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,8 +164,8 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +5908 |
-| 🥈 | _mm | +2073 |
+| 🥇 | _noise | +6497 |
+| 🥈 | _mm | +1570 |
 | 🥉 | _momentum | +0 |
 <!-- BOT_BOARD_END -->
 
