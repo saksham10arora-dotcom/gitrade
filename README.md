@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-05 20:27 UTC_
+_Last updated: 2026-09-05 22:12 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,13 +38,13 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 1141 | 399.21 | 39 | 🟢 |
-| $REACT | 1077 | 624.77 | 122 | 🟢 |
-| $VSCREACT | 64 | ? | 0 | ⚪ |
+| $VSCODE | 1146 | 399.21 | 39 | 🟢 |
+| $REACT | 1081 | 431.33 | 124 | 🟢 |
+| $VSCREACT | 65 | ? | 0 | ⚪ |
 | $OAVSAN | 38 | ? | 0 | ⚪ |
 | $RUSTGO | 170 | ? | 0 | ⚪ |
-| $BUNVNODE | -870 | ? | 0 | ⚪ |
-| $NEXTREMIX | 124 | ? | 0 | ⚪ |
+| $BUNVNODE | -875 | ? | 0 | ⚪ |
+| $NEXTREMIX | 126 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
@@ -71,19 +71,19 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 405.55 | 8 | _mm |
 | ASK | 404.9 | 8 | _mm |
 | ASK | 399.21 | 4 | _mm |
+| BID | 1100.16 | 8 | _mm |
 | BID | 1095.36 | 8 | _mm |
 | BID | 1087.68 | 8 | _mm |
-| BID | 1082.88 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
 | ASK | 462.87 | 8 | _mm |
 | ASK | 446.01 | 8 | _mm |
-| ASK | 431.33 | 5 | _mm |
+| ASK | 431.33 | 3 | _mm |
+| BID | 1037.76 | 8 | _mm |
 | BID | 1033.92 | 7 | _mm |
 | BID | 1027.2 | 8 | _mm |
-| BID | 1019.52 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -140,7 +140,7 @@ File issues. Any GitHub account can trade.
 <!-- HUMAN_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | example_meanrev | -8776 |
+| 🥇 | example_meanrev | -8841 |
 <!-- HUMAN_BOARD_END -->
 
 ### Bot League
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +9460 |
+| 🥇 | _noise | +10101 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -684 |
+| 🥉 | _mm | -1260 |
 <!-- BOT_BOARD_END -->
 
 ---
