@@ -1,21 +1,21 @@
 {
   "week": 2,
-  "tick": 47,
+  "tick": 48,
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 10,
-    "REACT": 4,
-    "VSCREACT": 6,
-    "OAVSAN": 4,
-    "RUSTGO": -3,
-    "BUNVNODE": -9,
-    "NEXTREMIX": 8
+    "VSCODE": 22,
+    "REACT": 13,
+    "VSCREACT": 9,
+    "OAVSAN": 13,
+    "RUSTGO": -1,
+    "BUNVNODE": -18,
+    "NEXTREMIX": 11
   },
   "last_price": {
-    "REACT": 38.4
+    "REACT": 124.8
   },
   "top_human": "example_meanrev",
   "top_bot": "_mm",
-  "twap_samples": 0
+  "twap_samples": 1
 }
