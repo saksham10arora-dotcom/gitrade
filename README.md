@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-07 05:07 UTC_
+_Last updated: 2026-09-07 10:23 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 97 | ? | 0 | ⚪ |
-| $REACT | 86 | 41.6 | 26 | 🟢 |
-| $VSCREACT | 11 | ? | 0 | ⚪ |
-| $OAVSAN | 39 | ? | 0 | ⚪ |
-| $RUSTGO | 12 | ? | 0 | ⚪ |
-| $BUNVNODE | -83 | ? | 0 | ⚪ |
-| $NEXTREMIX | 41 | ? | 0 | ⚪ |
+| $VSCODE | 512 | ? | 0 | ⚪ |
+| $REACT | 509 | 2637.33 | 28 | 🔴 |
+| $VSCREACT | 3 | ? | 0 | ⚪ |
+| $OAVSAN | 42 | ? | 0 | ⚪ |
+| $RUSTGO | -10 | ? | 0 | ⚪ |
+| $BUNVNODE | -476 | ? | 0 | ⚪ |
+| $NEXTREMIX | 51 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 5d 22h 8m**
+**Settlement in: 5d 16h 52m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -71,9 +71,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 353.6 | 8 | _mm |
 | ASK | 228.8 | 8 | _mm |
 | ASK | 104.0 | 8 | _mm |
+| BID | 2652.87 | 8 | _mm |
 | BID | 605.01 | 8 | _mm |
 | BID | 508.8 | 8 | _mm |
-| BID | 507.99 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
@@ -81,9 +81,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 280.8 | 8 | _mm |
 | ASK | 218.4 | 8 | _mm |
 | ASK | 135.2 | 8 | _mm |
+| BID | 2637.33 | 6 | _mm |
 | BID | 536.4 | 8 | _mm |
 | BID | 434.1 | 3 | _mm |
-| BID | 412.13 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +1043 |
+| 🥇 | _mm | +6960 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -1043 |
+| 🥉 | _noise | -6960 |
 <!-- BOT_BOARD_END -->
 
 ---
