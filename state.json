@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 529,
-    "REACT": 517,
-    "VSCREACT": 12,
+    "VSCODE": 527,
+    "REACT": 520,
+    "VSCREACT": 7,
     "OAVSAN": 40,
-    "RUSTGO": -6,
-    "BUNVNODE": -493,
-    "NEXTREMIX": 67
+    "RUSTGO": -2,
+    "BUNVNODE": -496,
+    "NEXTREMIX": 71
   },
   "books": {
     "DSTAR": {
@@ -437,34 +437,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1788713036.4356444,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 47,
-        "REACT": 31,
-        "VSCREACT": 16,
-        "OAVSAN": 27,
-        "RUSTGO": 8,
-        "BUNVNODE": -34,
-        "NEXTREMIX": 27
-      }
-    },
-    {
-      "ts": 1788720633.208677,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 53,
-        "REACT": 38,
-        "VSCREACT": 15,
-        "OAVSAN": 30,
-        "RUSTGO": 7,
-        "BUNVNODE": -40,
-        "NEXTREMIX": 31
-      }
-    },
-    {
       "ts": 1788728549.757816,
       "stats": {
         "DSTAR": 0,
@@ -533,6 +505,20 @@
         "BUNVNODE": -491,
         "NEXTREMIX": 64
       }
+    },
+    {
+      "ts": 1788807580.532319,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 527,
+        "REACT": 520,
+        "VSCREACT": 7,
+        "OAVSAN": 40,
+        "RUSTGO": -2,
+        "BUNVNODE": -496,
+        "NEXTREMIX": 71
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -552,15 +538,15 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 191448,
-    "react_stars": 249630,
+    "vscode_stars": 191446,
+    "react_stars": 249633,
     "openai_sdk_stars": 31605,
     "anthropic_sdk_stars": 3891,
-    "rust_stars": 117965,
-    "go_stars": 138021,
-    "bun_stars": 95904,
-    "node_stars": 121159,
-    "nextjs_stars": 142187,
+    "rust_stars": 117970,
+    "go_stars": 138022,
+    "bun_stars": 95905,
+    "node_stars": 121163,
+    "nextjs_stars": 142191,
     "remix_stars": 56576
   },
   "weekly_volume": {
