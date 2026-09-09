@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-08 23:26 UTC_
+_Last updated: 2026-09-09 01:27 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 568 | ? | 0 | ⚪ |
-| $REACT | 552 | 218.4 | 41 | 🟢 |
-| $VSCREACT | 16 | ? | 0 | ⚪ |
+| $VSCODE | 573 | ? | 0 | ⚪ |
+| $REACT | 555 | 218.4 | 46 | 🟢 |
+| $VSCREACT | 18 | ? | 0 | ⚪ |
 | $OAVSAN | 35 | ? | 0 | ⚪ |
-| $RUSTGO | 29 | ? | 0 | ⚪ |
-| $BUNVNODE | -512 | ? | 0 | ⚪ |
-| $NEXTREMIX | 98 | ? | 0 | ⚪ |
+| $RUSTGO | 28 | ? | 0 | ⚪ |
+| $BUNVNODE | -511 | ? | 0 | ⚪ |
+| $NEXTREMIX | 100 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 3h 49m**
+**Settlement in: 4d 1h 48m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -80,7 +80,7 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |------|-------|-----|-------|
 | ASK | 384.8 | 8 | _mm |
 | ASK | 280.8 | 8 | _mm |
-| ASK | 218.4 | 6 | _mm |
+| ASK | 218.4 | 2 | _mm |
 | BID | 2637.33 | 5 | _mm |
 | BID | 2269.47 | 8 | _mm |
 | BID | 2064.25 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +4638 |
+| 🥇 | _noise | +8539 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -4638 |
+| 🥉 | _mm | -8539 |
 <!-- BOT_BOARD_END -->
 
 ---
