@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-09 21:54 UTC_
+_Last updated: 2026-09-10 00:01 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 584 | ? | 0 | ⚪ |
+| $VSCODE | 586 | ? | 0 | ⚪ |
 | $REACT | 523 | 545.21 | 57 | 🔴 |
-| $VSCREACT | 61 | ? | 0 | ⚪ |
-| $OAVSAN | 36 | ? | 0 | ⚪ |
+| $VSCREACT | 63 | ? | 0 | ⚪ |
+| $OAVSAN | 35 | ? | 0 | ⚪ |
 | $RUSTGO | 47 | ? | 0 | ⚪ |
-| $BUNVNODE | -470 | ? | 0 | ⚪ |
-| $NEXTREMIX | 96 | ? | 0 | ⚪ |
+| $BUNVNODE | -468 | ? | 0 | ⚪ |
+| $NEXTREMIX | 97 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 3d 5h 21m**
+**Settlement in: 3d 3h 14m**
 <!-- COUNTDOWN_END -->
 
 ---
