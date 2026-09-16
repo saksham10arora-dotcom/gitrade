@@ -4,12 +4,12 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 471,
-    "REACT": 379,
-    "VSCREACT": 92,
-    "OAVSAN": 2,
-    "RUSTGO": 85,
-    "BUNVNODE": -339,
+    "VSCODE": 473,
+    "REACT": 378,
+    "VSCREACT": 95,
+    "OAVSAN": 1,
+    "RUSTGO": 84,
+    "BUNVNODE": -337,
     "NEXTREMIX": 67
   },
   "books": {
@@ -116,6 +116,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 1093.6,
+          "ts": 1789521417.6409087
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 48.0,
           "ts": 1789301048.0640204
         },
@@ -138,6 +144,12 @@
           "qty": 8,
           "price": 52.0,
           "ts": 1789301048.0640204
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 1218.41,
+          "ts": 1789512927.5487335
         },
         {
           "owner": "_mm",
@@ -226,8 +238,8 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 1218.41,
-          "ts": 1789512927.5487335
+          "price": 1184.73,
+          "ts": 1789521417.6409087
         }
       ]
     },
@@ -324,6 +336,12 @@
           "ts": 1789512927.5487335
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 873.95,
+          "ts": 1789521417.6409087
+        },
+        {
           "owner": "_noise",
           "qty": 4,
           "price": 350.24,
@@ -390,6 +408,18 @@
           "qty": 2,
           "price": 375.15,
           "ts": 1789472946.204444
+        },
+        {
+          "owner": "_noise",
+          "qty": 4,
+          "price": 399.12,
+          "ts": 1789512927.5487335
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 982.5,
+          "ts": 1789512927.5487335
         },
         {
           "owner": "_mm",
@@ -478,14 +508,14 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 982.5,
-          "ts": 1789512927.5487335
+          "price": 946.78,
+          "ts": 1789521417.6409087
         },
         {
           "owner": "_noise",
-          "qty": 4,
-          "price": 399.12,
-          "ts": 1789512927.5487335
+          "qty": 3,
+          "price": 360.98,
+          "ts": 1789521417.6409087
         }
       ]
     },
@@ -722,14 +752,14 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 192567,
-    "react_stars": 250475,
+    "vscode_stars": 192569,
+    "react_stars": 250474,
     "openai_sdk_stars": 31626,
-    "anthropic_sdk_stars": 3901,
-    "rust_stars": 118919,
+    "anthropic_sdk_stars": 3902,
+    "rust_stars": 118918,
     "go_stars": 138836,
     "bun_stars": 95972,
-    "node_stars": 121964,
+    "node_stars": 121962,
     "nextjs_stars": 142332,
     "remix_stars": 56572
   },
@@ -740,6 +770,6 @@
     "_mm",
     "_noise"
   ],
-  "tick": 112,
+  "tick": 113,
   "star_cache": {}
 }
