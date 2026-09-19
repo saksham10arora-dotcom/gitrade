@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 585,
+    "VSCODE": 591,
     "REACT": 490,
-    "VSCREACT": 95,
+    "VSCREACT": 101,
     "OAVSAN": 22,
-    "RUSTGO": 74,
-    "BUNVNODE": -367,
-    "NEXTREMIX": 84
+    "RUSTGO": 78,
+    "BUNVNODE": -372,
+    "NEXTREMIX": 91
   },
   "books": {
     "DSTAR": {
@@ -1341,20 +1341,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1789759721.4590354,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 558,
-        "REACT": 467,
-        "VSCREACT": 91,
-        "OAVSAN": 17,
-        "RUSTGO": 53,
-        "BUNVNODE": -358,
-        "NEXTREMIX": 67
-      }
-    },
-    {
       "ts": 1789769889.3765023,
       "stats": {
         "DSTAR": 0,
@@ -1437,6 +1423,20 @@
         "BUNVNODE": -367,
         "NEXTREMIX": 84
       }
+    },
+    {
+      "ts": 1789848237.1778402,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 591,
+        "REACT": 490,
+        "VSCREACT": 101,
+        "OAVSAN": 22,
+        "RUSTGO": 78,
+        "BUNVNODE": -372,
+        "NEXTREMIX": 91
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -1456,15 +1456,15 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 192681,
+    "vscode_stars": 192687,
     "react_stars": 250586,
     "openai_sdk_stars": 31652,
     "anthropic_sdk_stars": 3907,
-    "rust_stars": 118957,
-    "go_stars": 138885,
-    "bun_stars": 95986,
-    "node_stars": 122006,
-    "nextjs_stars": 142357,
+    "rust_stars": 118965,
+    "go_stars": 138889,
+    "bun_stars": 95985,
+    "node_stars": 122010,
+    "nextjs_stars": 142364,
     "remix_stars": 56580
   },
   "weekly_volume": {
