@@ -188,7 +188,22 @@
     "_mm": 956.3
   },
   "trader_cache": {},
-  "twap_samples": [],
+  "twap_samples": [
+    {
+      "ts": 1789883002.1252158,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 1,
+        "REACT": 10,
+        "VSCREACT": -9,
+        "OAVSAN": 0,
+        "RUSTGO": 0,
+        "BUNVNODE": -1,
+        "NEXTREMIX": 16
+      }
+    }
+  ],
   "prior_week_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
@@ -210,8 +225,8 @@
     "react_stars": 250604,
     "openai_sdk_stars": 31653,
     "anthropic_sdk_stars": 3908,
-    "rust_stars": 118974,
-    "go_stars": 138899,
+    "rust_stars": 118975,
+    "go_stars": 138900,
     "bun_stars": 95986,
     "node_stars": 122015,
     "nextjs_stars": 142386,
