@@ -4,9 +4,9 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 18,
-    "REACT": 15,
-    "VSCREACT": 3,
+    "VSCODE": 19,
+    "REACT": 14,
+    "VSCREACT": 5,
     "OAVSAN": 5,
     "RUSTGO": 14,
     "BUNVNODE": -1,
@@ -315,6 +315,20 @@
         "BUNVNODE": 2,
         "NEXTREMIX": 21
       }
+    },
+    {
+      "ts": 1789927057.7075386,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 19,
+        "REACT": 14,
+        "VSCREACT": 5,
+        "OAVSAN": 5,
+        "RUSTGO": 14,
+        "BUNVNODE": -1,
+        "NEXTREMIX": 24
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -334,8 +348,8 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 192718,
-    "react_stars": 250609,
+    "vscode_stars": 192719,
+    "react_stars": 250608,
     "openai_sdk_stars": 31658,
     "anthropic_sdk_stars": 3908,
     "rust_stars": 118996,
