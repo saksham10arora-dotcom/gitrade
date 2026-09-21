@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-20 22:20 UTC_
+_Last updated: 2026-09-21 00:26 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -39,16 +39,16 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
 | $VSCODE | 31 | ? | 0 | ⚪ |
-| $REACT | 15 | 115.2 | 6 | 🔴 |
-| $VSCREACT | 16 | ? | 0 | ⚪ |
-| $OAVSAN | 7 | ? | 0 | ⚪ |
+| $REACT | 16 | 144.0 | 8 | 🔴 |
+| $VSCREACT | 15 | ? | 0 | ⚪ |
+| $OAVSAN | 8 | ? | 0 | ⚪ |
 | $RUSTGO | 18 | ? | 0 | ⚪ |
 | $BUNVNODE | -7 | ? | 0 | ⚪ |
 | $NEXTREMIX | 23 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 5h 23m**
+**Settlement in: 6d 3h 18m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -72,16 +72,16 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 72.8 | 8 | _mm |
 | ASK | 10.4 | 8 | _mm |
 | BID | 268.68 | 8 | _mm |
+| BID | 241.54 | 8 | _mm |
 | BID | 220.8 | 8 | _mm |
-| BID | 172.8 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 140.84 | 8 | _mm |
+| ASK | 135.05 | 8 | _mm |
 | ASK | 124.8 | 8 | _mm |
 | ASK | 104.0 | 8 | _mm |
-| BID | 144.0 | 8 | _mm |
+| BID | 144.0 | 6 | _mm |
 | BID | 134.4 | 8 | _mm |
 | BID | 134.4 | 8 | _mm |
 
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +110 |
+| 🥇 | _mm | +70 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -110 |
+| 🥉 | _noise | -70 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -215,7 +215,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `████░░░░░░░░░░░░░░░░` 5/24h. Settlement price will average these readings
+**TWAP samples:** `█████░░░░░░░░░░░░░░░` 6/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
