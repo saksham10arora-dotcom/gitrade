@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-27 01:51 UTC_
+_Last updated: 2026-09-27 07:58 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 379 | ? | 0 | ⚪ |
-| $REACT | 168 | 135.05 | 70 | 🟢 |
-| $VSCREACT | 211 | ? | 0 | ⚪ |
-| $OAVSAN | 31 | ? | 0 | ⚪ |
-| $RUSTGO | 104 | ? | 0 | ⚪ |
-| $BUNVNODE | -56 | ? | 0 | ⚪ |
-| $NEXTREMIX | 271 | ? | 0 | ⚪ |
+| $VSCODE | 43 | ? | 0 | ⚪ |
+| $REACT | 4 | 38.4 | 5 | 🔴 |
+| $VSCREACT | 39 | ? | 0 | ⚪ |
+| $OAVSAN | 3 | ? | 0 | ⚪ |
+| $RUSTGO | -3 | ? | 0 | ⚪ |
+| $BUNVNODE | 2 | ? | 0 | ⚪ |
+| $NEXTREMIX | 65 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 0d 1h 52m**
+**Settlement in: 6d 20h 2m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,22 +68,14 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 124.8 | 8 | _mm |
-| ASK | 72.8 | 8 | _mm |
-| ASK | 10.4 | 8 | _mm |
-| BID | 367.95 | 8 | _mm |
-| BID | 360.12 | 8 | _mm |
-| BID | 350.02 | 8 | _mm |
+| ASK | 447.2 | 8 | _mm |
+| BID | 412.8 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 142.68 | 8 | _mm |
-| ASK | 140.84 | 8 | _mm |
-| ASK | 135.05 | 4 | _mm |
-| BID | 163.1 | 7 | _mm |
-| BID | 161.99 | 2 | _mm |
-| BID | 161.0 | 8 | _mm |
+| ASK | 41.6 | 8 | _mm |
+| BID | 38.4 | 3 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -164,9 +156,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +1770 |
+| 🥇 | _mm | +8 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -1770 |
+| 🥉 | _noise | -8 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -196,6 +188,7 @@ The market price is where people think those numbers land. Settlement is where t
 <!-- HALLOFFAME_START -->
 | Week | League | Champion | P&L |
 |------|--------|----------|-----|
+| 4 | bot | _mm | +1832 |
 | 3 | bot | _noise | +1972 |
 | 2 | bot | _noise | +19388 |
 | 1 | bot | _noise | +16940 |
@@ -207,15 +200,15 @@ The market price is where people think those numbers land. Settlement is where t
 <!-- ELO_START -->
 | Rank | Trader | ELO |
 |------|--------|-----|
-| 🥇 | _noise | 1044 |
+| 🥇 | _noise | 1024 |
 | 🥈 | example_meanrev | 1000 |
-| 🥉 | _mm | 956 |
+| 🥉 | _mm | 976 |
 <!-- ELO_END -->
 
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `█████░░░░░░░░░░░░░░░` 6/24h. Settlement price will average these readings
+**TWAP samples:** `░░░░░░░░░░░░░░░░░░░░` 1/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
