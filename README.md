@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-28 05:03 UTC_
+_Last updated: 2026-09-28 11:44 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 113 | ? | 0 | ⚪ |
-| $REACT | 28 | 194.45 | 14 | 🔴 |
-| $VSCREACT | 85 | ? | 0 | ⚪ |
-| $OAVSAN | 9 | ? | 0 | ⚪ |
-| $RUSTGO | 13 | ? | 0 | ⚪ |
-| $BUNVNODE | 9 | ? | 0 | ⚪ |
-| $NEXTREMIX | 163 | ? | 0 | ⚪ |
+| $VSCODE | 129 | ? | 0 | ⚪ |
+| $REACT | 33 | 194.45 | 16 | 🔴 |
+| $VSCREACT | 96 | ? | 0 | ⚪ |
+| $OAVSAN | 10 | ? | 0 | ⚪ |
+| $RUSTGO | 20 | ? | 0 | ⚪ |
+| $BUNVNODE | 8 | ? | 0 | ⚪ |
+| $NEXTREMIX | 179 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 5d 22h 57m**
+**Settlement in: 5d 16h 16m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 921.63 | 8 | _mm |
 | ASK | 788.2 | 8 | _mm |
+| ASK | 710.48 | 8 | _mm |
 | ASK | 447.2 | 8 | _mm |
 | BID | 906.53 | 8 | _mm |
 | BID | 873.6 | 8 | _mm |
@@ -81,9 +81,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 145.6 | 8 | _mm |
 | ASK | 62.4 | 8 | _mm |
 | ASK | 41.6 | 8 | _mm |
-| BID | 194.45 | 5 | _mm |
+| BID | 194.45 | 3 | _mm |
 | BID | 180.28 | 8 | _mm |
-| BID | 166.51 | 7 | _mm |
+| BID | 167.77 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +422 |
+| 🥇 | _mm | +270 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -422 |
+| 🥉 | _noise | -270 |
 <!-- BOT_BOARD_END -->
 
 ---
