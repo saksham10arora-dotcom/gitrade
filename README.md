@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-29 11:31 UTC_
+_Last updated: 2026-09-29 17:02 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 186 | ? | 0 | ⚪ |
-| $REACT | 60 | 195.64 | 28 | 🔴 |
-| $VSCREACT | 126 | ? | 0 | ⚪ |
-| $OAVSAN | 17 | ? | 0 | ⚪ |
-| $RUSTGO | 41 | ? | 0 | ⚪ |
-| $BUNVNODE | -25 | ? | 0 | ⚪ |
-| $NEXTREMIX | 231 | ? | 0 | ⚪ |
+| $VSCODE | 196 | ? | 0 | ⚪ |
+| $REACT | 64 | 41.6 | 31 | 🟢 |
+| $VSCREACT | 132 | ? | 0 | ⚪ |
+| $OAVSAN | 16 | ? | 0 | ⚪ |
+| $RUSTGO | 45 | ? | 0 | ⚪ |
+| $BUNVNODE | -30 | ? | 0 | ⚪ |
+| $NEXTREMIX | 240 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 16h 29m**
+**Settlement in: 4d 10h 58m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 585.45 | 8 | _mm |
 | ASK | 579.4 | 8 | _mm |
+| ASK | 561.15 | 8 | _mm |
 | ASK | 447.2 | 8 | _mm |
 | BID | 906.53 | 8 | _mm |
 | BID | 873.6 | 8 | _mm |
@@ -78,9 +78,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 62.4 | 8 | _mm |
 | ASK | 58.04 | 5 | _noise |
 | ASK | 57.14 | 2 | _noise |
-| ASK | 41.6 | 3 | _mm |
 | BID | 195.64 | 1 | _mm |
 | BID | 194.45 | 3 | _mm |
 | BID | 189.15 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +645 |
+| 🥇 | _noise | +760 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -645 |
+| 🥉 | _mm | -760 |
 <!-- BOT_BOARD_END -->
 
 ---
