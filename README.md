@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-30 00:42 UTC_
+_Last updated: 2026-09-30 06:01 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 204 | ? | 0 | ⚪ |
-| $REACT | 70 | 62.4 | 41 | 🟢 |
-| $VSCREACT | 134 | ? | 0 | ⚪ |
+| $VSCODE | 215 | ? | 0 | ⚪ |
+| $REACT | 75 | 62.4 | 46 | 🟢 |
+| $VSCREACT | 140 | ? | 0 | ⚪ |
 | $OAVSAN | 16 | ? | 0 | ⚪ |
-| $RUSTGO | 45 | ? | 0 | ⚪ |
-| $BUNVNODE | -32 | ? | 0 | ⚪ |
-| $NEXTREMIX | 248 | ? | 0 | ⚪ |
+| $RUSTGO | 55 | ? | 0 | ⚪ |
+| $BUNVNODE | -31 | ? | 0 | ⚪ |
+| $NEXTREMIX | 260 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 3h 18m**
+**Settlement in: 3d 21h 59m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 536.91 | 8 | _mm |
 | ASK | 518.83 | 8 | _mm |
+| ASK | 507.53 | 8 | _mm |
 | ASK | 447.2 | 8 | _mm |
 | BID | 906.53 | 8 | _mm |
 | BID | 873.6 | 8 | _mm |
@@ -78,9 +78,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 177.05 | 8 | _mm |
+| ASK | 176.3 | 8 | _mm |
 | ASK | 145.6 | 8 | _mm |
-| ASK | 62.4 | 2 | _mm |
-| ASK | 58.04 | 3 | _noise |
 | BID | 195.64 | 1 | _mm |
 | BID | 194.45 | 3 | _mm |
 | BID | 189.15 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +862 |
+| 🥇 | _noise | +172 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -862 |
+| 🥉 | _mm | -172 |
 <!-- BOT_BOARD_END -->
 
 ---
