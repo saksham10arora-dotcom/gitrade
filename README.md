@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-09-30 12:40 UTC_
+_Last updated: 2026-09-30 18:08 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 218 | ? | 0 | ⚪ |
-| $REACT | 78 | 195.64 | 47 | 🔴 |
-| $VSCREACT | 140 | ? | 0 | ⚪ |
-| $OAVSAN | 16 | ? | 0 | ⚪ |
-| $RUSTGO | 68 | ? | 0 | ⚪ |
-| $BUNVNODE | -32 | ? | 0 | ⚪ |
-| $NEXTREMIX | 272 | ? | 0 | ⚪ |
+| $VSCODE | 223 | ? | 0 | ⚪ |
+| $REACT | 79 | 74.44 | 48 | 🟢 |
+| $VSCREACT | 144 | ? | 0 | ⚪ |
+| $OAVSAN | 14 | ? | 0 | ⚪ |
+| $RUSTGO | 69 | ? | 0 | ⚪ |
+| $BUNVNODE | -30 | ? | 0 | ⚪ |
+| $NEXTREMIX | 282 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 3d 15h 20m**
+**Settlement in: 3d 9h 51m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 507.53 | 8 | _mm |
 | ASK | 472.24 | 8 | _mm |
+| ASK | 452.34 | 8 | _mm |
 | ASK | 447.2 | 8 | _mm |
 | BID | 906.53 | 8 | _mm |
 | BID | 873.6 | 8 | _mm |
@@ -78,9 +78,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 168.97 | 8 | _mm |
 | ASK | 145.6 | 8 | _mm |
-| ASK | 74.44 | 3 | _noise |
+| ASK | 78.16 | 2 | _noise |
+| ASK | 74.44 | 2 | _noise |
 | BID | 194.45 | 3 | _mm |
 | BID | 189.15 | 8 | _mm |
 | BID | 180.28 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +740 |
+| 🥇 | _noise | +680 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -740 |
+| 🥉 | _mm | -680 |
 <!-- BOT_BOARD_END -->
 
 ---
