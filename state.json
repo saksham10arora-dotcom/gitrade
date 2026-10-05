@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 86,
-    "REACT": 23,
-    "VSCREACT": 63,
-    "OAVSAN": 1,
-    "RUSTGO": 11,
-    "BUNVNODE": -74,
-    "NEXTREMIX": 97
+    "VSCODE": 102,
+    "REACT": 32,
+    "VSCREACT": 70,
+    "OAVSAN": 2,
+    "RUSTGO": 19,
+    "BUNVNODE": -84,
+    "NEXTREMIX": 110
   },
   "books": {
     "DSTAR": {
@@ -379,34 +379,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1791105689.097892,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 29,
-        "REACT": 1,
-        "VSCREACT": 28,
-        "OAVSAN": -2,
-        "RUSTGO": 15,
-        "BUNVNODE": -32,
-        "NEXTREMIX": 37
-      }
-    },
-    {
-      "ts": 1791126540.762611,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 49,
-        "REACT": 9,
-        "VSCREACT": 40,
-        "OAVSAN": -2,
-        "RUSTGO": 16,
-        "BUNVNODE": -40,
-        "NEXTREMIX": 57
-      }
-    },
-    {
       "ts": 1791141081.0784578,
       "stats": {
         "DSTAR": 0,
@@ -461,6 +433,20 @@
         "BUNVNODE": -72,
         "NEXTREMIX": 95
       }
+    },
+    {
+      "ts": 1791222851.9994242,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 102,
+        "REACT": 32,
+        "VSCREACT": 70,
+        "OAVSAN": 2,
+        "RUSTGO": 19,
+        "BUNVNODE": -84,
+        "NEXTREMIX": 110
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -480,16 +466,16 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 193522,
-    "react_stars": 250895,
-    "openai_sdk_stars": 31745,
-    "anthropic_sdk_stars": 3948,
-    "rust_stars": 119563,
-    "go_stars": 139255,
-    "bun_stars": 96122,
-    "node_stars": 122348,
-    "nextjs_stars": 143183,
-    "remix_stars": 56588
+    "vscode_stars": 193538,
+    "react_stars": 250904,
+    "openai_sdk_stars": 31749,
+    "anthropic_sdk_stars": 3951,
+    "rust_stars": 119584,
+    "go_stars": 139268,
+    "bun_stars": 96123,
+    "node_stars": 122359,
+    "nextjs_stars": 143198,
+    "remix_stars": 56590
   },
   "weekly_volume": {
     "REACT": 7
