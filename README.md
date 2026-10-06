@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-06 19:34 UTC_
+_Last updated: 2026-10-06 23:19 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 171 | ? | 0 | ⚪ |
-| $REACT | 41 | 143.46 | 19 | 🔴 |
-| $VSCREACT | 130 | ? | 0 | ⚪ |
-| $OAVSAN | 6 | ? | 0 | ⚪ |
-| $RUSTGO | 27 | ? | 0 | ⚪ |
-| $BUNVNODE | -114 | ? | 0 | ⚪ |
+| $VSCODE | 173 | ? | 0 | ⚪ |
+| $REACT | 44 | 31.2 | 21 | 🟢 |
+| $VSCREACT | 129 | ? | 0 | ⚪ |
+| $OAVSAN | 7 | ? | 0 | ⚪ |
+| $RUSTGO | 39 | ? | 0 | ⚪ |
+| $BUNVNODE | -116 | ? | 0 | ⚪ |
 | $NEXTREMIX | 141 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 9h 3m**
+**Settlement in: 4d 5h 18m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -78,9 +78,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
+| ASK | 115.28 | 8 | _mm |
 | ASK | 113.81 | 8 | _mm |
-| ASK | 31.2 | 8 | _mm |
-| ASK | 20.8 | 1 | _mm |
+| ASK | 31.2 | 7 | _mm |
 | BID | 143.46 | 3 | _mm |
 | BID | 128.32 | 6 | _mm |
 | BID | 126.48 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +514 |
+| 🥇 | _noise | +610 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -514 |
+| 🥉 | _mm | -610 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -217,7 +217,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `███░░░░░░░░░░░░░░░░░` 4/24h. Settlement price will average these readings
+**TWAP samples:** `████░░░░░░░░░░░░░░░░` 5/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
