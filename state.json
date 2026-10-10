@@ -9,7 +9,7 @@
     "VSCREACT": 136,
     "OAVSAN": 44,
     "RUSTGO": 171,
-    "BUNVNODE": 58,
+    "BUNVNODE": 59,
     "NEXTREMIX": 15
   },
   "books": {
@@ -146,6 +146,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 86.88,
+          "ts": 1791663414.676668
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 85.58,
           "ts": 1791631453.4961438
         },
@@ -240,6 +246,12 @@
           "qty": 8,
           "price": 80.73,
           "ts": 1791610710.4348137
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 89.76,
+          "ts": 1791649271.954119
         },
         {
           "owner": "_mm",
@@ -370,8 +382,8 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 89.76,
-          "ts": 1791649271.954119
+          "price": 94.12,
+          "ts": 1791663414.676668
         }
       ]
     },
@@ -917,7 +929,7 @@
     "anthropic_sdk_stars": 3956,
     "rust_stars": 119642,
     "go_stars": 139174,
-    "bun_stars": 96176,
+    "bun_stars": 96177,
     "node_stars": 122270,
     "nextjs_stars": 143106,
     "remix_stars": 56593
@@ -929,6 +941,6 @@
     "_mm",
     "_noise"
   ],
-  "tick": 244,
+  "tick": 245,
   "star_cache": {}
 }
