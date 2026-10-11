@@ -8,7 +8,7 @@
     "REACT": 31,
     "VSCREACT": -3,
     "OAVSAN": 7,
-    "RUSTGO": 3,
+    "RUSTGO": 5,
     "BUNVNODE": -28,
     "NEXTREMIX": 20
   },
@@ -22,12 +22,46 @@
       "asks": []
     },
     "VSCODE": {
-      "bids": [],
-      "asks": []
+      "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 268.8,
+          "ts": 1791718438.7617376
+        }
+      ],
+      "asks": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 291.2,
+          "ts": 1791718438.7617376
+        }
+      ]
     },
     "REACT": {
-      "bids": [],
-      "asks": []
+      "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 297.6,
+          "ts": 1791718438.7617376
+        },
+        {
+          "owner": "_noise",
+          "qty": 1,
+          "price": 29.19,
+          "ts": 1791718438.7617376
+        }
+      ],
+      "asks": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 322.4,
+          "ts": 1791718438.7617376
+        }
+      ]
     },
     "VSCREACT": {
       "bids": [],
@@ -212,7 +246,7 @@
     "react_stars": 250858,
     "openai_sdk_stars": 31807,
     "anthropic_sdk_stars": 3958,
-    "rust_stars": 119684,
+    "rust_stars": 119686,
     "go_stars": 139197,
     "bun_stars": 96186,
     "node_stars": 122301,
@@ -221,6 +255,6 @@
   },
   "weekly_volume": {},
   "active_this_week": [],
-  "tick": 247,
+  "tick": 248,
   "star_cache": {}
 }
