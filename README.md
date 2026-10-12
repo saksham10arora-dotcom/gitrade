@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-12 00:24 UTC_
+_Last updated: 2026-10-12 06:24 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 51 | ? | 0 | ⚪ |
-| $REACT | 49 | ? | 0 | ⚪ |
-| $VSCREACT | 2 | ? | 0 | ⚪ |
-| $OAVSAN | 14 | ? | 0 | ⚪ |
-| $RUSTGO | 16 | ? | 0 | ⚪ |
-| $BUNVNODE | -32 | ? | 0 | ⚪ |
-| $NEXTREMIX | 29 | ? | 0 | ⚪ |
+| $VSCODE | 63 | ? | 0 | ⚪ |
+| $REACT | 58 | ? | 0 | ⚪ |
+| $VSCREACT | 5 | ? | 0 | ⚪ |
+| $OAVSAN | 15 | ? | 0 | ⚪ |
+| $RUSTGO | 23 | ? | 0 | ⚪ |
+| $BUNVNODE | -29 | ? | 0 | ⚪ |
+| $NEXTREMIX | 34 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 3h 58m**
+**Settlement in: 5d 21h 59m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 447.2 | 8 | _mm |
 | ASK | 445.15 | 8 | _mm |
+| ASK | 423.16 | 8 | _mm |
 | ASK | 291.2 | 8 | _mm |
 | BID | 451.2 | 8 | _mm |
 | BID | 412.8 | 8 | _mm |
@@ -78,12 +78,12 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 427.69 | 8 | _mm |
+| ASK | 389.57 | 8 | _mm |
 | ASK | 384.8 | 8 | _mm |
 | ASK | 322.4 | 8 | _mm |
 | BID | 403.2 | 8 | _mm |
 | BID | 394.79 | 8 | _mm |
-| BID | 355.2 | 8 | _mm |
+| BID | 359.61 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -218,7 +218,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `██░░░░░░░░░░░░░░░░░░` 3/24h. Settlement price will average these readings
+**TWAP samples:** `███░░░░░░░░░░░░░░░░░` 4/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
