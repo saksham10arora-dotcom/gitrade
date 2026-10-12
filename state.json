@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 82,
-    "REACT": 91,
-    "VSCREACT": -9,
+    "VSCODE": 81,
+    "REACT": 94,
+    "VSCREACT": -13,
     "OAVSAN": 20,
-    "RUSTGO": 36,
-    "BUNVNODE": -28,
-    "NEXTREMIX": 34
+    "RUSTGO": 37,
+    "BUNVNODE": -33,
+    "NEXTREMIX": 32
   },
   "books": {
     "DSTAR": {
@@ -367,34 +367,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1791717161.745591,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 28,
-        "REACT": 31,
-        "VSCREACT": -3,
-        "OAVSAN": 7,
-        "RUSTGO": 3,
-        "BUNVNODE": -28,
-        "NEXTREMIX": 20
-      }
-    },
-    {
-      "ts": 1791739250.764576,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 44,
-        "REACT": 38,
-        "VSCREACT": 6,
-        "OAVSAN": 7,
-        "RUSTGO": 13,
-        "BUNVNODE": -29,
-        "NEXTREMIX": 26
-      }
-    },
-    {
       "ts": 1791754188.3668897,
       "stats": {
         "DSTAR": 0,
@@ -435,6 +407,20 @@
         "BUNVNODE": -28,
         "NEXTREMIX": 33
       }
+    },
+    {
+      "ts": 1791825759.4414442,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 81,
+        "REACT": 94,
+        "VSCREACT": -13,
+        "OAVSAN": 20,
+        "RUSTGO": 37,
+        "BUNVNODE": -33,
+        "NEXTREMIX": 32
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -454,16 +440,16 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 193618,
-    "react_stars": 250918,
+    "vscode_stars": 193617,
+    "react_stars": 250921,
     "openai_sdk_stars": 31823,
     "anthropic_sdk_stars": 3961,
     "rust_stars": 119743,
-    "go_stars": 139223,
-    "bun_stars": 96209,
-    "node_stars": 122324,
+    "go_stars": 139222,
+    "bun_stars": 96205,
+    "node_stars": 122325,
     "nextjs_stars": 143148,
-    "remix_stars": 56597
+    "remix_stars": 56599
   },
   "weekly_volume": {
     "REACT": 2
