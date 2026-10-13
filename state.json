@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 98,
-    "REACT": 124,
-    "VSCREACT": -26,
+    "VSCODE": 113,
+    "REACT": 137,
+    "VSCREACT": -24,
     "OAVSAN": 28,
-    "RUSTGO": 45,
-    "BUNVNODE": -43,
-    "NEXTREMIX": 34
+    "RUSTGO": 46,
+    "BUNVNODE": -47,
+    "NEXTREMIX": 39
   },
   "books": {
     "DSTAR": {
@@ -422,34 +422,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1791766763.1104355,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 52,
-        "REACT": 49,
-        "VSCREACT": 3,
-        "OAVSAN": 14,
-        "RUSTGO": 16,
-        "BUNVNODE": -31,
-        "NEXTREMIX": 29
-      }
-    },
-    {
-      "ts": 1791789236.0354154,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 63,
-        "REACT": 62,
-        "VSCREACT": 1,
-        "OAVSAN": 16,
-        "RUSTGO": 26,
-        "BUNVNODE": -28,
-        "NEXTREMIX": 33
-      }
-    },
-    {
       "ts": 1791825759.4414442,
       "stats": {
         "DSTAR": 0,
@@ -476,6 +448,20 @@
         "BUNVNODE": -44,
         "NEXTREMIX": 35
       }
+    },
+    {
+      "ts": 1791876122.0788069,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 113,
+        "REACT": 137,
+        "VSCREACT": -24,
+        "OAVSAN": 28,
+        "RUSTGO": 46,
+        "BUNVNODE": -47,
+        "NEXTREMIX": 39
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -495,15 +481,15 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 193634,
-    "react_stars": 250951,
+    "vscode_stars": 193649,
+    "react_stars": 250964,
     "openai_sdk_stars": 31834,
     "anthropic_sdk_stars": 3964,
-    "rust_stars": 119762,
-    "go_stars": 139233,
-    "bun_stars": 96210,
-    "node_stars": 122340,
-    "nextjs_stars": 143150,
+    "rust_stars": 119771,
+    "go_stars": 139241,
+    "bun_stars": 96216,
+    "node_stars": 122350,
+    "nextjs_stars": 143155,
     "remix_stars": 56599
   },
   "weekly_volume": {
