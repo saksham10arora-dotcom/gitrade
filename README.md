@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-13 18:10 UTC_
+_Last updated: 2026-10-13 22:49 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 179 | ? | 0 | ⚪ |
-| $REACT | 249 | 87.61 | 3 | 🟢 |
-| $VSCREACT | -70 | ? | 0 | ⚪ |
-| $OAVSAN | 25 | ? | 0 | ⚪ |
-| $RUSTGO | 83 | ? | 0 | ⚪ |
-| $BUNVNODE | -135 | ? | 0 | ⚪ |
-| $NEXTREMIX | 70 | ? | 0 | ⚪ |
+| $VSCODE | 198 | ? | 0 | ⚪ |
+| $REACT | 270 | 87.61 | 3 | 🟢 |
+| $VSCREACT | -72 | ? | 0 | ⚪ |
+| $OAVSAN | 31 | ? | 0 | ⚪ |
+| $RUSTGO | 92 | ? | 0 | ⚪ |
+| $BUNVNODE | -146 | ? | 0 | ⚪ |
+| $NEXTREMIX | 96 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 10h 12m**
+**Settlement in: 4d 5h 33m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -71,9 +71,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 363.7 | 8 | _mm |
 | ASK | 351.89 | 8 | _mm |
 | ASK | 291.2 | 8 | _mm |
+| BID | 480.65 | 8 | _mm |
 | BID | 467.22 | 8 | _mm |
 | BID | 451.2 | 8 | _mm |
-| BID | 412.8 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
@@ -81,9 +81,9 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 154.86 | 1 | _noise |
 | ASK | 122.48 | 2 | _noise |
 | ASK | 118.37 | 1 | _noise |
+| BID | 655.43 | 8 | _mm |
 | BID | 649.93 | 8 | _mm |
 | BID | 434.08 | 8 | _mm |
-| BID | 425.07 | 7 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +240 |
+| 🥇 | _mm | +248 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -240 |
+| 🥉 | _noise | -248 |
 <!-- BOT_BOARD_END -->
 
 ---
