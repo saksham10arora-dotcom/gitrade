@@ -842,20 +842,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1792009662.7583752,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 67,
-        "REACT": 190,
-        "VSCREACT": -123,
-        "OAVSAN": 31,
-        "RUSTGO": 280,
-        "BUNVNODE": 52,
-        "NEXTREMIX": -122
-      }
-    },
-    {
       "ts": 1792021301.9076293,
       "stats": {
         "DSTAR": 0,
@@ -923,6 +909,20 @@
         "RUSTGO": 615,
         "BUNVNODE": 43,
         "NEXTREMIX": -106
+      }
+    },
+    {
+      "ts": 1792101375.45887,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 118,
+        "REACT": 239,
+        "VSCREACT": -121,
+        "OAVSAN": 42,
+        "RUSTGO": 612,
+        "BUNVNODE": 38,
+        "NEXTREMIX": -109
       }
     }
   ],
