@@ -4,11 +4,11 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 42,
+    "VSCODE": 43,
     "REACT": 51,
-    "VSCREACT": -9,
+    "VSCREACT": -8,
     "OAVSAN": 10,
-    "RUSTGO": 4,
+    "RUSTGO": 5,
     "BUNVNODE": -8,
     "NEXTREMIX": 23
   },
@@ -23,6 +23,12 @@
     },
     "VSCODE": {
       "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 342.66,
+          "ts": 1792366483.3683136
+        },
         {
           "owner": "_mm",
           "qty": 8,
@@ -84,6 +90,12 @@
           "qty": 8,
           "price": 328.35,
           "ts": 1792358754.0646868
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 371.21,
+          "ts": 1792366483.3683136
         }
       ]
     },
@@ -100,6 +112,12 @@
           "qty": 8,
           "price": 422.4,
           "ts": 1792349938.6985655
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 406.41,
+          "ts": 1792366483.3683136
         },
         {
           "owner": "_mm",
@@ -132,6 +150,12 @@
           "qty": 1,
           "price": 44.48,
           "ts": 1792349938.6985655
+        },
+        {
+          "owner": "_noise",
+          "qty": 1,
+          "price": 50.66,
+          "ts": 1792358754.0646868
         },
         {
           "owner": "_mm",
@@ -170,10 +194,16 @@
           "ts": 1792358754.0646868
         },
         {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 440.28,
+          "ts": 1792366483.3683136
+        },
+        {
           "owner": "_noise",
-          "qty": 1,
-          "price": 50.66,
-          "ts": 1792358754.0646868
+          "qty": 3,
+          "price": 50.05,
+          "ts": 1792366483.3683136
         }
       ]
     },
@@ -444,14 +474,14 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 193836,
+    "vscode_stars": 193837,
     "react_stars": 251272,
     "openai_sdk_stars": 31880,
     "anthropic_sdk_stars": 3976,
-    "rust_stars": 120492,
+    "rust_stars": 120493,
     "go_stars": 139318,
-    "bun_stars": 96287,
-    "node_stars": 122412,
+    "bun_stars": 96288,
+    "node_stars": 122413,
     "nextjs_stars": 143075,
     "remix_stars": 56609
   },
@@ -462,6 +492,6 @@
     "_mm",
     "_noise"
   ],
-  "tick": 290,
+  "tick": 291,
   "star_cache": {}
 }
