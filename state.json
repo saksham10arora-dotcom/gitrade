@@ -4,12 +4,12 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 24,
-    "REACT": 40,
-    "VSCREACT": -16,
+    "VSCODE": 27,
+    "REACT": 44,
+    "VSCREACT": -17,
     "OAVSAN": 3,
-    "RUSTGO": 2,
-    "BUNVNODE": -1,
+    "RUSTGO": 1,
+    "BUNVNODE": -2,
     "NEXTREMIX": 19
   },
   "books": {
@@ -23,6 +23,12 @@
     },
     "VSCODE": {
       "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 259.2,
+          "ts": 1792349938.6985655
+        },
         {
           "owner": "_mm",
           "qty": 8,
@@ -60,11 +66,23 @@
           "qty": 8,
           "price": 218.4,
           "ts": 1792341261.9155414
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 280.8,
+          "ts": 1792349938.6985655
         }
       ]
     },
     "REACT": {
       "bids": [
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 422.4,
+          "ts": 1792349938.6985655
+        },
         {
           "owner": "_mm",
           "qty": 4,
@@ -114,6 +132,18 @@
           "qty": 8,
           "price": 395.2,
           "ts": 1792341261.9155414
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 457.6,
+          "ts": 1792349938.6985655
+        },
+        {
+          "owner": "_noise",
+          "qty": 2,
+          "price": 44.48,
+          "ts": 1792349938.6985655
         }
       ]
     },
@@ -355,14 +385,14 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 193818,
-    "react_stars": 251261,
+    "vscode_stars": 193821,
+    "react_stars": 251265,
     "openai_sdk_stars": 31873,
     "anthropic_sdk_stars": 3976,
     "rust_stars": 120483,
-    "go_stars": 139311,
+    "go_stars": 139312,
     "bun_stars": 96286,
-    "node_stars": 122404,
+    "node_stars": 122405,
     "nextjs_stars": 143072,
     "remix_stars": 56610
   },
@@ -373,6 +403,6 @@
     "_mm",
     "_noise"
   ],
-  "tick": 288,
+  "tick": 289,
   "star_cache": {}
 }
