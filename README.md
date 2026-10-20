@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-20 18:46 UTC_
+_Last updated: 2026-10-20 22:12 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 367 | ? | 0 | ⚪ |
-| $REACT | 353 | 44.48 | 15 | 🟢 |
-| $VSCREACT | 14 | ? | 0 | ⚪ |
-| $OAVSAN | 13 | ? | 0 | ⚪ |
-| $RUSTGO | 61 | ? | 0 | ⚪ |
-| $BUNVNODE | -87 | ? | 0 | ⚪ |
-| $NEXTREMIX | 51 | ? | 0 | ⚪ |
+| $VSCODE | 378 | ? | 0 | ⚪ |
+| $REACT | 372 | 104.0 | 19 | 🟢 |
+| $VSCREACT | 6 | ? | 0 | ⚪ |
+| $OAVSAN | 8 | ? | 0 | ⚪ |
+| $RUSTGO | 73 | ? | 0 | ⚪ |
+| $BUNVNODE | -50 | ? | 0 | ⚪ |
+| $NEXTREMIX | 38 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 8h 34m**
+**Settlement in: 4d 5h 8m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -72,8 +72,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 156.0 | 8 | _mm |
 | ASK | 52.0 | 8 | _mm |
 | BID | 933.17 | 8 | _mm |
+| BID | 911.81 | 8 | _mm |
 | BID | 828.55 | 8 | _mm |
-| BID | 814.81 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
@@ -82,8 +82,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 50.05 | 3 | _noise |
 | ASK | 44.48 | 1 | _noise |
 | BID | 897.57 | 8 | _mm |
+| BID | 897.33 | 8 | _mm |
 | BID | 798.57 | 8 | _mm |
-| BID | 765.72 | 8 | _mm |
 
 **$VSCREACT**
 | Side | Price | Qty | Owner |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +3363 |
+| 🥇 | _mm | +1895 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -3363 |
+| 🥉 | _noise | -1895 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -219,7 +219,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `████░░░░░░░░░░░░░░░░` 5/24h. Settlement price will average these readings
+**TWAP samples:** `█████░░░░░░░░░░░░░░░` 6/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
