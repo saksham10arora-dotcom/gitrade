@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 417,
-    "REACT": 471,
-    "VSCREACT": -54,
-    "OAVSAN": 23,
-    "RUSTGO": 29,
-    "BUNVNODE": -89,
-    "NEXTREMIX": 126
+    "VSCODE": 425,
+    "REACT": 475,
+    "VSCREACT": -50,
+    "OAVSAN": 26,
+    "RUSTGO": 33,
+    "BUNVNODE": -94,
+    "NEXTREMIX": 129
   },
   "books": {
     "DSTAR": {
@@ -140,6 +140,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 603.88,
+          "ts": 1792702243.739472
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 344.87,
           "ts": 1792374433.4336338
         },
@@ -222,6 +228,12 @@
           "qty": 8,
           "price": 373.61,
           "ts": 1792374433.4336338
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 659.27,
+          "ts": 1792690518.194022
         },
         {
           "owner": "_mm",
@@ -334,8 +346,8 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 659.27,
-          "ts": 1792690518.194022
+          "price": 654.21,
+          "ts": 1792702243.739472
         }
       ]
     },
@@ -434,6 +446,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 674.93,
+          "ts": 1792702243.739472
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 660.2,
           "ts": 1792650678.5002568
         },
@@ -513,7 +531,7 @@
         },
         {
           "owner": "_mm",
-          "qty": 6,
+          "qty": 4,
           "price": 208.0,
           "ts": 1792313621.9639277
         },
@@ -614,6 +632,12 @@
           "ts": 1792349938.6985655
         },
         {
+          "owner": "_noise",
+          "qty": 4,
+          "price": 477.57,
+          "ts": 1792690518.194022
+        },
+        {
           "owner": "_mm",
           "qty": 8,
           "price": 482.87,
@@ -640,6 +664,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 731.17,
+          "ts": 1792702243.739472
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 733.33,
           "ts": 1792489183.1903813
         },
@@ -648,6 +678,12 @@
           "qty": 8,
           "price": 737.76,
           "ts": 1792441971.1145527
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 746.43,
+          "ts": 1792690518.194022
         },
         {
           "owner": "_mm",
@@ -726,18 +762,6 @@
           "qty": 8,
           "price": 972.37,
           "ts": 1792521967.0619514
-        },
-        {
-          "owner": "_mm",
-          "qty": 8,
-          "price": 746.43,
-          "ts": 1792690518.194022
-        },
-        {
-          "owner": "_noise",
-          "qty": 4,
-          "price": 477.57,
-          "ts": 1792690518.194022
         }
       ]
     },
@@ -764,13 +788,13 @@
   },
   "accounts": {
     "_mm": {
-      "cash": 144.71999999999994,
+      "cash": 560.7199999999999,
       "cash_at_week_start": 3739.38,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": 19,
+        "REACT": 17,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -796,13 +820,13 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 50608.31000000001,
+      "cash": 50192.31000000001,
       "cash_at_week_start": 47013.65,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": -19,
+        "REACT": -17,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -829,7 +853,7 @@
     }
   },
   "last_price": {
-    "REACT": 157.85
+    "REACT": 208.0
   },
   "price_history": {
     "REACT": [
@@ -849,7 +873,8 @@
       104.0,
       208.0,
       130.36,
-      157.85
+      157.85,
+      208.0
     ]
   },
   "hall_of_fame": [
@@ -1019,24 +1044,24 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 194211,
-    "react_stars": 251692,
-    "openai_sdk_stars": 31910,
+    "vscode_stars": 194219,
+    "react_stars": 251696,
+    "openai_sdk_stars": 31913,
     "anthropic_sdk_stars": 3993,
-    "rust_stars": 120670,
-    "go_stars": 139471,
-    "bun_stars": 96346,
-    "node_stars": 122552,
-    "nextjs_stars": 143190,
+    "rust_stars": 120679,
+    "go_stars": 139476,
+    "bun_stars": 96347,
+    "node_stars": 122558,
+    "nextjs_stars": 143193,
     "remix_stars": 56621
   },
   "weekly_volume": {
-    "REACT": 39
+    "REACT": 41
   },
   "active_this_week": [
     "_mm",
     "_noise"
   ],
-  "tick": 311,
+  "tick": 312,
   "star_cache": {}
 }

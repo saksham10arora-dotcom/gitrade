@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-22 17:35 UTC_
+_Last updated: 2026-10-22 20:50 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 416 | ? | 0 | ⚪ |
-| $REACT | 471 | 157.85 | 39 | 🟢 |
-| $VSCREACT | -55 | ? | 0 | ⚪ |
-| $OAVSAN | 24 | ? | 0 | ⚪ |
-| $RUSTGO | 28 | ? | 0 | ⚪ |
-| $BUNVNODE | -88 | ? | 0 | ⚪ |
-| $NEXTREMIX | 127 | ? | 0 | ⚪ |
+| $VSCODE | 425 | ? | 0 | ⚪ |
+| $REACT | 475 | 208.0 | 41 | 🟢 |
+| $VSCREACT | -50 | ? | 0 | ⚪ |
+| $OAVSAN | 26 | ? | 0 | ⚪ |
+| $RUSTGO | 33 | ? | 0 | ⚪ |
+| $BUNVNODE | -94 | ? | 0 | ⚪ |
+| $NEXTREMIX | 129 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 2d 9h 45m**
+**Settlement in: 2d 6h 29m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -78,7 +78,7 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 208.0 | 6 | _mm |
+| ASK | 208.0 | 4 | _mm |
 | ASK | 174.6 | 4 | _noise |
 | ASK | 170.84 | 4 | _noise |
 | BID | 897.57 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _mm | +6555 |
+| 🥇 | _mm | +5903 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _noise | -6555 |
+| 🥉 | _noise | -5903 |
 <!-- BOT_BOARD_END -->
 
 ---
@@ -219,7 +219,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `████░░░░░░░░░░░░░░░░` 5/24h. Settlement price will average these readings
+**TWAP samples:** `█████░░░░░░░░░░░░░░░` 6/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
