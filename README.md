@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-10-27 12:45 UTC_
+_Last updated: 2026-10-27 18:38 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 119 | ? | 0 | ⚪ |
-| $REACT | 136 | 120.32 | 36 | 🟢 |
-| $VSCREACT | -17 | ? | 0 | ⚪ |
-| $OAVSAN | 22 | ? | 0 | ⚪ |
-| $RUSTGO | 10 | ? | 0 | ⚪ |
-| $BUNVNODE | -25 | ? | 0 | ⚪ |
-| $NEXTREMIX | 88 | ? | 0 | ⚪ |
+| $VSCODE | 122 | ? | 0 | ⚪ |
+| $REACT | 29 | 120.32 | 36 | 🔴 |
+| $VSCREACT | 93 | ? | 0 | ⚪ |
+| $OAVSAN | 20 | ? | 0 | ⚪ |
+| $RUSTGO | 141 | ? | 0 | ⚪ |
+| $BUNVNODE | -19 | ? | 0 | ⚪ |
+| $NEXTREMIX | -42 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 14h 43m**
+**Settlement in: 4d 8h 51m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -78,8 +78,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 127.23 | 5 | _noise |
 | ASK | 120.32 | 2 | _noise |
+| ASK | 80.25 | 8 | _mm |
 | ASK | 72.8 | 4 | _mm |
 | BID | 777.6 | 5 | _mm |
 | BID | 738.31 | 8 | _mm |
