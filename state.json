@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 110,
-    "REACT": 10,
-    "VSCREACT": 100,
-    "OAVSAN": 24,
-    "RUSTGO": 156,
-    "BUNVNODE": 42,
-    "NEXTREMIX": -16
+    "VSCODE": 115,
+    "REACT": 12,
+    "VSCREACT": 103,
+    "OAVSAN": 25,
+    "RUSTGO": 158,
+    "BUNVNODE": 39,
+    "NEXTREMIX": -11
   },
   "books": {
     "DSTAR": {
@@ -146,6 +146,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 139.3,
+          "ts": 1793378306.9170673
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 139.08,
           "ts": 1793354013.5288076
         },
@@ -222,6 +228,12 @@
           "qty": 8,
           "price": 146.21,
           "ts": 1793329174.6224082
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 150.67,
+          "ts": 1793354013.5288076
         },
         {
           "owner": "_mm",
@@ -346,8 +358,8 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 150.67,
-          "ts": 1793354013.5288076
+          "price": 150.91,
+          "ts": 1793378306.9170673
         }
       ]
     },
@@ -421,7 +433,7 @@
         },
         {
           "owner": "_mm",
-          "qty": 5,
+          "qty": 3,
           "price": 94.07,
           "ts": 1793152044.1577313
         },
@@ -492,22 +504,16 @@
           "ts": 1793175265.16849
         },
         {
-          "owner": "_noise",
-          "qty": 2,
-          "price": 24.6,
-          "ts": 1793200367.4194775
+          "owner": "_mm",
+          "qty": 8,
+          "price": 14.54,
+          "ts": 1793378306.9170673
         },
         {
           "owner": "_noise",
           "qty": 3,
           "price": 11.72,
           "ts": 1793175265.16849
-        },
-        {
-          "owner": "_noise",
-          "qty": 1,
-          "price": 48.33,
-          "ts": 1793354013.5288076
         }
       ],
       "asks": [
@@ -660,6 +666,12 @@
           "qty": 8,
           "price": 855.34,
           "ts": 1792967373.1393101
+        },
+        {
+          "owner": "_mm",
+          "qty": 5,
+          "price": 15.75,
+          "ts": 1793378306.9170673
         }
       ]
     },
@@ -686,13 +698,13 @@
   },
   "accounts": {
     "_mm": {
-      "cash": 151.3900000000011,
+      "cash": 60.78000000000111,
       "cash_at_week_start": 12214.66,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": 6,
+        "REACT": 5,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -718,13 +730,13 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 50601.640000000014,
+      "cash": 50692.250000000015,
       "cash_at_week_start": 38538.37,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": -6,
+        "REACT": -5,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -751,7 +763,7 @@
     }
   },
   "last_price": {
-    "REACT": 50.09
+    "REACT": 94.07
   },
   "price_history": {
     "REACT": [
@@ -776,7 +788,10 @@
       27.32,
       94.07,
       27.32,
-      50.09
+      50.09,
+      48.33,
+      24.6,
+      94.07
     ]
   },
   "hall_of_fame": [
@@ -939,24 +954,24 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 194367,
-    "react_stars": 251763,
-    "openai_sdk_stars": 31983,
+    "vscode_stars": 194372,
+    "react_stars": 251765,
+    "openai_sdk_stars": 31984,
     "anthropic_sdk_stars": 4022,
-    "rust_stars": 120837,
-    "go_stars": 139443,
-    "bun_stars": 96467,
-    "node_stars": 123104,
-    "nextjs_stars": 143208,
+    "rust_stars": 120844,
+    "go_stars": 139448,
+    "bun_stars": 96470,
+    "node_stars": 123110,
+    "nextjs_stars": 143213,
     "remix_stars": 56628
   },
   "weekly_volume": {
-    "REACT": 48
+    "REACT": 53
   },
   "active_this_week": [
     "_mm",
     "_noise"
   ],
-  "tick": 353,
+  "tick": 354,
   "star_cache": {}
 }
