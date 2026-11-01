@@ -4,12 +4,12 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 168,
-    "REACT": 152,
-    "VSCREACT": 16,
-    "OAVSAN": 34,
-    "RUSTGO": 121,
-    "BUNVNODE": -2,
+    "VSCODE": 170,
+    "REACT": 156,
+    "VSCREACT": 14,
+    "OAVSAN": 35,
+    "RUSTGO": 124,
+    "BUNVNODE": -3,
     "NEXTREMIX": 92
   },
   "books": {
@@ -148,6 +148,12 @@
           "qty": 8,
           "price": 167.36,
           "ts": 1793481806.3435247
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
+          "price": 166.31,
+          "ts": 1793492482.866497
         },
         {
           "owner": "_mm",
@@ -310,6 +316,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 181.31,
+          "ts": 1793481806.3435247
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 197.6,
           "ts": 1792949702.533244
         },
@@ -430,8 +442,8 @@
         {
           "owner": "_mm",
           "qty": 8,
-          "price": 181.31,
-          "ts": 1793481806.3435247
+          "price": 180.17,
+          "ts": 1793492482.866497
         }
       ]
     },
@@ -502,6 +514,12 @@
           "qty": 6,
           "price": 382.99,
           "ts": 1793105157.5390797
+        },
+        {
+          "owner": "_mm",
+          "qty": 5,
+          "price": 152.61,
+          "ts": 1793492482.866497
         },
         {
           "owner": "_mm",
@@ -627,13 +645,7 @@
       "asks": [
         {
           "owner": "_mm",
-          "qty": 1,
-          "price": 30.47,
-          "ts": 1793394364.084204
-        },
-        {
-          "owner": "_mm",
-          "qty": 8,
+          "qty": 7,
           "price": 39.56,
           "ts": 1793407796.99918
         },
@@ -648,12 +660,6 @@
           "qty": 8,
           "price": 52.09,
           "ts": 1793354013.5288076
-        },
-        {
-          "owner": "_noise",
-          "qty": 3,
-          "price": 52.25,
-          "ts": 1793429510.111938
         },
         {
           "owner": "_mm",
@@ -754,6 +760,12 @@
         {
           "owner": "_mm",
           "qty": 8,
+          "price": 165.33,
+          "ts": 1793492482.866497
+        },
+        {
+          "owner": "_mm",
+          "qty": 8,
           "price": 414.91,
           "ts": 1793105157.5390797
         },
@@ -848,13 +860,13 @@
   },
   "accounts": {
     "_mm": {
-      "cash": 176.3800000000011,
+      "cash": 89.6600000000011,
       "cash_at_week_start": 12214.66,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": -3,
+        "REACT": -2,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -880,13 +892,13 @@
       "league": "human"
     },
     "_noise": {
-      "cash": 50576.65000000001,
+      "cash": 50663.37000000001,
       "cash_at_week_start": 38538.37,
       "positions": {
         "DSTAR": 0,
         "DFORK": 0,
         "VSCODE": 0,
-        "REACT": 3,
+        "REACT": 2,
         "VSCREACT": 0,
         "OAVSAN": 0,
         "RUSTGO": 0,
@@ -913,7 +925,7 @@
     }
   },
   "last_price": {
-    "REACT": 30.47
+    "REACT": 39.56
   },
   "price_history": {
     "REACT": [
@@ -948,7 +960,10 @@
       15.75,
       30.47,
       52.25,
-      30.47
+      30.47,
+      52.25,
+      30.47,
+      39.56
     ]
   },
   "hall_of_fame": [
@@ -1111,24 +1126,24 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 194425,
-    "react_stars": 251905,
-    "openai_sdk_stars": 31999,
+    "vscode_stars": 194427,
+    "react_stars": 251909,
+    "openai_sdk_stars": 32000,
     "anthropic_sdk_stars": 4028,
-    "rust_stars": 120926,
-    "go_stars": 139567,
-    "bun_stars": 96487,
-    "node_stars": 123168,
+    "rust_stars": 120930,
+    "go_stars": 139568,
+    "bun_stars": 96488,
+    "node_stars": 123170,
     "nextjs_stars": 143314,
     "remix_stars": 56626
   },
   "weekly_volume": {
-    "REACT": 69
+    "REACT": 74
   },
   "active_this_week": [
     "_mm",
     "_noise"
   ],
-  "tick": 360,
+  "tick": 361,
   "star_cache": {}
 }
