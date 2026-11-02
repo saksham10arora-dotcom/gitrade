@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-11-02 01:53 UTC_
+_Last updated: 2026-11-02 09:16 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 32 | ? | 0 | ⚪ |
-| $REACT | 141 | 125.33 | 7 | 🟢 |
-| $VSCREACT | -109 | ? | 0 | ⚪ |
-| $OAVSAN | 8 | ? | 0 | ⚪ |
-| $RUSTGO | -103 | ? | 0 | ⚪ |
-| $BUNVNODE | -3 | ? | 0 | ⚪ |
-| $NEXTREMIX | 120 | ? | 0 | ⚪ |
+| $VSCODE | 46 | ? | 0 | ⚪ |
+| $REACT | 151 | 125.33 | 7 | 🟢 |
+| $VSCREACT | -105 | ? | 0 | ⚪ |
+| $OAVSAN | 9 | ? | 0 | ⚪ |
+| $RUSTGO | -102 | ? | 0 | ⚪ |
+| $BUNVNODE | -2 | ? | 0 | ⚪ |
+| $NEXTREMIX | 122 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 6d 2h 49m**
+**Settlement in: 5d 19h 27m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -71,14 +71,14 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 | ASK | 249.6 | 8 | _mm |
 | ASK | 218.4 | 8 | _mm |
 | ASK | 72.8 | 8 | _mm |
+| BID | 259.91 | 8 | _mm |
 | BID | 251.36 | 8 | _mm |
 | BID | 243.78 | 8 | _mm |
-| BID | 230.4 | 8 | _mm |
 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 1163.67 | 8 | _mm |
+| ASK | 143.44 | 1 | _noise |
 | ASK | 139.91 | 2 | _noise |
 | ASK | 135.67 | 5 | _noise |
 | BID | 1296.0 | 7 | _mm |
@@ -221,7 +221,7 @@ The market price is where people think those numbers land. Settlement is where t
 ## TWAP Settlement Progress
 
 <!-- TWAP_START -->
-**TWAP samples:** `███░░░░░░░░░░░░░░░░░` 4/24h. Settlement price will average these readings
+**TWAP samples:** `████░░░░░░░░░░░░░░░░` 5/24h. Settlement price will average these readings
 <!-- TWAP_END -->
 
 ---
