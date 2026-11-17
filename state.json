@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 98,
-    "REACT": 77,
-    "VSCREACT": 21,
+    "VSCODE": 113,
+    "REACT": 93,
+    "VSCREACT": 20,
     "OAVSAN": 12,
-    "RUSTGO": 82,
+    "RUSTGO": 101,
     "BUNVNODE": 10,
-    "NEXTREMIX": 114
+    "NEXTREMIX": 133
   },
   "books": {
     "DSTAR": {
@@ -364,34 +364,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1794786303.4446578,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 27,
-        "REACT": 26,
-        "VSCREACT": 1,
-        "OAVSAN": 2,
-        "RUSTGO": 43,
-        "BUNVNODE": -18,
-        "NEXTREMIX": 15
-      }
-    },
-    {
-      "ts": 1794804538.1540685,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 40,
-        "REACT": 25,
-        "VSCREACT": 15,
-        "OAVSAN": 2,
-        "RUSTGO": 51,
-        "BUNVNODE": -9,
-        "NEXTREMIX": 28
-      }
-    },
-    {
       "ts": 1794835272.6912968,
       "stats": {
         "DSTAR": 0,
@@ -418,6 +390,20 @@
         "BUNVNODE": 11,
         "NEXTREMIX": 112
       }
+    },
+    {
+      "ts": 1794897428.723285,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": 113,
+        "REACT": 93,
+        "VSCREACT": 20,
+        "OAVSAN": 12,
+        "RUSTGO": 101,
+        "BUNVNODE": 10,
+        "NEXTREMIX": 133
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -437,16 +423,16 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 195500,
-    "react_stars": 252705,
+    "vscode_stars": 195515,
+    "react_stars": 252721,
     "openai_sdk_stars": 32180,
     "anthropic_sdk_stars": 4079,
-    "rust_stars": 122077,
-    "go_stars": 139969,
-    "bun_stars": 96721,
-    "node_stars": 123753,
-    "nextjs_stars": 143640,
-    "remix_stars": 56637
+    "rust_stars": 122103,
+    "go_stars": 139976,
+    "bun_stars": 96724,
+    "node_stars": 123756,
+    "nextjs_stars": 143660,
+    "remix_stars": 56638
   },
   "weekly_volume": {
     "REACT": 15
