@@ -4,13 +4,13 @@
   "fair_value": {
     "DSTAR": 0,
     "DFORK": 0,
-    "VSCODE": 114,
-    "REACT": 111,
-    "VSCREACT": 3,
+    "VSCODE": -21,
+    "REACT": -21,
+    "VSCREACT": 0,
     "OAVSAN": 12,
-    "RUSTGO": 47,
-    "BUNVNODE": -98,
-    "NEXTREMIX": 3
+    "RUSTGO": 62,
+    "BUNVNODE": -4,
+    "NEXTREMIX": -2
   },
   "books": {
     "DSTAR": {
@@ -374,34 +374,6 @@
   "trader_cache": {},
   "twap_samples": [
     {
-      "ts": 1795344229.9037309,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 63,
-        "REACT": 43,
-        "VSCREACT": 20,
-        "OAVSAN": 1,
-        "RUSTGO": 20,
-        "BUNVNODE": -35,
-        "NEXTREMIX": -1
-      }
-    },
-    {
-      "ts": 1795371218.8908858,
-      "stats": {
-        "DSTAR": 0,
-        "DFORK": 0,
-        "VSCODE": 113,
-        "REACT": 95,
-        "VSCREACT": 18,
-        "OAVSAN": 3,
-        "RUSTGO": 21,
-        "BUNVNODE": -76,
-        "NEXTREMIX": 2
-      }
-    },
-    {
       "ts": 1795391963.3260617,
       "stats": {
         "DSTAR": 0,
@@ -428,6 +400,20 @@
         "BUNVNODE": -95,
         "NEXTREMIX": 2
       }
+    },
+    {
+      "ts": 1795463467.501482,
+      "stats": {
+        "DSTAR": 0,
+        "DFORK": 0,
+        "VSCODE": -21,
+        "REACT": -21,
+        "VSCREACT": 0,
+        "OAVSAN": 12,
+        "RUSTGO": 62,
+        "BUNVNODE": -4,
+        "NEXTREMIX": -2
+      }
     }
   ],
   "prior_week_snapshot": {
@@ -447,16 +433,16 @@
   "current_raw_snapshot": {
     "gitrade_stars": 0,
     "gitrade_forks": 0,
-    "vscode_stars": 195783,
-    "react_stars": 252934,
+    "vscode_stars": 195648,
+    "react_stars": 252802,
     "openai_sdk_stars": 32223,
     "anthropic_sdk_stars": 4097,
-    "rust_stars": 122427,
-    "go_stars": 140169,
-    "bun_stars": 96838,
-    "node_stars": 123952,
-    "nextjs_stars": 143607,
-    "remix_stars": 56651
+    "rust_stars": 122295,
+    "go_stars": 140022,
+    "bun_stars": 96842,
+    "node_stars": 123862,
+    "nextjs_stars": 143601,
+    "remix_stars": 56650
   },
   "weekly_volume": {
     "REACT": 5
