@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-11-24 20:50 UTC_
+_Last updated: 2026-11-25 04:03 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 30 | ? | 0 | ⚪ |
-| $REACT | 42 | 13.18 | 13 | 🟢 |
-| $VSCREACT | -12 | ? | 0 | ⚪ |
-| $OAVSAN | 16 | ? | 0 | ⚪ |
-| $RUSTGO | 98 | ? | 0 | ⚪ |
-| $BUNVNODE | -4 | ? | 0 | ⚪ |
-| $NEXTREMIX | 77 | ? | 0 | ⚪ |
+| $VSCODE | 55 | ? | 0 | ⚪ |
+| $REACT | 58 | 112.94 | 17 | 🔴 |
+| $VSCREACT | -3 | ? | 0 | ⚪ |
+| $OAVSAN | 18 | ? | 0 | ⚪ |
+| $RUSTGO | 97 | ? | 0 | ⚪ |
+| $BUNVNODE | -15 | ? | 0 | ⚪ |
+| $NEXTREMIX | 80 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 4d 8h 35m**
+**Settlement in: 4d 1h 22m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,7 +68,7 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 572.0 | 8 | _mm |
+| ASK | 136.07 | 8 | _mm |
 | ASK | 82.66 | 8 | _mm |
 | ASK | 23.06 | 8 | _mm |
 | BID | 1125.45 | 8 | _mm |
@@ -78,8 +78,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 112.94 | 2 | _noise |
-| ASK | 109.89 | 2 | _noise |
+| ASK | 115.73 | 8 | _mm |
+| ASK | 59.09 | 1 | _noise |
 | ASK | 13.18 | 1 | _mm |
 | BID | 1021.42 | 8 | _mm |
 | BID | 858.05 | 8 | _mm |
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +1049 |
+| 🥇 | _mm | +574 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -1049 |
+| 🥉 | _noise | -574 |
 <!-- BOT_BOARD_END -->
 
 ---
