@@ -4,7 +4,7 @@
 [![Bot League](https://img.shields.io/badge/bots-submit_a_PR-0d1117?style=flat-square&color=58a6ff)](CONTRIBUTING.md)
 
 <!-- TIMESTAMP_START -->
-_Last updated: 2026-11-27 18:29 UTC_
+_Last updated: 2026-11-28 01:37 UTC_
 <!-- TIMESTAMP_END -->
 
 ---
@@ -38,17 +38,17 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 |--------|-----------|------------|-----|--------|
 | $DSTAR | 0 | ? | 0 | ⚪ |
 | $DFORK | 0 | ? | 0 | ⚪ |
-| $VSCODE | 128 | ? | 0 | ⚪ |
-| $REACT | 109 | 115.73 | 24 | 🔴 |
-| $VSCREACT | 19 | ? | 0 | ⚪ |
-| $OAVSAN | 29 | ? | 0 | ⚪ |
-| $RUSTGO | 468 | ? | 0 | ⚪ |
-| $BUNVNODE | 6 | ? | 0 | ⚪ |
-| $NEXTREMIX | 148 | ? | 0 | ⚪ |
+| $VSCODE | 42 | ? | 0 | ⚪ |
+| $REACT | 30 | 34.51 | 33 | 🔴 |
+| $VSCREACT | 12 | ? | 0 | ⚪ |
+| $OAVSAN | 31 | ? | 0 | ⚪ |
+| $RUSTGO | 399 | ? | 0 | ⚪ |
+| $BUNVNODE | 68 | ? | 0 | ⚪ |
+| $NEXTREMIX | 136 | ? | 0 | ⚪ |
 <!-- STATS_END -->
 
 <!-- COUNTDOWN_START -->
-**Settlement in: 1d 10h 56m**
+**Settlement in: 1d 3h 48m**
 <!-- COUNTDOWN_END -->
 
 ---
@@ -68,8 +68,8 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$VSCODE**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 136.07 | 8 | _mm |
 | ASK | 82.66 | 8 | _mm |
+| ASK | 52.34 | 8 | _mm |
 | ASK | 23.06 | 8 | _mm |
 | BID | 1125.45 | 8 | _mm |
 | BID | 1036.8 | 8 | _mm |
@@ -78,10 +78,10 @@ The number on Sunday morning is the trailing average, NOT the final delta. That 
 **$REACT**
 | Side | Price | Qty | Owner |
 |------|-------|-----|-------|
-| ASK | 143.49 | 8 | _mm |
 | ASK | 143.13 | 8 | _mm |
 | ASK | 115.73 | 3 | _mm |
-| BID | 1021.42 | 8 | _mm |
+| ASK | 37.39 | 2 | _mm |
+| BID | 1021.42 | 7 | _mm |
 | BID | 858.05 | 8 | _mm |
 | BID | 835.2 | 5 | _mm |
 
@@ -164,9 +164,9 @@ Bots run sandboxed: **2s timeout**, **6 orders/tick max**. See [`bots/example_me
 <!-- BOT_BOARD_START -->
 | Rank | Name | P&L |
 |------|------|-----|
-| 🥇 | _noise | +1582 |
+| 🥇 | _noise | +3622 |
 | 🥈 | _momentum | +0 |
-| 🥉 | _mm | -1582 |
+| 🥉 | _mm | -3622 |
 <!-- BOT_BOARD_END -->
 
 ---
